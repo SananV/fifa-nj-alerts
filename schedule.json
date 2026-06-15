@@ -1,0 +1,1774 @@
+{
+  "generated_at": "2026-06-15T16:20:28.632317-04:00",
+  "match_count": 104,
+  "matches": [
+    {
+      "scheduled": "2026-06-11T15:00:00-04:00",
+      "home_team": {
+        "name": "Mexico"
+      },
+      "away_team": {
+        "name": "South Africa"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-11T22:00:00-04:00",
+      "home_team": {
+        "name": "South Korea"
+      },
+      "away_team": {
+        "name": "Czechia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-12T15:00:00-04:00",
+      "home_team": {
+        "name": "Canada"
+      },
+      "away_team": {
+        "name": "Bosnia-Herzegovina"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-12T21:00:00-04:00",
+      "home_team": {
+        "name": "United States"
+      },
+      "away_team": {
+        "name": "Paraguay"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-13T15:00:00-04:00",
+      "home_team": {
+        "name": "Qatar"
+      },
+      "away_team": {
+        "name": "Switzerland"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-13T18:00:00-04:00",
+      "home_team": {
+        "name": "Brazil"
+      },
+      "away_team": {
+        "name": "Morocco"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-13T21:00:00-04:00",
+      "home_team": {
+        "name": "Haiti"
+      },
+      "away_team": {
+        "name": "Scotland"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-14T00:00:00-04:00",
+      "home_team": {
+        "name": "Australia"
+      },
+      "away_team": {
+        "name": "Turkey"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-14T13:00:00-04:00",
+      "home_team": {
+        "name": "Germany"
+      },
+      "away_team": {
+        "name": "Cura\u00e7ao"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-14T16:00:00-04:00",
+      "home_team": {
+        "name": "Netherlands"
+      },
+      "away_team": {
+        "name": "Japan"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-14T19:00:00-04:00",
+      "home_team": {
+        "name": "Ivory Coast"
+      },
+      "away_team": {
+        "name": "Ecuador"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-14T22:00:00-04:00",
+      "home_team": {
+        "name": "Sweden"
+      },
+      "away_team": {
+        "name": "Tunisia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-15T12:00:00-04:00",
+      "home_team": {
+        "name": "Spain"
+      },
+      "away_team": {
+        "name": "Cape Verde Islands"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "closed"
+    },
+    {
+      "scheduled": "2026-06-15T15:00:00-04:00",
+      "home_team": {
+        "name": "Belgium"
+      },
+      "away_team": {
+        "name": "Egypt"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "live"
+    },
+    {
+      "scheduled": "2026-06-15T18:00:00-04:00",
+      "home_team": {
+        "name": "Saudi Arabia"
+      },
+      "away_team": {
+        "name": "Uruguay"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-15T21:00:00-04:00",
+      "home_team": {
+        "name": "Iran"
+      },
+      "away_team": {
+        "name": "New Zealand"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-16T15:00:00-04:00",
+      "home_team": {
+        "name": "France"
+      },
+      "away_team": {
+        "name": "Senegal"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-16T18:00:00-04:00",
+      "home_team": {
+        "name": "Iraq"
+      },
+      "away_team": {
+        "name": "Norway"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-16T21:00:00-04:00",
+      "home_team": {
+        "name": "Argentina"
+      },
+      "away_team": {
+        "name": "Algeria"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-17T00:00:00-04:00",
+      "home_team": {
+        "name": "Austria"
+      },
+      "away_team": {
+        "name": "Jordan"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-17T13:00:00-04:00",
+      "home_team": {
+        "name": "Portugal"
+      },
+      "away_team": {
+        "name": "Congo DR"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-17T16:00:00-04:00",
+      "home_team": {
+        "name": "England"
+      },
+      "away_team": {
+        "name": "Croatia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-17T19:00:00-04:00",
+      "home_team": {
+        "name": "Ghana"
+      },
+      "away_team": {
+        "name": "Panama"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-17T22:00:00-04:00",
+      "home_team": {
+        "name": "Uzbekistan"
+      },
+      "away_team": {
+        "name": "Colombia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-18T12:00:00-04:00",
+      "home_team": {
+        "name": "Czechia"
+      },
+      "away_team": {
+        "name": "South Africa"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-18T15:00:00-04:00",
+      "home_team": {
+        "name": "Switzerland"
+      },
+      "away_team": {
+        "name": "Bosnia-Herzegovina"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-18T18:00:00-04:00",
+      "home_team": {
+        "name": "Canada"
+      },
+      "away_team": {
+        "name": "Qatar"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-18T21:00:00-04:00",
+      "home_team": {
+        "name": "Mexico"
+      },
+      "away_team": {
+        "name": "South Korea"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-19T15:00:00-04:00",
+      "home_team": {
+        "name": "United States"
+      },
+      "away_team": {
+        "name": "Australia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-19T18:00:00-04:00",
+      "home_team": {
+        "name": "Scotland"
+      },
+      "away_team": {
+        "name": "Morocco"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-19T20:30:00-04:00",
+      "home_team": {
+        "name": "Brazil"
+      },
+      "away_team": {
+        "name": "Haiti"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-19T23:00:00-04:00",
+      "home_team": {
+        "name": "Turkey"
+      },
+      "away_team": {
+        "name": "Paraguay"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-20T13:00:00-04:00",
+      "home_team": {
+        "name": "Netherlands"
+      },
+      "away_team": {
+        "name": "Sweden"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-20T16:00:00-04:00",
+      "home_team": {
+        "name": "Germany"
+      },
+      "away_team": {
+        "name": "Ivory Coast"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-20T20:00:00-04:00",
+      "home_team": {
+        "name": "Ecuador"
+      },
+      "away_team": {
+        "name": "Cura\u00e7ao"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-21T00:00:00-04:00",
+      "home_team": {
+        "name": "Tunisia"
+      },
+      "away_team": {
+        "name": "Japan"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-21T12:00:00-04:00",
+      "home_team": {
+        "name": "Spain"
+      },
+      "away_team": {
+        "name": "Saudi Arabia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-21T15:00:00-04:00",
+      "home_team": {
+        "name": "Belgium"
+      },
+      "away_team": {
+        "name": "Iran"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-21T18:00:00-04:00",
+      "home_team": {
+        "name": "Uruguay"
+      },
+      "away_team": {
+        "name": "Cape Verde Islands"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-21T21:00:00-04:00",
+      "home_team": {
+        "name": "New Zealand"
+      },
+      "away_team": {
+        "name": "Egypt"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-22T13:00:00-04:00",
+      "home_team": {
+        "name": "Argentina"
+      },
+      "away_team": {
+        "name": "Austria"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-22T17:00:00-04:00",
+      "home_team": {
+        "name": "France"
+      },
+      "away_team": {
+        "name": "Iraq"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-22T20:00:00-04:00",
+      "home_team": {
+        "name": "Norway"
+      },
+      "away_team": {
+        "name": "Senegal"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-22T23:00:00-04:00",
+      "home_team": {
+        "name": "Jordan"
+      },
+      "away_team": {
+        "name": "Algeria"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-23T13:00:00-04:00",
+      "home_team": {
+        "name": "Portugal"
+      },
+      "away_team": {
+        "name": "Uzbekistan"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-23T16:00:00-04:00",
+      "home_team": {
+        "name": "England"
+      },
+      "away_team": {
+        "name": "Ghana"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-23T19:00:00-04:00",
+      "home_team": {
+        "name": "Panama"
+      },
+      "away_team": {
+        "name": "Croatia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-23T22:00:00-04:00",
+      "home_team": {
+        "name": "Colombia"
+      },
+      "away_team": {
+        "name": "Congo DR"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T15:00:00-04:00",
+      "home_team": {
+        "name": "Switzerland"
+      },
+      "away_team": {
+        "name": "Canada"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T15:00:00-04:00",
+      "home_team": {
+        "name": "Bosnia-Herzegovina"
+      },
+      "away_team": {
+        "name": "Qatar"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_B"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T18:00:00-04:00",
+      "home_team": {
+        "name": "Morocco"
+      },
+      "away_team": {
+        "name": "Haiti"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T18:00:00-04:00",
+      "home_team": {
+        "name": "Scotland"
+      },
+      "away_team": {
+        "name": "Brazil"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_C"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T21:00:00-04:00",
+      "home_team": {
+        "name": "Czechia"
+      },
+      "away_team": {
+        "name": "Mexico"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-24T21:00:00-04:00",
+      "home_team": {
+        "name": "South Africa"
+      },
+      "away_team": {
+        "name": "South Korea"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_A"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T16:00:00-04:00",
+      "home_team": {
+        "name": "Ecuador"
+      },
+      "away_team": {
+        "name": "Germany"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T16:00:00-04:00",
+      "home_team": {
+        "name": "Cura\u00e7ao"
+      },
+      "away_team": {
+        "name": "Ivory Coast"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_E"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T19:00:00-04:00",
+      "home_team": {
+        "name": "Tunisia"
+      },
+      "away_team": {
+        "name": "Netherlands"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T19:00:00-04:00",
+      "home_team": {
+        "name": "Japan"
+      },
+      "away_team": {
+        "name": "Sweden"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_F"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T22:00:00-04:00",
+      "home_team": {
+        "name": "Turkey"
+      },
+      "away_team": {
+        "name": "United States"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-25T22:00:00-04:00",
+      "home_team": {
+        "name": "Paraguay"
+      },
+      "away_team": {
+        "name": "Australia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_D"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T15:00:00-04:00",
+      "home_team": {
+        "name": "Norway"
+      },
+      "away_team": {
+        "name": "France"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T15:00:00-04:00",
+      "home_team": {
+        "name": "Senegal"
+      },
+      "away_team": {
+        "name": "Iraq"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_I"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T20:00:00-04:00",
+      "home_team": {
+        "name": "Uruguay"
+      },
+      "away_team": {
+        "name": "Spain"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T20:00:00-04:00",
+      "home_team": {
+        "name": "Cape Verde Islands"
+      },
+      "away_team": {
+        "name": "Saudi Arabia"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_H"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T23:00:00-04:00",
+      "home_team": {
+        "name": "New Zealand"
+      },
+      "away_team": {
+        "name": "Belgium"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-26T23:00:00-04:00",
+      "home_team": {
+        "name": "Egypt"
+      },
+      "away_team": {
+        "name": "Iran"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_G"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T17:00:00-04:00",
+      "home_team": {
+        "name": "Panama"
+      },
+      "away_team": {
+        "name": "England"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T17:00:00-04:00",
+      "home_team": {
+        "name": "Croatia"
+      },
+      "away_team": {
+        "name": "Ghana"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_L"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T19:30:00-04:00",
+      "home_team": {
+        "name": "Colombia"
+      },
+      "away_team": {
+        "name": "Portugal"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T19:30:00-04:00",
+      "home_team": {
+        "name": "Congo DR"
+      },
+      "away_team": {
+        "name": "Uzbekistan"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_K"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T22:00:00-04:00",
+      "home_team": {
+        "name": "Jordan"
+      },
+      "away_team": {
+        "name": "Argentina"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-27T22:00:00-04:00",
+      "home_team": {
+        "name": "Algeria"
+      },
+      "away_team": {
+        "name": "Austria"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Group Stage - GROUP_J"
+      },
+      "phase": "group",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-28T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-29T13:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-29T16:30:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-29T21:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-30T13:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-30T17:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-06-30T21:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-01T12:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-01T16:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-01T20:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-02T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-02T19:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-02T23:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-03T14:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-03T18:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-03T21:30:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_32"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-04T13:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-04T17:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-05T16:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-05T20:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-06T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-06T20:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-07T12:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-07T16:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "LAST_16"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-09T16:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Quarter-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-10T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Quarter-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-11T17:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Quarter-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-11T21:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Quarter-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-14T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Semi-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-15T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Semi-final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-18T17:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Third place"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    },
+    {
+      "scheduled": "2026-07-19T15:00:00-04:00",
+      "home_team": {
+        "name": "TBD"
+      },
+      "away_team": {
+        "name": "TBD"
+      },
+      "venue": {
+        "name": "Venue TBD"
+      },
+      "tournament_round": {
+        "name": "Final"
+      },
+      "phase": "knockout",
+      "status": "scheduled"
+    }
+  ]
+}
