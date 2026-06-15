@@ -17,7 +17,7 @@ jobs:
 
       - name: Fetch FIFA schedule
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: python3 fetch_schedule.py
 
       - name: Commit updated schedule
