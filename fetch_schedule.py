@@ -12,7 +12,7 @@ print(f"API key found, last 4: ...{api_key[-4:]}")
 # Source: FIFA official announcement
 # Each tuple: (city_keywords, full_venue_name, is_metlife)
 CITY_VENUES = [
-    (["new york", "new jersey", "east rutherford", "metlife"],
+    (["new york", "new jersey", "east rutherford", "metlife", "nynj", "new york new jersey"],
      "MetLife Stadium, East Rutherford, NJ", True),
     (["dallas", "arlington", "att"],
      "ATT Stadium, Arlington, TX", False),
@@ -82,10 +82,10 @@ GROUP_VENUE_MAP = {
     "GROUP_H-1": "Mercedes-Benz Stadium, Atlanta, GA",
     "GROUP_H-2": "Rose Bowl, Pasadena, CA",
     "GROUP_H-3": "Levis Stadium, Santa Clara, CA",
-    # Group I: Hard Rock, Arrowhead, MetLife
-    "GROUP_I-1": "Hard Rock Stadium, Miami Gardens, FL",
-    "GROUP_I-2": "Arrowhead Stadium, Kansas City, MO",
-    "GROUP_I-3": "MetLife Stadium, East Rutherford, NJ",
+    # Group I: MetLife, Gillette, Arrowhead
+    "GROUP_I-1": "MetLife Stadium, East Rutherford, NJ",
+    "GROUP_I-2": "Gillette Stadium, Foxborough, MA",
+    "GROUP_I-3": "Arrowhead Stadium, Kansas City, MO",
     # Group J: Lincoln Financial, NRG, Estadio Akron
     "GROUP_J-1": "Lincoln Financial Field, Philadelphia, PA",
     "GROUP_J-2": "NRG Stadium, Houston, TX",
