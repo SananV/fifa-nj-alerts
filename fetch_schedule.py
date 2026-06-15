@@ -1,85 +1,134 @@
 import json, urllib.request, urllib.error, os, sys
 from datetime import datetime, timezone, timedelta
 
-api_key = os.environ.get('ANTHROPIC_API_KEY', '').strip()
+# Free API from football-data.org — sign up at https://www.football-data.org/client/register
+# Store your free API key as GitHub Secret: FOOTBALL_DATA_API_KEY
+api_key = os.environ.get('FOOTBALL_DATA_API_KEY', '').strip()
 if not api_key:
-    print("ERROR: ANTHROPIC_API_KEY secret is not set.")
+    print("ERROR: FOOTBALL_DATA_API_KEY secret is not set.")
+    print("Sign up free at https://www.football-data.org/client/register")
+    print("Then add the key as a GitHub Secret named FOOTBALL_DATA_API_KEY")
     sys.exit(1)
 
 print(f"API key found, last 4: ...{api_key[-4:]}")
 
-prompt = (
-    "You are a sports data assistant. Generate the complete FIFA World Cup 2026 schedule as a JSON array.\n\n"
-    "Include ALL matches: all group stage games, round of 32, round of 16, quarter-finals, semi-finals, third place, and the final.\n\n"
-    "All times must be in Eastern Time (EDT = UTC-4). Use offset -04:00 in ISO datetime strings.\n\n"
-    "MetLife Stadium in East Rutherford, NJ is the New York/New Jersey venue. Label it as: MetLife Stadium, East Rutherford, NJ\n\n"
-    "Other venues include: ATT Stadium (Arlington TX), SoFi Stadium (Inglewood CA), "
-    "Levis Stadium (Santa Clara CA), Rose Bowl (Pasadena CA), Arrowhead Stadium (Kansas City MO), "
-    "Gillette Stadium (Foxborough MA), Lincoln Financial Field (Philadelphia PA), "
-    "Hard Rock Stadium (Miami FL), Mercedes-Benz Stadium (Atlanta GA), NRG Stadium (Houston TX), "
-    "Estadio Azteca (Mexico City), Estadio BBVA (Monterrey), Estadio Akron (Guadalajara), "
-    "BC Place (Vancouver), BMO Field (Toronto).\n\n"
-    "Return ONLY a valid JSON array. Start with [ and end with ]. No markdown, no backticks, no extra text.\n\n"
-    "Each object must have exactly these fields:\n"
-    '{"scheduled":"2026-06-11T12:00:00-04:00","home_team":{"name":"Mexico"},"away_team":{"name":"TBD"},'
-    '"venue":{"name":"ATT Stadium, Arlington, TX"},"tournament_round":{"name":"Group Stage - Group A"},'
-    '"phase":"group","status":"scheduled"}\n\n'
-    "Return the full JSON array now."
-)
-
-payload = json.dumps({
-    "model": "claude-sonnet-4-6",
-    "max_tokens": 8000,
-    "messages": [{"role": "user", "content": prompt}]
-}).encode()
+# FIFA World Cup 2026 competition ID on football-data.org is WC (or 2000 for World Cup)
+# Fetch all matches for the tournament
+url = "https://api.football-data.org/v4/competitions/WC/matches"
 
 req = urllib.request.Request(
-    "https://api.anthropic.com/v1/messages",
-    data=payload,
-    headers={
-        "Content-Type": "application/json",
-        "x-api-key": api_key,
-        "anthropic-version": "2023-06-01"
-    }
+    url,
+    headers={"X-Auth-Token": api_key}
 )
 
 try:
-    with urllib.request.urlopen(req, timeout=120) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
         data = json.loads(resp.read())
 except urllib.error.HTTPError as e:
     body = e.read().decode()
-    print(f"HTTP {e.code} from Anthropic API: {body}")
+    print(f"HTTP {e.code} from football-data.org: {body}")
     sys.exit(1)
 except Exception as e:
     print(f"Request failed: {e}")
     sys.exit(1)
 
-print(f"API call succeeded. Stop reason: {data.get('stop_reason')}")
+raw_matches = data.get('matches', [])
+print(f"Fetched {len(raw_matches)} matches from football-data.org")
 
-full_text = ''.join(
-    block.get('text', '') for block in data.get('content', [])
-    if block.get('type') == 'text'
-)
+# Venue mapping — football-data.org doesn't always include venue details
+# so we map by city/stadium from known FIFA 2026 host city assignments
+VENUE_MAP = {
+    "New York": "MetLife Stadium, East Rutherford, NJ",
+    "New Jersey": "MetLife Stadium, East Rutherford, NJ",
+    "East Rutherford": "MetLife Stadium, East Rutherford, NJ",
+    "Dallas": "ATT Stadium, Arlington, TX",
+    "Arlington": "ATT Stadium, Arlington, TX",
+    "Los Angeles": "SoFi Stadium, Inglewood, CA",
+    "Inglewood": "SoFi Stadium, Inglewood, CA",
+    "San Francisco": "Levis Stadium, Santa Clara, CA",
+    "Santa Clara": "Levis Stadium, Santa Clara, CA",
+    "Pasadena": "Rose Bowl, Pasadena, CA",
+    "Kansas City": "Arrowhead Stadium, Kansas City, MO",
+    "Boston": "Gillette Stadium, Foxborough, MA",
+    "Foxborough": "Gillette Stadium, Foxborough, MA",
+    "Philadelphia": "Lincoln Financial Field, Philadelphia, PA",
+    "Miami": "Hard Rock Stadium, Miami Gardens, FL",
+    "Atlanta": "Mercedes-Benz Stadium, Atlanta, GA",
+    "Houston": "NRG Stadium, Houston, TX",
+    "Mexico City": "Estadio Azteca, Mexico City",
+    "Monterrey": "Estadio BBVA, Monterrey",
+    "Guadalajara": "Estadio Akron, Guadalajara",
+    "Vancouver": "BC Place, Vancouver",
+    "Toronto": "BMO Field, Toronto",
+}
 
-print(f"Response length: {len(full_text)} chars")
+def resolve_venue(match):
+    # Try venue name from API first
+    venue = match.get('venue', '') or ''
+    if venue:
+        for key, full in VENUE_MAP.items():
+            if key.lower() in venue.lower():
+                return full
+        return venue
+    # Fall back to home team city if available
+    area = match.get('homeTeam', {}).get('area', {}).get('name', '')
+    for key, full in VENUE_MAP.items():
+        if key.lower() in area.lower():
+            return full
+    return "Venue TBD"
 
-clean = full_text.replace('```json', '').replace('```', '').strip()
-start = clean.find('[')
-end = clean.rfind(']')
+def to_est(utc_str):
+    if not utc_str:
+        return None
+    # Parse UTC datetime string like "2026-06-11T19:00:00Z"
+    utc_str = utc_str.replace('Z', '+00:00')
+    try:
+        dt_utc = datetime.fromisoformat(utc_str)
+        est = dt_utc.astimezone(timezone(timedelta(hours=-4)))
+        return est.isoformat()
+    except Exception:
+        return utc_str
 
-if start == -1 or end == -1:
-    print("ERROR: No JSON array found.")
-    print("First 500 chars:", full_text[:500])
-    sys.exit(1)
+def map_round(match):
+    stage = match.get('stage', '')
+    group = match.get('group', '')
+    stage_map = {
+        'GROUP_STAGE': f"Group Stage{' - ' + group if group else ''}",
+        'ROUND_OF_32': 'Round of 32',
+        'ROUND_OF_16': 'Round of 16',
+        'QUARTER_FINALS': 'Quarter-final',
+        'SEMI_FINALS': 'Semi-final',
+        'THIRD_PLACE': 'Third place',
+        'FINAL': 'Final',
+    }
+    return stage_map.get(stage, stage or 'Match')
 
-try:
-    matches = json.loads(clean[start:end+1])
-except json.JSONDecodeError as e:
-    print(f"JSON parse error: {e}")
-    print("JSON attempt (first 500):", clean[start:start+500])
-    sys.exit(1)
+def map_phase(match):
+    stage = match.get('stage', '')
+    return 'group' if stage == 'GROUP_STAGE' else 'knockout'
 
-print(f"Parsed {len(matches)} matches successfully.")
+def map_status(match):
+    s = match.get('status', '').upper()
+    if s in ('FINISHED', 'AWARDED'): return 'closed'
+    if s in ('IN_PLAY', 'PAUSED', 'LIVE'): return 'live'
+    return 'scheduled'
+
+matches = []
+for m in raw_matches:
+    home = m.get('homeTeam', {}).get('name') or 'TBD'
+    away = m.get('awayTeam', {}).get('name') or 'TBD'
+    utc_dt = m.get('utcDate', '')
+    matches.append({
+        "scheduled": to_est(utc_dt),
+        "home_team": {"name": home},
+        "away_team": {"name": away},
+        "venue": {"name": resolve_venue(m)},
+        "tournament_round": {"name": map_round(m)},
+        "phase": map_phase(m),
+        "status": map_status(m)
+    })
+
+print(f"Mapped {len(matches)} matches.")
 
 est = timezone(timedelta(hours=-4))
 output = {
