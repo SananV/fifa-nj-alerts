@@ -1,0 +1,105 @@
+name: Update FIFA Schedule
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 6 AM EST (UTC-4) daily
+  workflow_dispatch:       # manual trigger from GitHub Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch FIFA schedule via Anthropic API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import json, urllib.request, os, sys
+          from datetime import datetime, timezone, timedelta
+
+          api_key = os.environ.get('ANTHROPIC_API_KEY', '')
+          if not api_key:
+              print("ERROR: ANTHROPIC_API_KEY secret not set.")
+              sys.exit(1)
+
+          prompt = """Search the web for the complete FIFA World Cup 2026 schedule. Include ALL matches — group stage through the final.
+
+          Convert every kickoff time to Eastern Time (America/New_York, currently EDT = UTC-4).
+
+          MetLife Stadium may appear as: "MetLife Stadium", "New York/New Jersey", or "East Rutherford, NJ". Label it consistently as "MetLife Stadium, East Rutherford, NJ".
+
+          Return ONLY a raw JSON array — no markdown, no backticks, no explanation. Each object must have:
+          {
+            "scheduled": "2026-06-15T15:00:00-04:00",
+            "home_team": {"name": "Country or TBD"},
+            "away_team": {"name": "Country or TBD"},
+            "venue": {"name": "Full venue name, City, State/Country"},
+            "tournament_round": {"name": "Group Stage - Group A or Round of 32 etc"},
+            "phase": "group or knockout",
+            "status": "scheduled or live or closed"
+          }
+          Return the raw JSON array only — nothing else."""
+
+          payload = json.dumps({
+              "model": "claude-sonnet-4-6",
+              "max_tokens": 8000,
+              "tools": [{"type": "web_search_20250305", "name": "web_search"}],
+              "messages": [{"role": "user", "content": prompt}]
+          }).encode()
+
+          req = urllib.request.Request(
+              "https://api.anthropic.com/v1/messages",
+              data=payload,
+              headers={
+                  "Content-Type": "application/json",
+                  "x-api-key": api_key,
+                  "anthropic-version": "2023-06-01"
+              }
+          )
+
+          with urllib.request.urlopen(req, timeout=90) as resp:
+              data = json.loads(resp.read())
+
+          full_text = ''.join(
+              block.get('text', '') for block in data.get('content', [])
+              if block.get('type') == 'text'
+          )
+
+          # Strip markdown fences if present
+          clean = full_text.replace('```json', '').replace('```', '').strip()
+          start = clean.find('[')
+          end = clean.rfind(']')
+          if start == -1 or end == -1:
+              print("ERROR: No JSON array found in response.")
+              print("Response was:", full_text[:500])
+              sys.exit(1)
+
+          matches = json.loads(clean[start:end+1])
+          print(f"Fetched {len(matches)} matches.")
+
+          est = timezone(timedelta(hours=-4))
+          output = {
+              "generated_at": datetime.now(est).isoformat(),
+              "match_count": len(matches),
+              "matches": matches
+          }
+
+          with open("schedule.json", "w") as f:
+              json.dump(output, f, indent=2)
+
+          print("schedule.json written successfully.")
+          PYEOF
+
+      - name: Commit updated schedule
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add schedule.json
+          git diff --cached --quiet || git commit -m "chore: update FIFA schedule $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
