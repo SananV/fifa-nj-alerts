@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA 2026 — NJ Commuter Alerts</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+  :root {
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --blue-mid: #378ADD;
+    --red: #E24B4A;
+    --red-light: #FCEBEB;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --green: #3B6D11;
+    --green-light: #EAF3DE;
+    --gray-50: #F1EFE8;
+    --gray-100: #D3D1C7;
+    --gray-600: #5F5E5A;
+    --gray-900: #2C2C2A;
+    --text-primary: #1a1a18;
+    --text-secondary: #5F5E5A;
+    --text-muted: #888780;
+    --border: rgba(0,0,0,0.12);
+    --border-strong: rgba(0,0,0,0.22);
+    --bg: #ffffff;
+    --bg-secondary: #F7F6F2;
+    --bg-tertiary: #EFEDE7;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #EEECEA;
+      --text-secondary: #B4B2A9;
+      --text-muted: #888780;
+      --border: rgba(255,255,255,0.12);
+      --border-strong: rgba(255,255,255,0.22);
+      --bg: #1C1C1A;
+      --bg-secondary: #252523;
+      --bg-tertiary: #2E2E2B;
+      --blue-light: #0C447C;
+      --red-light: #501313;
+      --amber-light: #412402;
+      --green-light: #173404;
+      --gray-50: #2C2C2A;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg-tertiary); color: var(--text-primary); min-height: 100vh; }
+
+  .site-header { background: var(--bg); border-bottom: 0.5px solid var(--border); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .header-brand { display: flex; align-items: center; gap: 10px; }
+  .header-brand .logo { width: 32px; height: 32px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; }
+  .header-brand h1 { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+  .header-brand span { font-size: 12px; color: var(--text-secondary); }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .last-updated { font-size: 11px; color: var(--text-muted); }
+  .refresh-btn { background: none; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 6px 12px; font-size: 13px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 5px; }
+  .refresh-btn:hover { background: var(--bg-secondary); }
+  .refresh-btn:active { transform: scale(0.97); }
+  .spinning { animation: spin 1s linear infinite; display: inline-block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+
+  .tabs { display: flex; gap: 0; border-bottom: 0.5px solid var(--border); margin-bottom: 1.5rem; }
+  .tab { padding: 10px 20px; font-size: 14px; font-weight: 400; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -0.5px; background: none; border-top: none; border-left: none; border-right: none; display: flex; align-items: center; gap: 6px; }
+  .tab.active { color: var(--text-primary); border-bottom: 2px solid var(--text-primary); font-weight: 500; }
+  .tab:hover:not(.active) { color: var(--text-primary); }
+  .tab i { font-size: 15px; }
+
+  .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; }
+  .badge-danger { background: var(--red-light); color: var(--red); }
+  .badge-warning { background: var(--amber-light); color: var(--amber); }
+  .badge-info { background: var(--blue-light); color: var(--blue); }
+  .badge-success { background: var(--green-light); color: var(--green); }
+  .badge-neutral { background: var(--gray-50); color: var(--gray-600); }
+
+  .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .stat-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; text-align: center; }
+  .stat-num { font-size: 26px; font-weight: 500; color: var(--text-primary); }
+  .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 3px; line-height: 1.3; }
+
+  .alert-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+  .alert-card.high { border-left: 3px solid var(--red); }
+  .alert-card.medium { border-left: 3px solid var(--amber); }
+  .alert-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+  .alert-date { font-size: 13px; font-weight: 500; color: var(--text-primary); display: flex; align-items: center; gap: 5px; }
+  .alert-body { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+  .alert-body strong { color: var(--text-primary); font-weight: 500; }
+  .alert-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .pill { font-size: 11px; padding: 3px 10px; border-radius: 10px; border: 0.5px solid var(--border); color: var(--text-secondary); display: flex; align-items: center; gap: 4px; }
+  .pill-danger { background: var(--red-light); color: var(--red); border: none; }
+
+  .section-label { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; margin: 1.5rem 0 8px; }
+
+  .resource-section { margin-top: 1.5rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+  .resource-section-header { padding: 10px 16px; border-bottom: 0.5px solid var(--border); font-size: 12px; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.04em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+  .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+  .resource-link { padding: 12px 14px; border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-decoration: none; display: block; transition: background 0.12s; }
+  .resource-link:hover { background: var(--bg-secondary); }
+  .resource-link i { font-size: 18px; color: var(--text-secondary); display: block; margin-bottom: 6px; }
+  .resource-link .r-title { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 2px; }
+  .resource-link .r-desc { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+  .filter-row { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+  .filter-row label { font-size: 13px; color: var(--text-secondary); }
+  .filter-row select { font-size: 13px; padding: 7px 10px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg); color: var(--text-primary); }
+  .group-header { font-size: 12px; font-weight: 500; color: var(--text-secondary); padding: 6px 0 4px; border-bottom: 0.5px solid var(--border); margin-bottom: 6px; margin-top: 20px; display: flex; align-items: center; gap: 6px; }
+  .group-header:first-of-type { margin-top: 0; }
+  .match-row { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px 14px; margin-bottom: 6px; display: grid; grid-template-columns: 90px 1fr 120px; align-items: center; gap: 12px; }
+  .match-row:hover { background: var(--bg-secondary); }
+  .match-row.nj { border-left: 3px solid var(--red); }
+  .match-time-col { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+  .match-round { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .match-teams { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+  .match-venue { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+  .nj-tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 1px 6px; background: var(--red-light); color: var(--red); border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .match-status { text-align: right; }
+  .status-pill { font-size: 11px; padding: 3px 8px; border-radius: 6px; display: inline-block; }
+  .status-live { background: var(--red-light); color: var(--red); font-weight: 500; }
+  .status-sched { background: var(--gray-50); color: var(--gray-600); }
+  .status-closed { background: var(--green-light); color: var(--green); }
+
+  .loading { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 14px; }
+  .loading i { font-size: 28px; display: block; margin-bottom: 12px; }
+  .empty { text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary); font-size: 13px; }
+  .empty i { font-size: 28px; display: block; margin-bottom: 10px; color: var(--text-muted); }
+
+  .version-banner { background: var(--blue-light); border: 0.5px solid var(--blue-mid); border-radius: var(--radius-md); padding: 8px 14px; font-size: 12px; color: var(--blue); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .version-banner a { color: var(--blue); font-weight: 500; }
+
+  .data-freshness { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 8px 14px; font-size: 12px; color: var(--text-secondary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 6px; }
+  .data-freshness i { font-size: 14px; color: var(--green); }
+
+  .error-box { background: var(--red-light); border: 0.5px solid var(--red); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; text-align: center; }
+  .error-box i { font-size: 28px; color: var(--red); display: block; margin-bottom: 10px; }
+  .error-box p { font-size: 13px; color: var(--red); margin-bottom: 12px; line-height: 1.6; }
+  .error-box button { padding: 8px 20px; border: 0.5px solid var(--red); border-radius: var(--radius-md); background: var(--bg); color: var(--red); font-size: 13px; cursor: pointer; }
+  .error-box button:hover { background: var(--red-light); }
+
+  .site-footer { max-width: 900px; margin: 2rem auto 0; padding: 1rem 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-top: 0.5px solid var(--border); }
+  .footer-left { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+  .footer-left a { color: var(--blue); text-decoration: none; }
+  .footer-right { font-size: 11px; color: var(--text-muted); }
+
+  @media (max-width: 600px) {
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .match-row { grid-template-columns: 80px 1fr; }
+    .match-status { display: none; }
+    .header-brand span { display: none; }
+    .stats-row .stat-card:last-child { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="logo"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+      <div>
+        <h1>FIFA 2026 — NJ Commuter Alerts</h1>
+        <span>MetLife Stadium · Lincoln Tunnel · NJ Transit</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="last-updated" id="last-updated"></span>
+      <button class="refresh-btn" onclick="loadData()" aria-label="Refresh schedule">
+        <i class="ti ti-refresh" id="refresh-icon" aria-hidden="true"></i> Refresh
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="version-banner">
+    <i class="ti ti-info-circle" aria-hidden="true"></i>
+    <span>v1.1.0 &nbsp;·&nbsp; <a href="https://sananv.github.io/fifa-nj-alerts/" target="_blank" rel="noopener">sananv.github.io/fifa-nj-alerts</a> &nbsp;·&nbsp; Schedule refreshed daily at 6 AM EST via GitHub Actions &nbsp;·&nbsp; Refresh anytime for latest version</span>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="Main navigation">
+    <button class="tab active" role="tab" aria-selected="true" onclick="switchTab('alerts')">
+      <i class="ti ti-bell" aria-hidden="true"></i> NJ Alerts
+      <span class="badge badge-danger" id="alert-count" style="margin-left:4px">—</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" onclick="switchTab('schedule')">
+      <i class="ti ti-calendar" aria-hidden="true"></i> Full Schedule
+      <span class="badge badge-info" id="sched-count" style="margin-left:4px">—</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" onclick="switchTab('resources')">
+      <i class="ti ti-link" aria-hidden="true"></i> Resources
+    </button>
+  </nav>
+
+  <!-- ALERTS TAB -->
+  <div id="tab-alerts">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num" id="s-total">—</div><div class="stat-label">MetLife matches total</div></div>
+      <div class="stat-card"><div class="stat-num" id="s-week">—</div><div class="stat-label">Impacting next 7 days</div></div>
+      <div class="stat-card"><div class="stat-num" id="s-next">—</div><div class="stat-label">Days to next MetLife match</div></div>
+    </div>
+    <div id="alerts-content">
+      <div class="loading"><i class="ti ti-loader spinning"></i>Loading schedule…</div>
+    </div>
+    <div class="resource-section" style="margin-top:2rem">
+      <div class="resource-section-header"><i class="ti ti-bus" aria-hidden="true"></i> NJ Transit</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.njtransit.com/bus/service-alerts" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/schedules/bus" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/specialservice" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses for MetLife</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-road" aria-hidden="true"></i> Lincoln Tunnel &amp; Traffic</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.panynj.gov/tunnels-bridges/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Port Authority</div><div class="r-desc">Tunnel live traffic &amp; tolls</div></a>
+        <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin" aria-hidden="true"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time map</div></a>
+        <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map" aria-hidden="true"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY tunnel approach</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-trophy" aria-hidden="true"></i> FIFA 2026 &amp; Venue</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026/matches" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">All fixtures &amp; results</div></a>
+        <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium" aria-hidden="true"></i><div class="r-title">MetLife Stadium</div><div class="r-desc">Parking, transit &amp; fan info</div></a>
+        <a class="resource-link" href="https://www.path.net/schedules/" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train</div><div class="r-desc">Alternative on match days</div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE TAB -->
+  <div id="tab-schedule" style="display:none">
+    <div class="filter-row">
+      <label for="venue-filter">Venue</label>
+      <select id="venue-filter" onchange="renderSchedule()">
+        <option value="all">All venues</option>
+        <option value="metlife">MetLife only</option>
+      </select>
+      <label for="round-filter">Round</label>
+      <select id="round-filter" onchange="renderSchedule()">
+        <option value="all">All rounds</option>
+      </select>
+    </div>
+    <div id="schedule-content"><div class="loading">Loading…</div></div>
+  </div>
+
+  <!-- RESOURCES TAB -->
+  <div id="tab-resources" style="display:none">
+    <div class="resource-section">
+      <div class="resource-section-header"><i class="ti ti-bus" aria-hidden="true"></i> NJ Transit</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.njtransit.com/bus/service-alerts" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions and detours</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/schedules/bus" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355 — Lincoln Tunnel corridor</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/specialservice" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses added for MetLife Stadium events</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-road" aria-hidden="true"></i> Lincoln Tunnel &amp; Traffic</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.panynj.gov/tunnels-bridges/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Lincoln Tunnel — Port Authority</div><div class="r-desc">Live traffic, tolls, and lane status</div></a>
+        <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin" aria-hidden="true"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time traffic map</div></a>
+        <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map" aria-hidden="true"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY side tunnel approach conditions</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-trophy" aria-hidden="true"></i> FIFA 2026 &amp; MetLife</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026/matches" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">Complete fixture list, results, groups</div></a>
+        <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium" aria-hidden="true"></i><div class="r-title">MetLife Stadium events</div><div class="r-desc">Parking, transit, and fan info</div></a>
+        <a class="resource-link" href="https://www.path.net/schedules/" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train schedules</div><div class="r-desc">Alternative to NJ Transit on match days</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-brand-github" aria-hidden="true"></i> This app</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://github.com/SananV/fifa-nj-alerts" target="_blank" rel="noopener"><i class="ti ti-brand-github" aria-hidden="true"></i><div class="r-title">Source on GitHub</div><div class="r-desc">SananV/fifa-nj-alerts — public repo</div></a>
+        <a class="resource-link" href="https://sananv.github.io/fifa-nj-alerts/" target="_blank" rel="noopener"><i class="ti ti-external-link" aria-hidden="true"></i><div class="r-title">Live app URL</div><div class="r-desc">Share this link with commuters</div></a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    Built for NJ Transit commuters via Lincoln Tunnel to NYC &nbsp;·&nbsp;
+    <a href="https://github.com/SananV/fifa-nj-alerts" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+    All times in Eastern Time (EST/EDT) &nbsp;·&nbsp; Schedule auto-updated daily
+  </div>
+  <div class="footer-right">v1.1.0</div>
+</footer>
+
+<script>
+let allMatches = [];
+let currentTab = 'alerts';
+
+function switchTab(t) {
+  currentTab = t;
+  ['alerts','schedule','resources'].forEach((name, i) => {
+    document.querySelectorAll('.tab')[i].classList.toggle('active', name === t);
+    document.querySelectorAll('.tab')[i].setAttribute('aria-selected', name === t);
+    document.getElementById('tab-' + name).style.display = name === t ? '' : 'none';
+  });
+  if (t === 'schedule' && allMatches.length) renderSchedule();
+}
+
+function fmtDate(d) { return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'America/New_York'}); }
+function fmtTime(d) { return d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'America/New_York'}); }
+function fmtDateLong(d) { return d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'America/New_York'}); }
+function daysFromNow(d) {
+  const diff = Math.floor((d - new Date()) / 86400000);
+  if (diff < 0) return 'Past';
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Tomorrow';
+  return 'In ' + diff + ' days';
+}
+function isMetLife(m) {
+  const v = (m.venue && m.venue.name) ? m.venue.name.toLowerCase() : '';
+  return v.includes('metlife') || v.includes('east rutherford') || v.includes('new york/new jersey') || v.includes('new york new jersey');
+}
+function impactLevel(scheduled) {
+  const hr = parseInt(new Date(scheduled).toLocaleString('en-US',{hour:'numeric',hour12:false,timeZone:'America/New_York'}));
+  return hr >= 16 && hr <= 20 ? 'high' : 'medium';
+}
+
+function renderAlerts(matches) {
+  const now = new Date();
+  const in7 = new Date(now.getTime() + 7*24*3600*1000);
+  const metlife = matches.filter(isMetLife);
+  const upcoming7 = metlife.filter(m => new Date(m.scheduled) >= now && new Date(m.scheduled) <= in7)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+  const beyondWeek = metlife.filter(m => new Date(m.scheduled) > in7)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+
+  document.getElementById('s-total').textContent = metlife.length;
+  document.getElementById('s-week').textContent = upcoming7.length;
+  document.getElementById('alert-count').textContent = upcoming7.length;
+
+  const next = metlife.filter(m => new Date(m.scheduled) >= now).sort((a,b)=>new Date(a.scheduled)-new Date(b.scheduled))[0];
+  document.getElementById('s-next').textContent = next ? Math.max(0,Math.floor((new Date(next.scheduled)-now)/86400000)) || 'Today' : '—';
+
+  let html = '';
+  if (!upcoming7.length) {
+    html = `<div class="empty"><i class="ti ti-check" style="color:var(--green)"></i>No MetLife matches in the next 7 days.<br><span style="font-size:12px;display:block;margin-top:6px">Check Full Schedule for all fixtures.</span></div>`;
+  } else {
+    upcoming7.forEach(m => {
+      const d = new Date(m.scheduled);
+      const lvl = impactLevel(m.scheduled);
+      const home = m.home_team?.name || 'TBD';
+      const away = m.away_team?.name || 'TBD';
+      const round = m.tournament_round?.name || m.phase || 'Match';
+      html += `<div class="alert-card ${lvl}">
+        <div class="alert-top">
+          <span class="alert-date"><i class="ti ti-calendar" aria-hidden="true" style="font-size:13px"></i>${fmtDate(d)} · ${fmtTime(d)}</span>
+          <span class="badge badge-${lvl==='high'?'danger':'warning'}">${lvl==='high'?'⚠ High impact':'Moderate impact'}</span>
+        </div>
+        <div class="alert-body"><strong>${home} vs ${away}</strong> · ${round}<br>MetLife Stadium, East Rutherford, NJ · <strong>${daysFromNow(d)}</strong></div>
+        <div class="alert-pills">
+          <span class="pill"><i class="ti ti-bus" style="font-size:11px" aria-hidden="true"></i>Routes 320, 351, 355 affected</span>
+          <span class="pill"><i class="ti ti-road" style="font-size:11px" aria-hidden="true"></i>Lincoln Tunnel congestion</span>
+          ${lvl==='high'?'<span class="pill pill-danger">Evening rush overlap</span>':'<span class="pill">Plan 90+ min buffer</span>'}
+        </div>
+      </div>`;
+    });
+  }
+
+  if (beyondWeek.length) {
+    html += `<div class="section-label">Upcoming MetLife matches — beyond 7 days</div>`;
+    beyondWeek.forEach(m => {
+      const d = new Date(m.scheduled);
+      const home = m.home_team?.name || 'TBD';
+      const away = m.away_team?.name || 'TBD';
+      const round = m.tournament_round?.name || m.phase || 'Match';
+      html += `<div class="alert-card">
+        <div class="alert-top">
+          <span class="alert-date"><i class="ti ti-calendar" aria-hidden="true" style="font-size:13px"></i>${fmtDate(d)} · ${fmtTime(d)}</span>
+          <span class="badge badge-neutral">${daysFromNow(d)}</span>
+        </div>
+        <div class="alert-body"><strong>${home} vs ${away}</strong> · ${round}<br>MetLife Stadium, East Rutherford, NJ</div>
+      </div>`;
+    });
+  }
+  document.getElementById('alerts-content').innerHTML = html;
+}
+
+function renderSchedule() {
+  const venueF = document.getElementById('venue-filter').value;
+  const roundF = document.getElementById('round-filter').value;
+  let filtered = allMatches.filter(m => {
+    if (venueF === 'metlife' && !isMetLife(m)) return false;
+    const r = m.tournament_round?.name || m.phase || '';
+    if (roundF !== 'all' && r !== roundF) return false;
+    return true;
+  }).sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+
+  document.getElementById('sched-count').textContent = filtered.length;
+  if (!filtered.length) { document.getElementById('schedule-content').innerHTML = `<div class="empty"><i class="ti ti-calendar-off"></i>No matches for selected filters.</div>`; return; }
+
+  let byDate = {};
+  filtered.forEach(m => { const k = fmtDateLong(new Date(m.scheduled)); (byDate[k]=byDate[k]||[]).push(m); });
+
+  let html = '';
+  Object.keys(byDate).forEach(dk => {
+    html += `<div class="group-header"><i class="ti ti-calendar" style="font-size:13px" aria-hidden="true"></i>${dk}</div>`;
+    byDate[dk].forEach(m => {
+      const d = new Date(m.scheduled);
+      const nj = isMetLife(m);
+      const home = m.home_team?.name || 'TBD';
+      const away = m.away_team?.name || 'TBD';
+      const venue = m.venue?.name || 'TBD';
+      const round = m.tournament_round?.name || m.phase || '—';
+      const status = m.status || 'scheduled';
+      const sc = status==='live'?'status-live':status==='closed'?'status-closed':'status-sched';
+      const sl = status==='live'?'● Live':status==='closed'?'Final':'Scheduled';
+      html += `<div class="match-row${nj?' nj':''}">
+        <div><div class="match-time-col">${fmtTime(d)}</div><div class="match-round">${round}</div></div>
+        <div><div class="match-teams">${home} vs ${away}${nj?'<span class="nj-tag">NJ Impact</span>':''}</div><div class="match-venue">${venue}</div></div>
+        <div class="match-status"><span class="status-pill ${sc}">${sl}</span></div>
+      </div>`;
+    });
+  });
+  document.getElementById('schedule-content').innerHTML = html;
+}
+
+async function loadData() {
+  const icon = document.getElementById('refresh-icon');
+  icon.classList.add('spinning');
+  try {
+    // Bust cache so browser always gets the latest schedule.json from GitHub
+    const res = await fetch('schedule.json?t=' + Date.now());
+    if (!res.ok) throw new Error('schedule.json not found (HTTP ' + res.status + '). Run the GitHub Action first.');
+    const data = await res.json();
+    allMatches = data.matches || [];
+
+    const rounds = [...new Set(allMatches.map(m => m.tournament_round?.name || m.phase || '').filter(Boolean))];
+    const sel = document.getElementById('round-filter');
+    sel.innerHTML = '<option value="all">All rounds</option>';
+    rounds.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent=r; sel.appendChild(o); });
+
+    renderAlerts(allMatches);
+    if (currentTab === 'schedule') renderSchedule();
+
+    const gen = data.generated_at ? new Date(data.generated_at) : null;
+    document.getElementById('last-updated').textContent = gen
+      ? 'Data as of ' + gen.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'America/New_York'}) + ' ' + gen.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'America/New_York'}) + ' EST'
+      : 'Schedule loaded';
+
+  } catch(e) {
+    document.getElementById('alerts-content').innerHTML = `
+      <div class="error-box">
+        <i class="ti ti-alert-circle"></i>
+        <p>${e.message}<br><br>If this is a fresh deployment, go to your repo → <strong>Actions</strong> tab → <strong>Update FIFA Schedule</strong> → <strong>Run workflow</strong> to generate schedule.json for the first time.</p>
+        <button onclick="loadData()">Try again</button>
+      </div>`;
+    document.getElementById('s-total').textContent = '—';
+    document.getElementById('s-week').textContent = '—';
+    document.getElementById('s-next').textContent = '—';
+  } finally {
+    icon.classList.remove('spinning');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
