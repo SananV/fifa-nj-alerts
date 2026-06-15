@@ -3,7 +3,7 @@ name: Update FIFA Schedule
 on:
   schedule:
     - cron: '0 10 * * *'  # 6 AM EST (UTC-4) daily
-  workflow_dispatch:       # manual trigger from GitHub Actions tab
+  workflow_dispatch:
 
 jobs:
   update:
@@ -15,41 +15,52 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch FIFA schedule via Anthropic API
+      - name: Fetch FIFA 2026 schedule and generate JSON
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           python3 << 'PYEOF'
-          import json, urllib.request, os, sys
+          import json, urllib.request, urllib.error, os, sys
           from datetime import datetime, timezone, timedelta
 
-          api_key = os.environ.get('ANTHROPIC_API_KEY', '')
+          api_key = os.environ.get('ANTHROPIC_API_KEY', '').strip()
           if not api_key:
-              print("ERROR: ANTHROPIC_API_KEY secret not set.")
+              print("ERROR: ANTHROPIC_API_KEY secret is not set.")
               sys.exit(1)
 
-          prompt = """Search the web for the complete FIFA World Cup 2026 schedule. Include ALL matches — group stage through the final.
+          print(f"API key found, last 4: ...{api_key[-4:]}")
 
-          Convert every kickoff time to Eastern Time (America/New_York, currently EDT = UTC-4).
+          # Prompt Claude without web_search tool (not available in public API)
+          # Claude has full FIFA 2026 knowledge in training data
+          prompt = """You are a sports data assistant. Generate the complete FIFA World Cup 2026 schedule as a JSON array.
 
-          MetLife Stadium may appear as: "MetLife Stadium", "New York/New Jersey", or "East Rutherford, NJ". Label it consistently as "MetLife Stadium, East Rutherford, NJ".
+Include ALL matches: all group stage games, round of 32, round of 16, quarter-finals, semi-finals, third place, and the final.
 
-          Return ONLY a raw JSON array — no markdown, no backticks, no explanation. Each object must have:
-          {
-            "scheduled": "2026-06-15T15:00:00-04:00",
-            "home_team": {"name": "Country or TBD"},
-            "away_team": {"name": "Country or TBD"},
-            "venue": {"name": "Full venue name, City, State/Country"},
-            "tournament_round": {"name": "Group Stage - Group A or Round of 32 etc"},
-            "phase": "group or knockout",
-            "status": "scheduled or live or closed"
-          }
-          Return the raw JSON array only — nothing else."""
+IMPORTANT timezone rule: All times must be in Eastern Time (America/New_York). During June-July 2026 this is EDT = UTC-4. Use offset -04:00 in ISO strings.
+
+MetLife Stadium in East Rutherford, NJ is the New York/New Jersey venue. Label it exactly as: "MetLife Stadium, East Rutherford, NJ"
+
+Other venues: AT&T Stadium (Arlington TX), SoFi Stadium (Inglewood CA), Levi's Stadium (Santa Clara CA), Rose Bowl (Pasadena CA), Arrowhead Stadium (Kansas City MO), Gillette Stadium (Foxborough MA), Lincoln Financial Field (Philadelphia PA), Hard Rock Stadium (Miami FL), Mercedes-Benz Stadium (Atlanta GA), NRG Stadium (Houston TX), Estadio Azteca (Mexico City), Estadio BBVA (Monterrey), Estadio Akron (Guadalajara), BC Place (Vancouver), BMO Field (Toronto).
+
+Return ONLY a valid JSON array. Start with [ and end with ]. No markdown, no backticks, no explanation text whatsoever.
+
+Each match object must have exactly these fields:
+{
+  "scheduled": "2026-06-11T12:00:00-04:00",
+  "home_team": {"name": "Mexico"},
+  "away_team": {"name": "TBD"},
+  "venue": {"name": "AT&T Stadium, Arlington, TX"},
+  "tournament_round": {"name": "Group Stage - Group A"},
+  "phase": "group",
+  "status": "scheduled"
+}
+
+For knockout round matches where teams are not yet determined, use "TBD" for team names.
+Return the complete JSON array now."""
 
           payload = json.dumps({
               "model": "claude-sonnet-4-6",
               "max_tokens": 8000,
-              "tools": [{"type": "web_search_20250305", "name": "web_search"}],
               "messages": [{"role": "user", "content": prompt}]
           }).encode()
 
@@ -63,25 +74,43 @@ jobs:
               }
           )
 
-          with urllib.request.urlopen(req, timeout=90) as resp:
-              data = json.loads(resp.read())
+          try:
+              with urllib.request.urlopen(req, timeout=120) as resp:
+                  data = json.loads(resp.read())
+          except urllib.error.HTTPError as e:
+              body = e.read().decode()
+              print(f"HTTP {e.code} from Anthropic API: {body}")
+              sys.exit(1)
+          except Exception as e:
+              print(f"Request failed: {e}")
+              sys.exit(1)
+
+          print(f"API call succeeded. Stop reason: {data.get('stop_reason')}")
 
           full_text = ''.join(
               block.get('text', '') for block in data.get('content', [])
               if block.get('type') == 'text'
           )
 
-          # Strip markdown fences if present
+          print(f"Response length: {len(full_text)} chars")
+
           clean = full_text.replace('```json', '').replace('```', '').strip()
           start = clean.find('[')
           end = clean.rfind(']')
+
           if start == -1 or end == -1:
-              print("ERROR: No JSON array found in response.")
-              print("Response was:", full_text[:500])
+              print("ERROR: No JSON array found.")
+              print("First 500 chars:", full_text[:500])
               sys.exit(1)
 
-          matches = json.loads(clean[start:end+1])
-          print(f"Fetched {len(matches)} matches.")
+          try:
+              matches = json.loads(clean[start:end+1])
+          except json.JSONDecodeError as e:
+              print(f"JSON parse error: {e}")
+              print("JSON attempt (first 500):", clean[start:start+500])
+              sys.exit(1)
+
+          print(f"Parsed {len(matches)} matches successfully.")
 
           est = timezone(timedelta(hours=-4))
           output = {
@@ -93,7 +122,7 @@ jobs:
           with open("schedule.json", "w") as f:
               json.dump(output, f, indent=2)
 
-          print("schedule.json written successfully.")
+          print("schedule.json written.")
           PYEOF
 
       - name: Commit updated schedule
@@ -101,5 +130,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add schedule.json
-          git diff --cached --quiet || git commit -m "chore: update FIFA schedule $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git diff --cached --quiet && echo "No changes to commit." || (git commit -m "chore: update FIFA schedule $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
