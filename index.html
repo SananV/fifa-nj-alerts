@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0045)file:///C:/Users/Vivek/Downloads/index_3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FIFA 2026 — NJ Commuter Alerts</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="./index_files/tabler-icons.min.css">
 <style>
   :root {
     --blue: #185FA5;
@@ -181,19 +181,19 @@
 
   <div class="version-banner">
     <i class="ti ti-info-circle" aria-hidden="true"></i>
-    <span>v1.1.0 &nbsp;·&nbsp; <a href="https://sananv.github.io/fifa-nj-alerts/" target="_blank" rel="noopener">sananv.github.io/fifa-nj-alerts</a> &nbsp;·&nbsp; Schedule refreshed daily at 6 AM EST via GitHub Actions &nbsp;·&nbsp; Refresh anytime for latest version</span>
+    <span>v1.1.2 &nbsp;·&nbsp; <a href="https://sananv.github.io/fifa-nj-alerts/" target="_blank" rel="noopener">sananv.github.io/fifa-nj-alerts</a> &nbsp;·&nbsp; Schedule refreshed daily at 6 AM EST via GitHub Actions &nbsp;·&nbsp; Refresh anytime for latest version</span>
   </div>
 
   <nav class="tabs" role="tablist" aria-label="Main navigation">
-    <button class="tab active" role="tab" aria-selected="true" onclick="switchTab('alerts')">
+    <button class="tab active" role="tab" aria-selected="true" onclick="switchTab(&#39;alerts&#39;)">
       <i class="ti ti-bell" aria-hidden="true"></i> NJ Alerts
       <span class="badge badge-danger" id="alert-count" style="margin-left:4px">—</span>
     </button>
-    <button class="tab" role="tab" aria-selected="false" onclick="switchTab('schedule')">
+    <button class="tab" role="tab" aria-selected="false" onclick="switchTab(&#39;schedule&#39;)">
       <i class="ti ti-calendar" aria-hidden="true"></i> Full Schedule
       <span class="badge badge-info" id="sched-count" style="margin-left:4px">—</span>
     </button>
-    <button class="tab" role="tab" aria-selected="false" onclick="switchTab('resources')">
+    <button class="tab" role="tab" aria-selected="false" onclick="switchTab(&#39;resources&#39;)">
       <i class="ti ti-link" aria-hidden="true"></i> Resources
     </button>
   </nav>
@@ -206,26 +206,29 @@
       <div class="stat-card"><div class="stat-num" id="s-next">—</div><div class="stat-label">Days to next MetLife match</div></div>
     </div>
     <div id="alerts-content">
-      <div class="loading"><i class="ti ti-loader spinning"></i>Loading schedule…</div>
-    </div>
+      <div class="error-box">
+        <i class="ti ti-alert-circle"></i>
+        <p>Failed to fetch<br><br>If this is a fresh deployment, go to your repo → <strong>Actions</strong> tab → <strong>Update FIFA Schedule</strong> → <strong>Run workflow</strong> to generate schedule.json for the first time.</p>
+        <button onclick="loadData()">Try again</button>
+      </div></div>
     <div class="resource-section" style="margin-top:2rem">
       <div class="resource-section-header"><i class="ti ti-bus" aria-hidden="true"></i> NJ Transit</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.njtransit.com/bus/service-alerts" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions</div></a>
-        <a class="resource-link" href="https://www.njtransit.com/schedules/bus" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355</div></a>
-        <a class="resource-link" href="https://www.njtransit.com/specialservice" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses for MetLife</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/travel-alerts-to?tab=Bus" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/all-schedules-to" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/press-releases/fifa-world-cup-2026tm-new-york-new-jersey-host-committee-and-nj-transit-announce" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses for MetLife</div></a>
       </div>
       <div class="resource-section-header"><i class="ti ti-road" aria-hidden="true"></i> Lincoln Tunnel &amp; Traffic</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.panynj.gov/tunnels-bridges/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Port Authority</div><div class="r-desc">Tunnel live traffic &amp; tolls</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Port Authority</div><div class="r-desc">Tunnel live traffic &amp; tolls</div></a>
         <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin" aria-hidden="true"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time map</div></a>
         <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map" aria-hidden="true"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY tunnel approach</div></a>
       </div>
       <div class="resource-section-header"><i class="ti ti-trophy" aria-hidden="true"></i> FIFA 2026 &amp; Venue</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026/matches" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">All fixtures &amp; results</div></a>
+        <a class="resource-link" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=US&amp;wtw-filter=ALL" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">All fixtures &amp; results</div></a>
         <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium" aria-hidden="true"></i><div class="r-title">MetLife Stadium</div><div class="r-desc">Parking, transit &amp; fan info</div></a>
-        <a class="resource-link" href="https://www.path.net/schedules/" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train</div><div class="r-desc">Alternative on match days</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train</div><div class="r-desc">Alternative on match days</div></a>
       </div>
     </div>
   </div>
@@ -251,21 +254,21 @@
     <div class="resource-section">
       <div class="resource-section-header"><i class="ti ti-bus" aria-hidden="true"></i> NJ Transit</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.njtransit.com/bus/service-alerts" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions and detours</div></a>
-        <a class="resource-link" href="https://www.njtransit.com/schedules/bus" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355 — Lincoln Tunnel corridor</div></a>
-        <a class="resource-link" href="https://www.njtransit.com/specialservice" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses added for MetLife Stadium events</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/travel-alerts-to?tab=Bus" target="_blank" rel="noopener"><i class="ti ti-alert-circle" aria-hidden="true"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions and detours</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/all-schedules-to" target="_blank" rel="noopener"><i class="ti ti-clock" aria-hidden="true"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355 — Lincoln Tunnel corridor</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/press-releases/fifa-world-cup-2026tm-new-york-new-jersey-host-committee-and-nj-transit-announce" target="_blank" rel="noopener"><i class="ti ti-calendar-event" aria-hidden="true"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses added for MetLife Stadium events</div></a>
       </div>
       <div class="resource-section-header"><i class="ti ti-road" aria-hidden="true"></i> Lincoln Tunnel &amp; Traffic</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.panynj.gov/tunnels-bridges/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Lincoln Tunnel — Port Authority</div><div class="r-desc">Live traffic, tolls, and lane status</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road" aria-hidden="true"></i><div class="r-title">Lincoln Tunnel — Port Authority</div><div class="r-desc">Live traffic, tolls, and lane status</div></a>
         <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin" aria-hidden="true"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time traffic map</div></a>
         <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map" aria-hidden="true"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY side tunnel approach conditions</div></a>
       </div>
       <div class="resource-section-header"><i class="ti ti-trophy" aria-hidden="true"></i> FIFA 2026 &amp; MetLife</div>
       <div class="resource-grid">
-        <a class="resource-link" href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026/matches" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">Complete fixture list, results, groups</div></a>
+        <a class="resource-link" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=US&amp;wtw-filter=ALL" target="_blank" rel="noopener"><i class="ti ti-trophy" aria-hidden="true"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">Complete fixture list, results, groups</div></a>
         <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium" aria-hidden="true"></i><div class="r-title">MetLife Stadium events</div><div class="r-desc">Parking, transit, and fan info</div></a>
-        <a class="resource-link" href="https://www.path.net/schedules/" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train schedules</div><div class="r-desc">Alternative to NJ Transit on match days</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener"><i class="ti ti-train" aria-hidden="true"></i><div class="r-title">PATH train schedules</div><div class="r-desc">Alternative to NJ Transit on match days</div></a>
       </div>
       <div class="resource-section-header"><i class="ti ti-brand-github" aria-hidden="true"></i> This app</div>
       <div class="resource-grid">
@@ -283,7 +286,7 @@
     <a href="https://github.com/SananV/fifa-nj-alerts" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
     All times in Eastern Time (EST/EDT) &nbsp;·&nbsp; Schedule auto-updated daily
   </div>
-  <div class="footer-right">v1.1.0</div>
+  <div class="footer-right">v1.1.2</div>
 </footer>
 
 <script>
@@ -458,5 +461,6 @@ async function loadData() {
 
 document.addEventListener('DOMContentLoaded', loadData);
 </script>
-</body>
-</html>
+
+
+</body></html>
