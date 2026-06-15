@@ -136,10 +136,34 @@ KNOCKOUT_VENUE_MAP = {
     "FINAL-1":        "MetLife Stadium, East Rutherford, NJ",
 }
 
+# Match-specific venue overrides for cases where same group/matchday
+# has two games at different venues. Key = lowercase home team name.
+MATCH_VENUE_OVERRIDE = {
+    # Group I - June 16
+    "france":   "MetLife Stadium, East Rutherford, NJ",    # France vs Senegal
+    "iraq":     "Gillette Stadium, Foxborough, MA",         # Iraq vs Norway
+    # Group I - June 22
+    # France vs Iraq = Lincoln Financial (away team Iraq, home team France -> already handled)
+    # Norway vs Senegal = MetLife
+    "norway":   "MetLife Stadium, East Rutherford, NJ",    # Norway vs Senegal (matchday 2)
+    # Group I - June 26
+    # Norway vs France = Gillette, Senegal vs Iraq = BMO
+    # Norway already mapped, Senegal as home:
+    "senegal":  "BMO Field, Toronto, Canada",              # Senegal vs Iraq
+}
+
+
 def resolve_venue(match, stage_counter):
     stage = match.get('stage', '')
     group = match.get('group', '') or ''
     matchday = match.get('matchday') or 1
+
+    # Check match-specific override first (home team based)
+    home_name = (match.get('homeTeam', {}).get('name') or '').lower().strip()
+    if home_name in MATCH_VENUE_OVERRIDE:
+        # Only apply override for group stage (knockout uses counter map)
+        if stage == 'GROUP_STAGE':
+            return MATCH_VENUE_OVERRIDE[home_name]
 
     # Try group stage lookup
     if stage == 'GROUP_STAGE' and group:
