@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T17:00:46.427190-04:00",
+  "generated_at": "2026-06-15T17:03:34.187678-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -238,7 +238,7 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "live"
+      "status": "closed"
     },
     {
       "scheduled": "2026-06-15T18:00:00-04:00",
