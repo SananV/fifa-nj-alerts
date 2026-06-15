@@ -17,7 +17,7 @@ jobs:
 
       - name: Fetch FIFA schedule
         env:
-FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: python3 fetch_schedule.py
 
       - name: Commit updated schedule
@@ -25,4 +25,4 @@ FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add schedule.json
-          git diff --cached --quiet && echo "No changes." || (git commit -m "chore: update FIFA schedule $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
+          git diff --cached --quiet && echo "No changes." || (git commit -m "chore: update FIFA schedule $(date -u +'%Y-%m-%d %H:%M UTC')" && git pull --rebase && git push)
