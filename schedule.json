@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T17:30:19.648212-04:00",
+  "generated_at": "2026-06-15T20:02:10.339969-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -255,7 +255,7 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "live"
     },
     {
       "scheduled": "2026-06-15T21:00:00-04:00",
@@ -300,7 +300,7 @@
         "name": "Norway"
       },
       "venue": {
-        "name": "MetLife Stadium, East Rutherford, NJ"
+        "name": "Gillette Stadium, Foxborough, MA"
       },
       "tournament_round": {
         "name": "Group Stage - GROUP_I"
@@ -708,7 +708,7 @@
         "name": "Iraq"
       },
       "venue": {
-        "name": "Gillette Stadium, Foxborough, MA"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
         "name": "Group Stage - GROUP_I"
@@ -725,7 +725,7 @@
         "name": "Senegal"
       },
       "venue": {
-        "name": "Gillette Stadium, Foxborough, MA"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
         "name": "Group Stage - GROUP_I"
@@ -1031,7 +1031,7 @@
         "name": "France"
       },
       "venue": {
-        "name": "Arrowhead Stadium, Kansas City, MO"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
         "name": "Group Stage - GROUP_I"
@@ -1048,7 +1048,7 @@
         "name": "Iraq"
       },
       "venue": {
-        "name": "Arrowhead Stadium, Kansas City, MO"
+        "name": "BMO Field, Toronto, Canada"
       },
       "tournament_round": {
         "name": "Group Stage - GROUP_I"
