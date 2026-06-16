@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T20:10:13.527075-04:00",
+  "generated_at": "2026-06-15T21:05:09.504293-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -17,7 +17,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "win_probability": {
+        "home_win": 58,
+        "draw": 21,
+        "away_win": 21
+      }
     },
     {
       "scheduled": "2026-06-11T22:00:00-04:00",
@@ -34,7 +43,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 58,
+        "draw": 21,
+        "away_win": 21
+      }
     },
     {
       "scheduled": "2026-06-12T15:00:00-04:00",
@@ -51,7 +69,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 56,
+        "draw": 21,
+        "away_win": 23
+      }
     },
     {
       "scheduled": "2026-06-12T21:00:00-04:00",
@@ -68,7 +95,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 39,
+        "draw": 24,
+        "away_win": 37
+      }
     },
     {
       "scheduled": "2026-06-13T15:00:00-04:00",
@@ -85,7 +121,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 27,
+        "draw": 22,
+        "away_win": 51
+      }
     },
     {
       "scheduled": "2026-06-13T18:00:00-04:00",
@@ -102,7 +147,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 54,
+        "draw": 22,
+        "away_win": 24
+      }
     },
     {
       "scheduled": "2026-06-13T21:00:00-04:00",
@@ -119,7 +173,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 37,
+        "draw": 24,
+        "away_win": 39
+      }
     },
     {
       "scheduled": "2026-06-14T00:00:00-04:00",
@@ -136,7 +199,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "win_probability": {
+        "home_win": 43,
+        "draw": 24,
+        "away_win": 34
+      }
     },
     {
       "scheduled": "2026-06-14T13:00:00-04:00",
@@ -153,7 +225,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 7,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 63,
+        "draw": 20,
+        "away_win": 17
+      }
     },
     {
       "scheduled": "2026-06-14T16:00:00-04:00",
@@ -170,7 +251,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "win_probability": {
+        "home_win": 50,
+        "draw": 22,
+        "away_win": 28
+      }
     },
     {
       "scheduled": "2026-06-14T19:00:00-04:00",
@@ -187,7 +277,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "win_probability": {
+        "home_win": 30,
+        "draw": 23,
+        "away_win": 47
+      }
     },
     {
       "scheduled": "2026-06-14T22:00:00-04:00",
@@ -204,7 +303,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 49,
+        "draw": 23,
+        "away_win": 29
+      }
     },
     {
       "scheduled": "2026-06-15T12:00:00-04:00",
@@ -221,7 +329,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "win_probability": {
+        "home_win": 66,
+        "draw": 19,
+        "away_win": 14
+      }
     },
     {
       "scheduled": "2026-06-15T15:00:00-04:00",
@@ -238,7 +355,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 59,
+        "draw": 21,
+        "away_win": 20
+      }
     },
     {
       "scheduled": "2026-06-15T18:00:00-04:00",
@@ -255,7 +381,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "closed"
+      "status": "closed",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "win_probability": {
+        "home_win": 23,
+        "draw": 21,
+        "away_win": 56
+      }
     },
     {
       "scheduled": "2026-06-15T21:00:00-04:00",
@@ -272,7 +407,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 50,
+        "draw": 22,
+        "away_win": 28
+      }
     },
     {
       "scheduled": "2026-06-16T15:00:00-04:00",
@@ -289,7 +433,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 58,
+        "draw": 21,
+        "away_win": 21
+      }
     },
     {
       "scheduled": "2026-06-16T18:00:00-04:00",
@@ -306,7 +459,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 28,
+        "draw": 22,
+        "away_win": 49
+      }
     },
     {
       "scheduled": "2026-06-16T21:00:00-04:00",
@@ -323,7 +485,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 65,
+        "draw": 20,
+        "away_win": 15
+      }
     },
     {
       "scheduled": "2026-06-17T00:00:00-04:00",
@@ -340,7 +511,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 33,
+        "draw": 24,
+        "away_win": 43
+      }
     },
     {
       "scheduled": "2026-06-17T13:00:00-04:00",
@@ -357,7 +537,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 64,
+        "draw": 20,
+        "away_win": 16
+      }
     },
     {
       "scheduled": "2026-06-17T16:00:00-04:00",
@@ -374,7 +563,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 50,
+        "draw": 22,
+        "away_win": 28
+      }
     },
     {
       "scheduled": "2026-06-17T19:00:00-04:00",
@@ -391,7 +589,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 43,
+        "draw": 24,
+        "away_win": 34
+      }
     },
     {
       "scheduled": "2026-06-17T22:00:00-04:00",
@@ -408,7 +615,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 21,
+        "draw": 21,
+        "away_win": 58
+      }
     },
     {
       "scheduled": "2026-06-18T12:00:00-04:00",
@@ -425,7 +641,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 33,
+        "draw": 23,
+        "away_win": 44
+      }
     },
     {
       "scheduled": "2026-06-18T15:00:00-04:00",
@@ -442,7 +667,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 62,
+        "draw": 20,
+        "away_win": 18
+      }
     },
     {
       "scheduled": "2026-06-18T18:00:00-04:00",
@@ -459,7 +693,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 44,
+        "draw": 23,
+        "away_win": 33
+      }
     },
     {
       "scheduled": "2026-06-18T21:00:00-04:00",
@@ -476,7 +719,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 44,
+        "draw": 23,
+        "away_win": 33
+      }
     },
     {
       "scheduled": "2026-06-19T15:00:00-04:00",
@@ -493,7 +745,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 27,
+        "draw": 22,
+        "away_win": 51
+      }
     },
     {
       "scheduled": "2026-06-19T18:00:00-04:00",
@@ -510,7 +771,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 19,
+        "draw": 21,
+        "away_win": 60
+      }
     },
     {
       "scheduled": "2026-06-19T20:30:00-04:00",
@@ -527,7 +797,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 71,
+        "draw": 19,
+        "away_win": 10
+      }
     },
     {
       "scheduled": "2026-06-19T23:00:00-04:00",
@@ -544,7 +823,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 48,
+        "draw": 23,
+        "away_win": 30
+      }
     },
     {
       "scheduled": "2026-06-20T13:00:00-04:00",
@@ -561,7 +849,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 54,
+        "draw": 22,
+        "away_win": 24
+      }
     },
     {
       "scheduled": "2026-06-20T16:00:00-04:00",
@@ -578,7 +875,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 60,
+        "draw": 21,
+        "away_win": 19
+      }
     },
     {
       "scheduled": "2026-06-20T20:00:00-04:00",
@@ -595,7 +901,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 51,
+        "draw": 22,
+        "away_win": 27
+      }
     },
     {
       "scheduled": "2026-06-21T00:00:00-04:00",
@@ -612,7 +927,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 25,
+        "draw": 22,
+        "away_win": 53
+      }
     },
     {
       "scheduled": "2026-06-21T12:00:00-04:00",
@@ -629,7 +953,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 63,
+        "draw": 20,
+        "away_win": 17
+      }
     },
     {
       "scheduled": "2026-06-21T15:00:00-04:00",
@@ -646,7 +979,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 58,
+        "draw": 21,
+        "away_win": 21
+      }
     },
     {
       "scheduled": "2026-06-21T18:00:00-04:00",
@@ -663,7 +1005,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 59,
+        "draw": 21,
+        "away_win": 20
+      }
     },
     {
       "scheduled": "2026-06-21T21:00:00-04:00",
@@ -680,7 +1031,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 29,
+        "draw": 23,
+        "away_win": 48
+      }
     },
     {
       "scheduled": "2026-06-22T13:00:00-04:00",
@@ -697,7 +1057,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 69,
+        "draw": 19,
+        "away_win": 12
+      }
     },
     {
       "scheduled": "2026-06-22T17:00:00-04:00",
@@ -714,7 +1083,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 69,
+        "draw": 19,
+        "away_win": 12
+      }
     },
     {
       "scheduled": "2026-06-22T20:00:00-04:00",
@@ -731,7 +1109,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 34,
+        "draw": 24,
+        "away_win": 42
+      }
     },
     {
       "scheduled": "2026-06-22T23:00:00-04:00",
@@ -748,7 +1135,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 37,
+        "draw": 24,
+        "away_win": 39
+      }
     },
     {
       "scheduled": "2026-06-23T13:00:00-04:00",
@@ -765,7 +1161,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 64,
+        "draw": 20,
+        "away_win": 16
+      }
     },
     {
       "scheduled": "2026-06-23T16:00:00-04:00",
@@ -782,7 +1187,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 65,
+        "draw": 20,
+        "away_win": 16
+      }
     },
     {
       "scheduled": "2026-06-23T19:00:00-04:00",
@@ -799,7 +1213,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 20,
+        "draw": 21,
+        "away_win": 59
+      }
     },
     {
       "scheduled": "2026-06-23T22:00:00-04:00",
@@ -816,7 +1239,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 58,
+        "draw": 21,
+        "away_win": 21
+      }
     },
     {
       "scheduled": "2026-06-24T15:00:00-04:00",
@@ -833,7 +1265,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 45,
+        "draw": 23,
+        "away_win": 32
+      }
     },
     {
       "scheduled": "2026-06-24T15:00:00-04:00",
@@ -850,7 +1291,16 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 27,
+        "draw": 22,
+        "away_win": 50
+      }
     },
     {
       "scheduled": "2026-06-24T18:00:00-04:00",
@@ -867,7 +1317,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 61,
+        "draw": 20,
+        "away_win": 19
+      }
     },
     {
       "scheduled": "2026-06-24T18:00:00-04:00",
@@ -884,7 +1343,16 @@
         "name": "Group Stage - GROUP_C"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 10,
+        "draw": 19,
+        "away_win": 71
+      }
     },
     {
       "scheduled": "2026-06-24T21:00:00-04:00",
@@ -901,7 +1369,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 17,
+        "draw": 20,
+        "away_win": 63
+      }
     },
     {
       "scheduled": "2026-06-24T21:00:00-04:00",
@@ -918,7 +1395,16 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 26,
+        "draw": 22,
+        "away_win": 52
+      }
     },
     {
       "scheduled": "2026-06-25T16:00:00-04:00",
@@ -935,7 +1421,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 26,
+        "draw": 22,
+        "away_win": 52
+      }
     },
     {
       "scheduled": "2026-06-25T16:00:00-04:00",
@@ -952,7 +1447,16 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 35,
+        "draw": 24,
+        "away_win": 41
+      }
     },
     {
       "scheduled": "2026-06-25T19:00:00-04:00",
@@ -969,7 +1473,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 17,
+        "draw": 20,
+        "away_win": 63
+      }
     },
     {
       "scheduled": "2026-06-25T19:00:00-04:00",
@@ -986,7 +1499,16 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 43,
+        "draw": 24,
+        "away_win": 34
+      }
     },
     {
       "scheduled": "2026-06-25T22:00:00-04:00",
@@ -1003,7 +1525,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 47,
+        "draw": 23,
+        "away_win": 30
+      }
     },
     {
       "scheduled": "2026-06-25T22:00:00-04:00",
@@ -1020,7 +1551,16 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 26,
+        "draw": 22,
+        "away_win": 52
+      }
     },
     {
       "scheduled": "2026-06-26T15:00:00-04:00",
@@ -1037,7 +1577,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 18,
+        "draw": 20,
+        "away_win": 61
+      }
     },
     {
       "scheduled": "2026-06-26T15:00:00-04:00",
@@ -1054,7 +1603,16 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 54,
+        "draw": 22,
+        "away_win": 25
+      }
     },
     {
       "scheduled": "2026-06-26T20:00:00-04:00",
@@ -1071,7 +1629,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 30,
+        "draw": 23,
+        "away_win": 47
+      }
     },
     {
       "scheduled": "2026-06-26T20:00:00-04:00",
@@ -1088,7 +1655,16 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 34,
+        "draw": 24,
+        "away_win": 42
+      }
     },
     {
       "scheduled": "2026-06-26T23:00:00-04:00",
@@ -1105,7 +1681,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 14,
+        "draw": 19,
+        "away_win": 67
+      }
     },
     {
       "scheduled": "2026-06-26T23:00:00-04:00",
@@ -1122,7 +1707,16 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 36,
+        "draw": 24,
+        "away_win": 39
+      }
     },
     {
       "scheduled": "2026-06-27T17:00:00-04:00",
@@ -1139,7 +1733,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 13,
+        "draw": 19,
+        "away_win": 68
+      }
     },
     {
       "scheduled": "2026-06-27T17:00:00-04:00",
@@ -1156,7 +1759,16 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 55,
+        "draw": 21,
+        "away_win": 24
+      }
     },
     {
       "scheduled": "2026-06-27T19:30:00-04:00",
@@ -1173,7 +1785,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 31,
+        "draw": 23,
+        "away_win": 46
+      }
     },
     {
       "scheduled": "2026-06-27T19:30:00-04:00",
@@ -1190,7 +1811,16 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 38,
+        "draw": 25,
+        "away_win": 38
+      }
     },
     {
       "scheduled": "2026-06-27T22:00:00-04:00",
@@ -1207,7 +1837,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 15,
+        "draw": 20,
+        "away_win": 66
+      }
     },
     {
       "scheduled": "2026-06-27T22:00:00-04:00",
@@ -1224,7 +1863,16 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 44,
+        "draw": 23,
+        "away_win": 32
+      }
     },
     {
       "scheduled": "2026-06-28T15:00:00-04:00",
@@ -1241,7 +1889,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-29T13:00:00-04:00",
@@ -1258,7 +1911,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-29T16:30:00-04:00",
@@ -1275,7 +1933,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-29T21:00:00-04:00",
@@ -1292,7 +1955,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-30T13:00:00-04:00",
@@ -1309,7 +1977,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-30T17:00:00-04:00",
@@ -1326,7 +1999,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-06-30T21:00:00-04:00",
@@ -1343,7 +2021,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-01T12:00:00-04:00",
@@ -1360,7 +2043,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-01T16:00:00-04:00",
@@ -1377,7 +2065,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-01T20:00:00-04:00",
@@ -1394,7 +2087,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-02T15:00:00-04:00",
@@ -1411,7 +2109,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-02T19:00:00-04:00",
@@ -1428,7 +2131,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-02T23:00:00-04:00",
@@ -1445,7 +2153,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-03T14:00:00-04:00",
@@ -1462,7 +2175,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-03T18:00:00-04:00",
@@ -1479,7 +2197,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-03T21:30:00-04:00",
@@ -1496,7 +2219,12 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-04T13:00:00-04:00",
@@ -1513,7 +2241,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-04T17:00:00-04:00",
@@ -1530,7 +2263,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-05T16:00:00-04:00",
@@ -1547,7 +2285,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-05T20:00:00-04:00",
@@ -1564,7 +2307,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-06T15:00:00-04:00",
@@ -1581,7 +2329,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-06T20:00:00-04:00",
@@ -1598,7 +2351,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-07T12:00:00-04:00",
@@ -1615,7 +2373,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-07T16:00:00-04:00",
@@ -1632,7 +2395,12 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-09T16:00:00-04:00",
@@ -1649,7 +2417,12 @@
         "name": "Quarter-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-10T15:00:00-04:00",
@@ -1666,7 +2439,12 @@
         "name": "Quarter-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-11T17:00:00-04:00",
@@ -1683,7 +2461,12 @@
         "name": "Quarter-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-11T21:00:00-04:00",
@@ -1700,7 +2483,12 @@
         "name": "Quarter-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-14T15:00:00-04:00",
@@ -1717,7 +2505,12 @@
         "name": "Semi-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-15T15:00:00-04:00",
@@ -1734,7 +2527,12 @@
         "name": "Semi-final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-18T17:00:00-04:00",
@@ -1751,7 +2549,12 @@
         "name": "Third place"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
     },
     {
       "scheduled": "2026-07-19T15:00:00-04:00",
@@ -1768,7 +2571,650 @@
         "name": "Final"
       },
       "phase": "knockout",
-      "status": "scheduled"
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": null
+    }
+  ],
+  "standings": [
+    {
+      "group": "Group A",
+      "table": [
+        {
+          "position": 1,
+          "team": "Mexico",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "South Korea",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 1,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team": "Czechia",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 2,
+          "gd": -1,
+          "points": 0
+        },
+        {
+          "position": 4,
+          "team": "South Africa",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 2,
+          "gd": -2,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group B",
+      "table": [
+        {
+          "position": 1,
+          "team": "Switzerland",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 2,
+          "team": "Canada",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 3,
+          "team": "Qatar",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Bosnia-Herzegovina",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "group": "Group C",
+      "table": [
+        {
+          "position": 1,
+          "team": "Scotland",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 1,
+          "ga": 0,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "Morocco",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 3,
+          "team": "Brazil",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Haiti",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group D",
+      "table": [
+        {
+          "position": 1,
+          "team": "United States",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "Australia",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 2,
+          "ga": 0,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team": "Turkey",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 2,
+          "gd": -2,
+          "points": 0
+        },
+        {
+          "position": 4,
+          "team": "Paraguay",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 4,
+          "gd": -3,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group E",
+      "table": [
+        {
+          "position": 1,
+          "team": "Germany",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 7,
+          "ga": 1,
+          "gd": 6,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "Ivory Coast",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 1,
+          "ga": 0,
+          "gd": 1,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team": "Ecuador",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
+        },
+        {
+          "position": 4,
+          "team": "Cura\u00e7ao",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 7,
+          "gd": -6,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group F",
+      "table": [
+        {
+          "position": 1,
+          "team": "Sweden",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 5,
+          "ga": 1,
+          "gd": 4,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "Japan",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 2,
+          "team": "Netherlands",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Tunisia",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 5,
+          "gd": -4,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group G",
+      "table": [
+        {
+          "position": 1,
+          "team": "Iran",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 1,
+          "team": "New Zealand",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 3,
+          "team": "Belgium",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Egypt",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "group": "Group H",
+      "table": [
+        {
+          "position": 1,
+          "team": "Saudi Arabia",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 1,
+          "team": "Uruguay",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 3,
+          "team": "Spain",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Cape Verde Islands",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "group": "Group I",
+      "table": [
+        {
+          "position": 1,
+          "team": "France",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Iraq",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Norway",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Senegal",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group J",
+      "table": [
+        {
+          "position": 1,
+          "team": "Algeria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Argentina",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Jordan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Austria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group K",
+      "table": [
+        {
+          "position": 1,
+          "team": "Congo DR",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Colombia",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Portugal",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Uzbekistan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "group": "Group L",
+      "table": [
+        {
+          "position": 1,
+          "team": "England",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Ghana",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Croatia",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        },
+        {
+          "position": 1,
+          "team": "Panama",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 0,
+          "ga": 0,
+          "gd": 0,
+          "points": 0
+        }
+      ]
     }
   ]
 }
