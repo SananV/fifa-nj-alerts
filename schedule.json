@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T20:02:10.339969-04:00",
+  "generated_at": "2026-06-15T20:10:13.527075-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -255,7 +255,7 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "live"
+      "status": "closed"
     },
     {
       "scheduled": "2026-06-15T21:00:00-04:00",
@@ -1235,10 +1235,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1252,10 +1252,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "ATT Stadium, Arlington, TX"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1269,10 +1269,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "SoFi Stadium, Inglewood, CA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1286,10 +1286,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Hard Rock Stadium, Miami Gardens, FL"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1303,10 +1303,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Levis Stadium, Santa Clara, CA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1320,10 +1320,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Arrowhead Stadium, Kansas City, MO"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1337,10 +1337,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Lincoln Financial Field, Philadelphia, PA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1354,10 +1354,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Mercedes-Benz Stadium, Atlanta, GA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1371,10 +1371,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Rose Bowl, Pasadena, CA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1388,10 +1388,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "NRG Stadium, Houston, TX"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1405,10 +1405,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Gillette Stadium, Foxborough, MA"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1422,10 +1422,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "BC Place, Vancouver, Canada"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1439,10 +1439,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "BMO Field, Toronto, Canada"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1456,10 +1456,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Estadio Azteca, Mexico City, Mexico"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1473,10 +1473,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Estadio BBVA, Monterrey, Mexico"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1490,10 +1490,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Estadio Akron, Guadalajara, Mexico"
       },
       "tournament_round": {
-        "name": "LAST_32"
+        "name": "Round of 32"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1507,10 +1507,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1524,10 +1524,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "SoFi Stadium, Inglewood, CA"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1541,10 +1541,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "ATT Stadium, Arlington, TX"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1558,10 +1558,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Hard Rock Stadium, Miami Gardens, FL"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1575,10 +1575,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Levis Stadium, Santa Clara, CA"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1592,10 +1592,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Mercedes-Benz Stadium, Atlanta, GA"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1609,10 +1609,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Rose Bowl, Pasadena, CA"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
@@ -1626,10 +1626,10 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Venue TBD"
+        "name": "Arrowhead Stadium, Kansas City, MO"
       },
       "tournament_round": {
-        "name": "LAST_16"
+        "name": "Round of 16"
       },
       "phase": "knockout",
       "status": "scheduled"
