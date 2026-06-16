@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T21:15:43.092186-04:00",
+  "generated_at": "2026-06-15T21:23:19.435191-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -407,10 +407,10 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "live",
+      "status": "scheduled",
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "win_probability": {
         "home_win": 50,
