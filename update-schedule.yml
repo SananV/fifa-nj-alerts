@@ -11,7 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+      - name: Reset to clean state
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
       - name: Fetch FIFA schedule
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
@@ -20,8 +26,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git checkout origin/main -- . 2>/dev/null || true
           git add schedule.json
           git diff --cached --quiet && echo "No changes." || git commit -m "update schedule"
-          git push origin HEAD:main --force-with-lease
+          git push origin main --force-with-lease
