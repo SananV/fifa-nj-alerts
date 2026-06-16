@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA 2026 — NJ Commuter Alerts</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4JKFZEQXFV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4JKFZEQXFV');
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+:root {
+  --blue: #185FA5; --blue-light: #E6F1FB; --blue-mid: #378ADD;
+  --red: #E24B4A; --red-light: #FCEBEB;
+  --amber: #BA7517; --amber-light: #FAEEDA;
+  --green: #3B6D11; --green-light: #EAF3DE;
+  --gray-50: #F1EFE8; --gray-600: #5F5E5A;
+  --text-primary: #1a1a18; --text-secondary: #5F5E5A; --text-muted: #888780;
+  --border: rgba(0,0,0,0.12); --border-strong: rgba(0,0,0,0.22);
+  --bg: #ffffff; --bg-secondary: #F7F6F2; --bg-tertiary: #EFEDE7;
+  --radius-md: 8px; --radius-lg: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #EEECEA; --text-secondary: #B4B2A9; --text-muted: #888780;
+    --border: rgba(255,255,255,0.12); --border-strong: rgba(255,255,255,0.22);
+    --bg: #1C1C1A; --bg-secondary: #252523; --bg-tertiary: #2E2E2B;
+    --blue-light: #0C447C; --red-light: #501313; --amber-light: #412402;
+    --green-light: #173404; --gray-50: #2C2C2A;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg-tertiary); color: var(--text-primary); min-height: 100vh; }
+
+/* MATCHDAY BANNER */
+.matchday-banner { background: var(--red); color: white; padding: 10px 1.5rem; text-align: center; font-size: 14px; font-weight: 500; display: none; position: sticky; top: 0; z-index: 200; }
+.matchday-banner.visible { display: block; }
+.matchday-banner a { color: white; text-decoration: underline; }
+
+/* LIVE TICKER */
+.live-ticker { background: #1a1a18; color: #fff; padding: 8px 1.5rem; font-size: 12px; display: none; overflow: hidden; }
+.live-ticker.visible { display: flex; align-items: center; gap: 12px; }
+.ticker-label { background: var(--red); color: white; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+.ticker-scroll { display: flex; gap: 24px; overflow: hidden; white-space: nowrap; }
+.ticker-match { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.ticker-score { font-weight: 600; color: #ffd700; }
+
+/* HEADER */
+.site-header { background: var(--bg); border-bottom: 0.5px solid var(--border); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
+.header-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.header-brand { display: flex; align-items: center; gap: 10px; }
+.header-brand .logo { width: 32px; height: 32px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; }
+.header-brand h1 { font-size: 15px; font-weight: 500; }
+.header-brand span { font-size: 12px; color: var(--text-secondary); }
+.header-right { display: flex; align-items: center; gap: 10px; }
+.last-updated { font-size: 11px; color: var(--text-muted); }
+.refresh-btn { background: none; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 6px 12px; font-size: 13px; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.refresh-btn:hover { background: var(--bg-secondary); }
+.spinning { animation: spin 1s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* MAIN */
+.main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+
+/* VERSION BANNER */
+.version-banner { background: var(--blue-light); border: 0.5px solid var(--blue-mid); border-radius: var(--radius-md); padding: 8px 14px; font-size: 12px; color: var(--blue); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.version-banner a { color: var(--blue); font-weight: 500; }
+
+/* COUNTDOWN */
+.countdown-box { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px 20px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.countdown-label { font-size: 13px; color: var(--text-secondary); }
+.countdown-match { font-size: 14px; font-weight: 500; color: var(--text-primary); margin-top: 2px; }
+.countdown-timer { font-size: 22px; font-weight: 500; color: var(--red); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.countdown-timer.soon { animation: pulse 1s infinite; }
+
+/* TABS */
+.tabs { display: flex; border-bottom: 0.5px solid var(--border); margin-bottom: 1.5rem; overflow-x: auto; }
+.tab { padding: 10px 18px; font-size: 14px; font-weight: 400; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -0.5px; background: none; border-top: none; border-left: none; border-right: none; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.tab.active { color: var(--text-primary); border-bottom: 2px solid var(--text-primary); font-weight: 500; }
+.tab:hover:not(.active) { color: var(--text-primary); }
+
+/* BADGES */
+.badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; }
+.badge-danger { background: var(--red-light); color: var(--red); }
+.badge-warning { background: var(--amber-light); color: var(--amber); }
+.badge-info { background: var(--blue-light); color: var(--blue); }
+.badge-success { background: var(--green-light); color: var(--green); }
+.badge-neutral { background: var(--gray-50); color: var(--gray-600); }
+
+/* STATS */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+.stat-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; text-align: center; }
+.stat-num { font-size: 26px; font-weight: 500; }
+.stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 3px; }
+
+/* ALERT CARDS */
+.alert-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+.alert-card.high { border-left: 3px solid var(--red); }
+.alert-card.medium { border-left: 3px solid var(--amber); }
+.alert-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+.alert-date { font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 5px; }
+.alert-teams { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.alert-meta { font-size: 13px; color: var(--text-secondary); }
+.alert-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.pill { font-size: 11px; padding: 3px 10px; border-radius: 10px; border: 0.5px solid var(--border); color: var(--text-secondary); display: flex; align-items: center; gap: 4px; }
+.pill-danger { background: var(--red-light); color: var(--red); border: none; }
+
+/* WIN PROBABILITY */
+.prob-bar { margin-top: 10px; }
+.prob-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
+.prob-track { height: 6px; border-radius: 3px; background: var(--bg-tertiary); display: flex; overflow: hidden; gap: 0; }
+.prob-home { background: var(--blue); border-radius: 3px 0 0 3px; flex-shrink: 0; }
+.prob-draw { background: var(--gray-600); flex-shrink: 0; }
+.prob-away { background: var(--amber); border-radius: 0 3px 3px 0; flex-shrink: 0; }
+.prob-home-num { color: var(--blue); font-size: 11px; font-weight: 500; }
+.prob-draw-num { color: var(--gray-600); font-size: 11px; font-weight: 500; }
+.prob-away-num { color: var(--amber); font-size: 11px; font-weight: 500; }
+
+/* ALERT ACTIONS */
+.alert-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.action-btn { font-size: 11px; padding: 5px 12px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg); color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.action-btn:hover { background: var(--bg-secondary); }
+.action-btn.primary { background: var(--blue); color: white; border-color: var(--blue); }
+.action-btn.primary:hover { opacity: 0.9; }
+
+/* TRAFFIC BADGE */
+.traffic-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 3px 10px; border-radius: 10px; font-weight: 500; }
+.traffic-high { background: var(--red-light); color: var(--red); }
+.traffic-med { background: var(--amber-light); color: var(--amber); }
+.traffic-low { background: var(--green-light); color: var(--green); }
+
+/* SECTION LABELS */
+.section-label { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; margin: 1.5rem 0 8px; }
+
+/* MY TEAM FILTER */
+.my-team-row { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 10px 14px; flex-wrap: wrap; }
+.my-team-row label { font-size: 13px; color: var(--text-secondary); white-space: nowrap; }
+.my-team-row select { font-size: 13px; padding: 6px 10px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg); color: var(--text-primary); flex: 1; min-width: 140px; }
+.my-team-row .clear-btn { font-size: 12px; color: var(--text-muted); cursor: pointer; white-space: nowrap; }
+.my-team-row .clear-btn:hover { color: var(--red); }
+
+/* NOTIFY NEIGHBOR */
+.notify-bar { background: var(--blue-light); border: 0.5px solid var(--blue-mid); border-radius: var(--radius-lg); padding: 12px 16px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.notify-bar p { font-size: 13px; color: var(--blue); }
+.notify-bar button { font-size: 12px; padding: 6px 14px; background: var(--blue); color: white; border: none; border-radius: var(--radius-md); cursor: pointer; white-space: nowrap; }
+
+/* FULL SCHEDULE */
+.filter-row { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+.filter-row label { font-size: 13px; color: var(--text-secondary); }
+.filter-row select { font-size: 13px; padding: 7px 10px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg); color: var(--text-primary); }
+.group-header { font-size: 12px; font-weight: 500; color: var(--text-secondary); padding: 6px 0 4px; border-bottom: 0.5px solid var(--border); margin-bottom: 6px; margin-top: 20px; display: flex; align-items: center; gap: 6px; }
+.group-header:first-of-type { margin-top: 0; }
+.match-row { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px 14px; margin-bottom: 6px; }
+.match-row:hover { background: var(--bg-secondary); }
+.match-row.nj { border-left: 3px solid var(--red); }
+.match-row.my-team-highlight { border-left: 3px solid var(--blue); background: var(--blue-light); }
+.match-row-top { display: grid; grid-template-columns: 90px 1fr 130px; align-items: center; gap: 12px; }
+.match-time-col { font-size: 13px; font-weight: 500; }
+.match-round-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.match-teams { font-size: 14px; font-weight: 500; }
+.match-venue { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.match-right { text-align: right; }
+.nj-tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 1px 6px; background: var(--red-light); color: var(--red); border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+.my-tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 1px 6px; background: var(--blue-light); color: var(--blue); border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+.status-pill { font-size: 11px; padding: 3px 8px; border-radius: 6px; display: inline-block; }
+.status-live { background: var(--red-light); color: var(--red); font-weight: 500; }
+.status-sched { background: var(--gray-50); color: var(--gray-600); }
+.status-closed { background: var(--green-light); color: var(--green); }
+.match-prob-mini { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* STANDINGS */
+.group-standings { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 16px; }
+.group-standings-header { padding: 10px 14px; background: var(--bg-secondary); border-bottom: 0.5px solid var(--border); font-size: 12px; font-weight: 600; color: var(--text-primary); }
+.standings-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.standings-table th { padding: 6px 10px; text-align: center; color: var(--text-muted); font-weight: 500; border-bottom: 0.5px solid var(--border); }
+.standings-table th:first-child { text-align: left; }
+.standings-table td { padding: 8px 10px; text-align: center; border-bottom: 0.5px solid var(--border); }
+.standings-table td:first-child { text-align: left; font-weight: 500; }
+.standings-table tr:last-child td { border-bottom: none; }
+.standings-table tr.qualified td { background: var(--green-light); }
+.standings-table tr.playoff td { background: var(--amber-light); }
+.pos-num { color: var(--text-muted); margin-right: 8px; font-weight: 400; }
+.pts { font-weight: 600; color: var(--text-primary); }
+
+/* RESOURCES */
+.resource-section { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 16px; }
+.resource-section-header { padding: 10px 16px; border-bottom: 0.5px solid var(--border); font-size: 12px; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.04em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+.resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.resource-link { padding: 12px 14px; border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-decoration: none; display: block; transition: background 0.12s; }
+.resource-link:hover { background: var(--bg-secondary); }
+.resource-link i { font-size: 18px; color: var(--text-secondary); display: block; margin-bottom: 6px; }
+.resource-link .r-title { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 2px; }
+.resource-link .r-desc { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+/* FOOTER */
+.site-footer { max-width: 960px; margin: 2rem auto 0; padding: 1rem 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-top: 0.5px solid var(--border); }
+.footer-left { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.footer-left a { color: var(--blue); text-decoration: none; }
+.footer-right { font-size: 11px; color: var(--text-muted); }
+
+/* LOADING / EMPTY */
+.loading { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 14px; }
+.loading i { font-size: 28px; display: block; margin-bottom: 12px; }
+.empty { text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary); font-size: 13px; }
+.error-box { background: var(--red-light); border: 0.5px solid var(--red); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; text-align: center; }
+.error-box i { font-size: 28px; color: var(--red); display: block; margin-bottom: 10px; }
+.error-box p { font-size: 13px; color: var(--red); margin-bottom: 12px; line-height: 1.6; }
+.error-box button { padding: 8px 20px; border: 0.5px solid var(--red); border-radius: var(--radius-md); background: var(--bg); color: var(--red); font-size: 13px; cursor: pointer; }
+
+/* TOAST */
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #1a1a18; color: white; padding: 10px 20px; border-radius: var(--radius-md); font-size: 13px; z-index: 999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.toast.show { opacity: 1; }
+
+@media (max-width: 640px) {
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .match-row-top { grid-template-columns: 75px 1fr; }
+  .match-right { display: none; }
+  .header-brand span { display: none; }
+  .countdown-timer { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="matchday-banner" id="matchday-banner"></div>
+<div class="live-ticker" id="live-ticker">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-scroll" id="ticker-scroll"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="logo"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+      <div>
+        <h1>FIFA 2026 — NJ Commuter Alerts</h1>
+        <span>MetLife Stadium · Lincoln Tunnel · NJ Transit</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="last-updated" id="last-updated"></span>
+      <button class="refresh-btn" onclick="loadData()" aria-label="Refresh">
+        <i class="ti ti-refresh" id="refresh-icon"></i> Refresh
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div class="version-banner">
+    <i class="ti ti-info-circle"></i>
+    <span>v2.0.4 &nbsp;·&nbsp; <a href="https://sananv.github.io/fifa-nj-alerts/" target="_blank">sananv.github.io/fifa-nj-alerts</a> &nbsp;·&nbsp; Schedule refreshed daily at 6 AM EST &nbsp;·&nbsp; Refresh anytime for latest version</span>
+  </div>
+
+  <div class="countdown-box" id="countdown-box" style="display:none">
+    <div>
+      <div class="countdown-label">Next MetLife Stadium match</div>
+      <div class="countdown-match" id="countdown-match"></div>
+    </div>
+    <div class="countdown-timer" id="countdown-timer">--:--:--</div>
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" onclick="switchTab('alerts')"><i class="ti ti-bell" style="font-size:15px"></i> NJ Alerts <span class="badge badge-danger" id="alert-count" style="margin-left:4px">—</span></button>
+    <button class="tab" onclick="switchTab('schedule')"><i class="ti ti-calendar" style="font-size:15px"></i> Full Schedule <span class="badge badge-info" id="sched-count" style="margin-left:4px">—</span></button>
+    <button class="tab" onclick="switchTab('standings')"><i class="ti ti-table" style="font-size:15px"></i> Standings</button>
+    <button class="tab" onclick="switchTab('resources')"><i class="ti ti-link" style="font-size:15px"></i> Resources</button>
+  </nav>
+
+  <!-- ALERTS TAB -->
+  <div id="tab-alerts">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num" id="s-total">—</div><div class="stat-label">MetLife matches total</div></div>
+      <div class="stat-card"><div class="stat-num" id="s-week">—</div><div class="stat-label">Impacting next 7 days</div></div>
+      <div class="stat-card"><div class="stat-num" id="s-next">—</div><div class="stat-label">Days to next MetLife match</div></div>
+    </div>
+    <div class="notify-bar" id="notify-bar" style="display:none">
+      <p><i class="ti ti-mail" style="font-size:14px;vertical-align:-2px;margin-right:4px"></i> Share upcoming MetLife match alerts with your neighbors</p>
+      <button onclick="notifyNeighbor()">📧 Notify a neighbor</button>
+    </div>
+    <div id="alerts-content"><div class="loading"><i class="ti ti-loader spinning"></i>Loading schedule…</div></div>
+
+    <!-- RESOURCES IN ALERTS -->
+    <div class="resource-section" style="margin-top:2rem">
+      <div class="resource-section-header"><i class="ti ti-bus"></i> NJ Transit</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.njtransit.com/travel-alerts-to?tab=Bus" target="_blank" rel="noopener"><i class="ti ti-alert-circle"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/all-schedules-to" target="_blank" rel="noopener"><i class="ti ti-clock"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/press-releases/fifa-world-cup-2026tm-new-york-new-jersey-host-committee-and-nj-transit-announce" target="_blank" rel="noopener"><i class="ti ti-calendar-event"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses for MetLife</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-road"></i> Lincoln Tunnel &amp; Traffic</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road"></i><div class="r-title">Port Authority</div><div class="r-desc">Tunnel live traffic &amp; tolls</div></a>
+        <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time map</div></a>
+        <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY tunnel approach</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-trophy"></i> FIFA 2026 &amp; Venue</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=US&wtw-filter=ALL" target="_blank" rel="noopener"><i class="ti ti-trophy"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">All fixtures &amp; results</div></a>
+        <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium"></i><div class="r-title">MetLife Stadium</div><div class="r-desc">Parking, transit &amp; fan info</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener"><i class="ti ti-train"></i><div class="r-title">PATH train</div><div class="r-desc">Alternative on match days</div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE TAB -->
+  <div id="tab-schedule" style="display:none">
+    <div class="my-team-row">
+      <label><i class="ti ti-star" style="font-size:14px;vertical-align:-2px;margin-right:4px"></i>My team</label>
+      <select id="my-team-select" onchange="saveMyTeam()"><option value="">— Select your team —</option></select>
+      <span class="clear-btn" onclick="clearMyTeam()">✕ Clear</span>
+    </div>
+    <div class="filter-row">
+      <label>Venue</label>
+      <select id="venue-filter" onchange="renderSchedule()">
+        <option value="all">All venues</option>
+        <option value="metlife">MetLife only</option>
+      </select>
+      <label>Round</label>
+      <select id="round-filter" onchange="renderSchedule()"><option value="all">All rounds</option></select>
+    </div>
+    <div id="schedule-content"><div class="loading">Loading…</div></div>
+  </div>
+
+  <!-- STANDINGS TAB -->
+  <div id="tab-standings" style="display:none">
+    <div id="standings-content"><div class="loading"><i class="ti ti-loader spinning"></i>Loading standings…</div></div>
+  </div>
+
+  <!-- RESOURCES TAB -->
+  <div id="tab-resources" style="display:none">
+    <div class="resource-section">
+      <div class="resource-section-header"><i class="ti ti-bus"></i> NJ Transit</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.njtransit.com/travel-alerts-to?tab=Bus" target="_blank" rel="noopener"><i class="ti ti-alert-circle"></i><div class="r-title">Service alerts</div><div class="r-desc">Real-time bus disruptions and detours</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/all-schedules-to" target="_blank" rel="noopener"><i class="ti ti-clock"></i><div class="r-title">Bus schedules</div><div class="r-desc">Routes 320, 351, 355 — Lincoln Tunnel corridor</div></a>
+        <a class="resource-link" href="https://www.njtransit.com/press-releases/fifa-world-cup-2026tm-new-york-new-jersey-host-committee-and-nj-transit-announce" target="_blank" rel="noopener"><i class="ti ti-calendar-event"></i><div class="r-title">Special event service</div><div class="r-desc">Extra buses for MetLife Stadium events</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-road"></i> Lincoln Tunnel &amp; Traffic</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel.html" target="_blank" rel="noopener"><i class="ti ti-road"></i><div class="r-title">Lincoln Tunnel — Port Authority</div><div class="r-desc">Live traffic, tolls, and lane status</div></a>
+        <a class="resource-link" href="https://511nj.org/" target="_blank" rel="noopener"><i class="ti ti-map-pin"></i><div class="r-title">511NJ traffic</div><div class="r-desc">NJ statewide real-time traffic map</div></a>
+        <a class="resource-link" href="https://www.511ny.org/" target="_blank" rel="noopener"><i class="ti ti-map"></i><div class="r-title">511NY traffic</div><div class="r-desc">NY side tunnel approach conditions</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-trophy"></i> FIFA 2026 &amp; MetLife</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=US&wtw-filter=ALL" target="_blank" rel="noopener"><i class="ti ti-trophy"></i><div class="r-title">Official FIFA schedule</div><div class="r-desc">Complete fixture list, results, groups</div></a>
+        <a class="resource-link" href="https://www.metlifestadium.com/events" target="_blank" rel="noopener"><i class="ti ti-building-stadium"></i><div class="r-title">MetLife Stadium events</div><div class="r-desc">Parking, transit, and fan info</div></a>
+        <a class="resource-link" href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener"><i class="ti ti-train"></i><div class="r-title">PATH train schedules</div><div class="r-desc">Alternative to NJ Transit on match days</div></a>
+      </div>
+      <div class="resource-section-header"><i class="ti ti-brand-github"></i> This app</div>
+      <div class="resource-grid">
+        <a class="resource-link" href="https://github.com/SananV/fifa-nj-alerts" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i><div class="r-title">Source on GitHub</div><div class="r-desc">SananV/fifa-nj-alerts — public repo</div></a>
+        <a class="resource-link" href="https://sananv.github.io/fifa-nj-alerts/" target="_blank" rel="noopener"><i class="ti ti-external-link"></i><div class="r-title">Live app URL</div><div class="r-desc">Share this link with commuters</div></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">Built for NJ Transit commuters via Lincoln Tunnel to NYC &nbsp;·&nbsp; <a href="https://github.com/SananV/fifa-nj-alerts" target="_blank">GitHub</a> &nbsp;·&nbsp; All times in Eastern Time (EST/EDT)</div>
+  <div class="footer-right">v2.0.4</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ---------------------------------------------------------------------------
+// COUNTRY FLAGS
+// ---------------------------------------------------------------------------
+const FLAGS = {
+  "France":"🇫🇷","Brazil":"🇧🇷","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Spain":"🇪🇸","Argentina":"🇦🇷",
+  "Portugal":"🇵🇹","Netherlands":"🇳🇱","Germany":"🇩🇪","Belgium":"🇧🇪","Italy":"🇮🇹",
+  "Uruguay":"🇺🇾","Colombia":"🇨🇴","Mexico":"🇲🇽","Croatia":"🇭🇷","Denmark":"🇩🇰",
+  "Switzerland":"🇨🇭","USA":"🇺🇸","United States":"🇺🇸","Morocco":"🇲🇦","Japan":"🇯🇵",
+  "Senegal":"🇸🇳","South Korea":"🇰🇷","Korea Republic":"🇰🇷","Australia":"🇦🇺",
+  "Ecuador":"🇪🇨","Poland":"🇵🇱","Sweden":"🇸🇪","Norway":"🇳🇴","Canada":"🇨🇦",
+  "Peru":"🇵🇪","Chile":"🇨🇱","Turkey":"🇹🇷","Qatar":"🇶🇦","Iran":"🇮🇷",
+  "Saudi Arabia":"🇸🇦","Nigeria":"🇳🇬","Ivory Coast":"🇨🇮","Côte d'Ivoire":"🇨🇮",
+  "Egypt":"🇪🇬","Ghana":"🇬🇭","Cameroon":"🇨🇲","Algeria":"🇩🇿","Tunisia":"🇹🇳",
+  "South Africa":"🇿🇦","Iraq":"🇮🇶","Paraguay":"🇵🇾","Bolivia":"🇧🇴","Venezuela":"🇻🇪",
+  "Panama":"🇵🇦","Costa Rica":"🇨🇷","Honduras":"🇭🇳","El Salvador":"🇸🇻",
+  "Jamaica":"🇯🇲","Haiti":"🇭🇹","New Zealand":"🇳🇿","Slovenia":"🇸🇮","Slovakia":"🇸🇰",
+  "Czech Republic":"🇨🇿","Czechia":"🇨🇿","Austria":"🇦🇹","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "Bosnia-Herzegovina":"🇧🇦","Bosnia and Herzegovina":"🇧🇦","Curaçao":"🇨🇼","Curacao":"🇨🇼",
+  "Thailand":"🇹🇭","Netherlands Antilles":"🇳🇱","Ukraine":"🇺🇦","Wales":"🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+  "Serbia":"🇷🇸","Greece":"🇬🇷","Romania":"🇷🇴","Hungary":"🇭🇺","Albania":"🇦🇱",
+};
+function flag(name) { return FLAGS[name] || '🌍'; }
+function teamName(name) {
+  if (!name || name === 'TBD') return 'TBD';
+  return flag(name) + ' ' + name;
+}
+
+// ---------------------------------------------------------------------------
+// TRAFFIC PREDICTION
+// ---------------------------------------------------------------------------
+function trafficPrediction(scheduledISO) {
+  const d = new Date(scheduledISO);
+  const hr = parseInt(d.toLocaleString('en-US',{hour:'numeric',hour12:false,timeZone:'America/New_York'}));
+  const day = d.toLocaleDateString('en-US',{weekday:'short',timeZone:'America/New_York'});
+  const isWeekday = !['Sat','Sun'].includes(day);
+  // Evening rush weekday overlap = worst
+  if (isWeekday && hr >= 15 && hr <= 20) return {level:'high', label:'Est. 60–90 min NJ Transit delay', cls:'traffic-high'};
+  if (isWeekday && (hr >= 12 && hr < 15 || hr > 20 && hr <= 22)) return {level:'med', label:'Est. 30–60 min delay', cls:'traffic-med'};
+  if (!isWeekday && hr >= 12 && hr <= 20) return {level:'med', label:'Est. 30–45 min delay (weekend)', cls:'traffic-med'};
+  return {level:'low', label:'Minimal transit impact expected', cls:'traffic-low'};
+}
+
+// ---------------------------------------------------------------------------
+// ICS CALENDAR
+// ---------------------------------------------------------------------------
+function downloadICS(match) {
+  const d = new Date(match.scheduled);
+  const end = new Date(d.getTime() + 2 * 3600000);
+  function fmt(dt) { return dt.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z'; }
+  const home = match.home_team.name, away = match.away_team.name;
+  const ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FIFA NJ Alerts//EN',
+    'BEGIN:VEVENT',
+    `UID:${d.getTime()}@fifa-nj-alerts`,
+    `DTSTART:${fmt(d)}`,`DTEND:${fmt(end)}`,
+    `SUMMARY:⚠️ NJ Transit Impact: ${home} vs ${away}`,
+    `DESCRIPTION:MetLife Stadium match - plan NJ Transit/Lincoln Tunnel delays. ${match.venue.name}. App: https://sananv.github.io/fifa-nj-alerts/`,
+    `LOCATION:${match.venue.name}`,
+    'BEGIN:VALARM','TRIGGER:-PT24H','ACTION:DISPLAY','DESCRIPTION:NJ Transit alert - MetLife match tomorrow','END:VALARM',
+    'BEGIN:VALARM','TRIGGER:-PT2H','ACTION:DISPLAY','DESCRIPTION:NJ Transit alert - MetLife match in 2 hours','END:VALARM',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  const blob = new Blob([ics], {type:'text/calendar'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `metlife-${home.replace(/\s/g,'-')}-vs-${away.replace(/\s/g,'-')}.ics`;
+  a.click();
+  showToast('Calendar event downloaded!');
+}
+
+// ---------------------------------------------------------------------------
+// SHARE
+// ---------------------------------------------------------------------------
+function shareMatch(match) {
+  const d = new Date(match.scheduled);
+  const dateStr = d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'America/New_York'});
+  const timeStr = d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'America/New_York'});
+  const home = match.home_team.name, away = match.away_team.name;
+  const msg = encodeURIComponent(`⚠️ NJ Transit heads-up: ${flag(home)} ${home} vs ${flag(away)} ${away} at MetLife Stadium on ${dateStr} at ${timeStr} EST. Expect delays on routes 320, 351, 355 through the Lincoln Tunnel. Plan ahead → https://sananv.github.io/fifa-nj-alerts/`);
+  const menu = [
+    `<div style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:500;display:flex;align-items:center;justify-content:center" id="share-overlay" onclick="document.getElementById('share-overlay').remove()">`,
+    `<div style="background:var(--bg);border-radius:var(--radius-lg);padding:20px;max-width:320px;width:90%;display:flex;flex-direction:column;gap:10px" onclick="event.stopPropagation()">`,
+    `<div style="font-size:14px;font-weight:500;margin-bottom:4px">Share this alert</div>`,
+    `<a href="https://wa.me/?text=${msg}" target="_blank" style="padding:10px 14px;background:#25D366;color:white;border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>`,
+    `<a href="sms:?body=${msg}" style="padding:10px 14px;background:#2196F3;color:white;border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px"><i class="ti ti-message"></i> SMS</a>`,
+    `<a href="mailto:?subject=FIFA%20Match%20at%20MetLife%20-%20NJ%20Transit%20Alert&body=${msg}" style="padding:10px 14px;background:var(--bg-secondary);color:var(--text-primary);border:0.5px solid var(--border);border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail"></i> Email</a>`,
+    `<button onclick="navigator.clipboard.writeText(decodeURIComponent('${msg}')).then(()=>showToast('Copied!'));document.getElementById('share-overlay').remove()" style="padding:10px 14px;background:var(--bg-secondary);color:var(--text-primary);border:0.5px solid var(--border);border-radius:var(--radius-md);font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px"><i class="ti ti-copy"></i> Copy link</button>`,
+    `<button onclick="document.getElementById('share-overlay').remove()" style="font-size:12px;color:var(--text-muted);background:none;border:none;cursor:pointer;margin-top:4px">Cancel</button>`,
+    `</div></div>`
+  ].join('');
+  document.body.insertAdjacentHTML('beforeend', menu);
+}
+
+function notifyNeighbor() {
+  const now = new Date();
+  const in7 = new Date(now.getTime() + 7*24*3600*1000);
+  const upcoming = allMatches.filter(m => isMetLife(m) && new Date(m.scheduled) >= now && new Date(m.scheduled) <= in7)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+  if (!upcoming.length) { showToast('No MetLife matches in the next 7 days.'); return; }
+
+  const lines = upcoming.map(m => {
+    const d = new Date(m.scheduled);
+    return `• ${fmtDate(d)} at ${fmtTime(d)} EST: ${flag(m.home_team.name)} ${m.home_team.name} vs ${flag(m.away_team.name)} ${m.away_team.name}`;
+  }).join('\n');
+
+  const plainMsg = `⚠️ FIFA World Cup at MetLife Stadium this week — NJ Transit heads-up!\n\nUpcoming matches impacting routes 320, 351, 355 via Lincoln Tunnel:\n\n${lines}\n\nPlan extra travel time or take PATH train instead.\nFull alerts & schedule: https://sananv.github.io/fifa-nj-alerts/`;
+  const encoded = encodeURIComponent(plainMsg);
+  const emailSubject = 'FIFA%20World%20Cup%20at%20MetLife%20%E2%80%94%20NJ%20Transit%20Heads%20Up';
+
+  const menu = [
+    `<div style="position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:500;display:flex;align-items:center;justify-content:center" id="notify-overlay" onclick="document.getElementById('notify-overlay').remove()">`,
+    `<div style="background:var(--bg);border-radius:var(--radius-lg);padding:20px;max-width:340px;width:90%;display:flex;flex-direction:column;gap:10px" onclick="event.stopPropagation()">`,
+    `<div style="font-size:14px;font-weight:500;margin-bottom:2px">Notify a neighbor</div>`,
+    `<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px">Sends the full week's MetLife match schedule</div>`,
+    `<a href="https://wa.me/?text=${encoded}" target="_blank" style="padding:10px 14px;background:#25D366;color:white;border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px" onclick="document.getElementById('notify-overlay').remove()"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>`,
+    `<a href="sms:?body=${encoded}" style="padding:10px 14px;background:#2196F3;color:white;border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px" onclick="document.getElementById('notify-overlay').remove()"><i class="ti ti-message"></i> SMS</a>`,
+    `<a href="mailto:?subject=${emailSubject}&body=${encoded}" style="padding:10px 14px;background:var(--bg-secondary);color:var(--text-primary);border:0.5px solid var(--border);border-radius:var(--radius-md);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:8px" onclick="document.getElementById('notify-overlay').remove()"><i class="ti ti-mail"></i> Email</a>`,
+    `<button onclick="navigator.clipboard.writeText(decodeURIComponent('${encoded}')).then(()=>showToast('Copied!'));document.getElementById('notify-overlay').remove()" style="padding:10px 14px;background:var(--bg-secondary);color:var(--text-primary);border:0.5px solid var(--border);border-radius:var(--radius-md);font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px"><i class="ti ti-copy"></i> Copy message</button>`,
+    `<button onclick="document.getElementById('notify-overlay').remove()" style="font-size:12px;color:var(--text-muted);background:none;border:none;cursor:pointer;margin-top:4px">Cancel</button>`,
+    `</div></div>`
+  ].join('');
+  document.body.insertAdjacentHTML('beforeend', menu);
+}
+
+// ---------------------------------------------------------------------------
+// TOAST
+// ---------------------------------------------------------------------------
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ---------------------------------------------------------------------------
+// HELPERS
+// ---------------------------------------------------------------------------
+let allMatches = [], allStandings = [], currentTab = 'alerts', countdownInterval = null, tickerInterval = null;
+
+function switchTab(t) {
+  currentTab = t;
+  document.querySelectorAll('.tab').forEach((el,i) => {
+    const names = ['alerts','schedule','standings','resources'];
+    el.classList.toggle('active', names[i] === t);
+  });
+  ['alerts','schedule','standings','resources'].forEach(n => {
+    document.getElementById('tab-'+n).style.display = n === t ? '' : 'none';
+  });
+  if (t === 'schedule' && allMatches.length) renderSchedule();
+  if (t === 'standings') renderStandings();
+}
+
+function fmtDate(d) { return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'America/New_York'}); }
+function fmtTime(d) { return d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'America/New_York'}); }
+function fmtDateLong(d) { return d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'America/New_York'}); }
+function daysFromNow(d) {
+  const est = 'America/New_York';
+  const today = new Date(new Date().toLocaleDateString('en-CA',{timeZone:est}));
+  const matchDate = new Date(d.toLocaleDateString('en-CA',{timeZone:est}));
+  const diff = Math.round((matchDate - today) / 86400000);
+  if (diff < 0) return 'Past';
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Tomorrow';
+  return 'In ' + diff + ' days';
+}
+function isMetLife(m) {
+  const v = (m.venue && m.venue.name) ? m.venue.name.toLowerCase() : '';
+  return v.includes('metlife') || v.includes('east rutherford') || v.includes('new york/new jersey') || v.includes('new york new jersey');
+}
+
+// ---------------------------------------------------------------------------
+// MY TEAM
+// ---------------------------------------------------------------------------
+function saveMyTeam() {
+  const v = document.getElementById('my-team-select').value;
+  if (v) localStorage.setItem('myTeam', v); else localStorage.removeItem('myTeam');
+  renderSchedule();
+}
+function clearMyTeam() {
+  localStorage.removeItem('myTeam');
+  document.getElementById('my-team-select').value = '';
+  renderSchedule();
+}
+function getMyTeam() { return localStorage.getItem('myTeam') || ''; }
+
+// ---------------------------------------------------------------------------
+// COUNTDOWN
+// ---------------------------------------------------------------------------
+function startCountdown(matches) {
+  if (countdownInterval) clearInterval(countdownInterval);
+  const now = new Date();
+  const next = matches.filter(m => isMetLife(m) && new Date(m.scheduled) > now)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled))[0];
+  if (!next) { document.getElementById('countdown-box').style.display = 'none'; return; }
+  const target = new Date(next.scheduled);
+  const home = next.home_team.name, away = next.away_team.name;
+  document.getElementById('countdown-match').textContent = `${teamName(home)} vs ${teamName(away)} · ${fmtDate(target)} ${fmtTime(target)}`;
+  document.getElementById('countdown-box').style.display = '';
+  function tick() {
+    const diff = target - new Date();
+    if (diff <= 0) { document.getElementById('countdown-timer').textContent = 'Starting now!'; clearInterval(countdownInterval); return; }
+    const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
+    const str = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    document.getElementById('countdown-timer').textContent = str;
+    document.getElementById('countdown-timer').classList.toggle('soon', diff < 3600000);
+  }
+  tick();
+  countdownInterval = setInterval(tick, 1000);
+}
+
+// ---------------------------------------------------------------------------
+// LIVE TICKER
+// ---------------------------------------------------------------------------
+function updateTicker(matches) {
+  const live = matches.filter(m => m.status === 'live');
+  const ticker = document.getElementById('live-ticker');
+  const scroll = document.getElementById('ticker-scroll');
+  if (!live.length) { ticker.classList.remove('visible'); return; }
+  ticker.classList.add('visible');
+  scroll.innerHTML = live.map(m => {
+    const h = m.home_team.name, a = m.away_team.name;
+    const sh = m.score && m.score.home != null ? m.score.home : '–';
+    const sa = m.score && m.score.away != null ? m.score.away : '–';
+    return `<span class="ticker-match">${teamName(h)} <span class="ticker-score">${sh} – ${sa}</span> ${teamName(a)}</span>`;
+  }).join('<span style="color:#555">|</span>');
+}
+
+// ---------------------------------------------------------------------------
+// MATCHDAY BANNER
+// ---------------------------------------------------------------------------
+function updateMatchdayBanner(matches) {
+  const now = new Date();
+  const todayStr = now.toLocaleDateString('en-CA', {timeZone:'America/New_York'});
+  const todayMatches = matches.filter(m => {
+    if (!isMetLife(m)) return false;
+    const mDate = new Date(m.scheduled).toLocaleDateString('en-CA', {timeZone:'America/New_York'});
+    return mDate === todayStr;
+  });
+  const banner = document.getElementById('matchday-banner');
+  if (!todayMatches.length) { banner.classList.remove('visible'); return; }
+  const m = todayMatches[0];
+  const t = fmtTime(new Date(m.scheduled));
+  banner.innerHTML = `⚠️ Match day at MetLife Stadium today — ${teamName(m.home_team.name)} vs ${teamName(m.away_team.name)} at ${t} EST. <a href="#" onclick="switchTab('alerts');return false">View NJ Transit alerts →</a>`;
+  banner.classList.add('visible');
+}
+
+// ---------------------------------------------------------------------------
+// WIN PROBABILITY BAR
+// ---------------------------------------------------------------------------
+function probBarHTML(match) {
+  const p = match.win_probability;
+  const h = match.home_team.name, a = match.away_team.name;
+  if (!p || h === 'TBD' || a === 'TBD') return '';
+  // Position Draw label centered over the draw segment
+  const drawLabelLeft = p.home_win + (p.draw / 2);
+  return `<div class="prob-bar">
+    <div class="prob-labels" style="position:relative;display:block;height:16px;">
+      <span class="prob-home-num" style="position:absolute;left:0">${teamName(h)} ${p.home_win}%</span>
+      <span class="prob-draw-num" style="position:absolute;left:${drawLabelLeft}%;transform:translateX(-50%)">Draw ${p.draw}%</span>
+      <span class="prob-away-num" style="position:absolute;right:0">${teamName(a)} ${p.away_win}%</span>
+    </div>
+    <div class="prob-track" style="width:100%;margin-top:4px">
+      <div class="prob-home" style="width:${p.home_win}%;flex-basis:${p.home_win}%"></div>
+      <div class="prob-draw" style="width:${p.draw}%;flex-basis:${p.draw}%"></div>
+      <div class="prob-away" style="width:${p.away_win}%;flex-basis:${p.away_win}%"></div>
+    </div>
+  </div>`;
+}
+
+// ---------------------------------------------------------------------------
+// RENDER ALERTS
+// ---------------------------------------------------------------------------
+function renderAlerts(matches) {
+  const now = new Date();
+  const in7 = new Date(now.getTime() + 7*24*3600*1000);
+  const metlife = matches.filter(isMetLife);
+  const upcoming7 = metlife.filter(m => new Date(m.scheduled) >= now && new Date(m.scheduled) <= in7)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+  const beyond = metlife.filter(m => new Date(m.scheduled) > in7)
+    .sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+
+  document.getElementById('s-total').textContent = metlife.length;
+  document.getElementById('s-week').textContent = upcoming7.length;
+  document.getElementById('alert-count').textContent = upcoming7.length;
+  const next = metlife.filter(m => new Date(m.scheduled) >= now).sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled))[0];
+  if (next) {
+    const est = 'America/New_York';
+    const todayStr = now.toLocaleDateString('en-CA', {timeZone: est});
+    const nextStr = new Date(next.scheduled).toLocaleDateString('en-CA', {timeZone: est});
+    const diffDays = Math.round((new Date(nextStr) - new Date(todayStr)) / 86400000);
+    document.getElementById('s-next').textContent = diffDays === 0 ? 'Today' : diffDays === 1 ? 'Tomorrow' : diffDays;
+  } else {
+    document.getElementById('s-next').textContent = '—';
+  }
+
+  if (upcoming7.length) document.getElementById('notify-bar').style.display = '';
+
+  let html = '';
+  if (!upcoming7.length) {
+    html = `<div class="empty"><i class="ti ti-check" style="color:var(--green);font-size:28px;display:block;margin-bottom:10px"></i>No MetLife matches in the next 7 days.<br><span style="font-size:12px;display:block;margin-top:6px">Check Full Schedule for all fixtures.</span></div>`;
+  } else {
+    upcoming7.forEach(m => {
+      const d = new Date(m.scheduled);
+      const hr = parseInt(d.toLocaleString('en-US',{hour:'numeric',hour12:false,timeZone:'America/New_York'}));
+      const level = hr >= 16 && hr <= 20 ? 'high' : 'medium';
+      const home = m.home_team.name, away = m.away_team.name;
+      const round = m.tournament_round?.name || 'Match';
+      const traffic = trafficPrediction(m.scheduled);
+      const matchJSON = encodeURIComponent(JSON.stringify(m));
+      html += `<div class="alert-card ${level}">
+        <div class="alert-top">
+          <span class="alert-date"><i class="ti ti-calendar" style="font-size:13px"></i> ${fmtDate(d)} · ${fmtTime(d)}</span>
+          <span class="badge badge-${level==='high'?'danger':'warning'}">${level==='high'?'⚠ High impact':'Moderate impact'}</span>
+        </div>
+        <div class="alert-teams">${teamName(home)} vs ${teamName(away)}</div>
+        <div class="alert-meta">${round} · MetLife Stadium, East Rutherford, NJ · <strong>${daysFromNow(d)}</strong></div>
+        ${probBarHTML(m)}
+        <div class="alert-pills" style="margin-top:10px">
+          <span class="pill"><i class="ti ti-bus" style="font-size:11px"></i>Routes 320, 351, 355</span>
+          <span class="pill"><i class="ti ti-road" style="font-size:11px"></i>Lincoln Tunnel congestion</span>
+          <span class="traffic-badge ${traffic.cls}">${traffic.label}</span>
+        </div>
+        <div class="alert-actions">
+          <button class="action-btn primary" onclick='downloadICS(${JSON.stringify(m)})'><i class="ti ti-calendar-plus" style="font-size:12px"></i> Add to calendar</button>
+          <button class="action-btn" onclick='shareMatch(${JSON.stringify(m)})'><i class="ti ti-share" style="font-size:12px"></i> Share alert</button>
+        </div>
+      </div>`;
+    });
+  }
+
+  if (beyond.length) {
+    html += `<div class="section-label">Upcoming MetLife matches — beyond 7 days</div>`;
+    beyond.forEach(m => {
+      const d = new Date(m.scheduled);
+      const home = m.home_team.name, away = m.away_team.name;
+      const round = m.tournament_round?.name || 'Match';
+      html += `<div class="alert-card">
+        <div class="alert-top">
+          <span class="alert-date"><i class="ti ti-calendar" style="font-size:13px"></i> ${fmtDate(d)} · ${fmtTime(d)}</span>
+          <span class="badge badge-neutral">${daysFromNow(d)}</span>
+        </div>
+        <div class="alert-teams">${teamName(home)} vs ${teamName(away)}</div>
+        <div class="alert-meta">${round} · MetLife Stadium, East Rutherford, NJ</div>
+        ${probBarHTML(m)}
+        <div class="alert-actions">
+          <button class="action-btn primary" onclick='downloadICS(${JSON.stringify(m)})'><i class="ti ti-calendar-plus" style="font-size:12px"></i> Add to calendar</button>
+          <button class="action-btn" onclick='shareMatch(${JSON.stringify(m)})'><i class="ti ti-share" style="font-size:12px"></i> Share alert</button>
+        </div>
+      </div>`;
+    });
+  }
+
+  document.getElementById('alerts-content').innerHTML = html;
+}
+
+// ---------------------------------------------------------------------------
+// RENDER SCHEDULE
+// ---------------------------------------------------------------------------
+function renderSchedule() {
+  const venueF = document.getElementById('venue-filter').value;
+  const roundF = document.getElementById('round-filter').value;
+  const myTeam = getMyTeam();
+  let filtered = allMatches.filter(m => {
+    if (venueF === 'metlife' && !isMetLife(m)) return false;
+    const r = m.tournament_round?.name || '';
+    if (roundF !== 'all' && r !== roundF) return false;
+    return true;
+  }).sort((a,b) => new Date(a.scheduled)-new Date(b.scheduled));
+  document.getElementById('sched-count').textContent = filtered.length;
+
+  // Populate my-team selector
+  const teams = [...new Set(allMatches.flatMap(m => [m.home_team.name, m.away_team.name]).filter(n => n && n !== 'TBD'))].sort();
+  const sel = document.getElementById('my-team-select');
+  const cur = getMyTeam();
+  sel.innerHTML = '<option value="">— Select your team —</option>' + teams.map(t => `<option value="${t}" ${t===cur?'selected':''}>${flag(t)} ${t}</option>`).join('');
+
+  if (!filtered.length) { document.getElementById('schedule-content').innerHTML = `<div class="empty">No matches for selected filters.</div>`; return; }
+
+  let byDate = {};
+  filtered.forEach(m => { const k = fmtDateLong(new Date(m.scheduled)); (byDate[k]=byDate[k]||[]).push(m); });
+
+  let html = '';
+  Object.keys(byDate).forEach(dk => {
+    html += `<div class="group-header"><i class="ti ti-calendar" style="font-size:13px"></i>${dk}</div>`;
+    byDate[dk].forEach(m => {
+      const d = new Date(m.scheduled);
+      const nj = isMetLife(m);
+      const home = m.home_team.name, away = m.away_team.name;
+      const isMyTeam = myTeam && (home === myTeam || away === myTeam);
+      const venue = m.venue?.name || 'TBD';
+      const round = m.tournament_round?.name || '—';
+      const p = m.win_probability;
+      const probMini = p && home !== 'TBD' ? `<div class="match-prob-mini">${flag(home)} ${p.home_win}% · Draw ${p.draw}% · ${flag(away)} ${p.away_win}%</div>` : '';
+      const status = m.status || 'scheduled';
+      const sc = status==='live'?'status-live':status==='closed'?'status-closed':'status-sched';
+      const sl = status==='live'?'● Live':status==='closed'?'Final':'Scheduled';
+      let score = '';
+      if (m.score && m.score.home != null) score = `<div style="font-weight:600;font-size:14px">${m.score.home} – ${m.score.away}</div>`;
+      html += `<div class="match-row${nj?' nj':''}${isMyTeam?' my-team-highlight':''}">
+        <div class="match-row-top">
+          <div><div class="match-time-col">${fmtTime(d)}</div><div class="match-round-label">${round}</div></div>
+          <div>
+            <div class="match-teams">${teamName(home)} vs ${teamName(away)}${nj?'<span class="nj-tag">NJ Impact</span>':''}${isMyTeam?'<span class="my-tag">★ My Team</span>':''}</div>
+            <div class="match-venue">${venue}</div>
+            ${probMini}
+          </div>
+          <div class="match-right">${score}<span class="status-pill ${sc}">${sl}</span></div>
+        </div>
+      </div>`;
+    });
+  });
+  document.getElementById('schedule-content').innerHTML = html;
+}
+
+// ---------------------------------------------------------------------------
+// RENDER STANDINGS
+// ---------------------------------------------------------------------------
+function renderStandings() {
+  if (!allStandings.length) {
+    document.getElementById('standings-content').innerHTML = `<div class="empty"><i class="ti ti-table" style="font-size:28px;display:block;margin-bottom:10px;color:var(--text-muted)"></i>Standings data not available yet.<br><span style="font-size:12px;display:block;margin-top:6px">Data updates daily — check back after group stage matches.</span></div>`;
+    return;
+  }
+  let html = '';
+  allStandings.forEach(g => {
+    html += `<div class="group-standings"><div class="group-standings-header">${g.group}</div>
+    <table class="standings-table">
+      <tr><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>`;
+    g.table.forEach((row, i) => {
+      const cls = i < 2 ? 'qualified' : i === 2 ? 'playoff' : '';
+      html += `<tr class="${cls}"><td><span class="pos-num">${row.position}</span>${teamName(row.team)}</td><td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td><td>${row.gf}</td><td>${row.ga}</td><td>${row.gd > 0?'+':''}${row.gd}</td><td class="pts">${row.points}</td></tr>`;
+    });
+    html += `</table></div>`;
+  });
+  html += `<div style="font-size:11px;color:var(--text-muted);margin-top:8px;padding:0 4px"><span style="display:inline-block;width:12px;height:12px;background:var(--green-light);border-radius:2px;vertical-align:middle;margin-right:4px"></span>Qualify for Round of 32 &nbsp; <span style="display:inline-block;width:12px;height:12px;background:var(--amber-light);border-radius:2px;vertical-align:middle;margin-right:4px"></span>Playoff contention</div>`;
+  document.getElementById('standings-content').innerHTML = html;
+}
+
+// ---------------------------------------------------------------------------
+// LOAD DATA
+// ---------------------------------------------------------------------------
+async function loadData() {
+  const icon = document.getElementById('refresh-icon');
+  icon.classList.add('spinning');
+  try {
+    const res = await fetch('schedule.json?t=' + Date.now());
+    if (!res.ok) throw new Error('schedule.json not found (HTTP ' + res.status + '). Run the GitHub Action first.');
+    const data = await res.json();
+    allMatches = data.matches || [];
+    allStandings = data.standings || [];
+
+    // Populate round filter
+    const rounds = [...new Set(allMatches.map(m => m.tournament_round?.name || '').filter(Boolean))];
+    const sel = document.getElementById('round-filter');
+    sel.innerHTML = '<option value="all">All rounds</option>' + rounds.map(r => `<option value="${r}">${r}</option>`).join('');
+
+    renderAlerts(allMatches);
+    updateMatchdayBanner(allMatches);
+    updateTicker(allMatches);
+    startCountdown(allMatches);
+    if (currentTab === 'schedule') renderSchedule();
+    if (currentTab === 'standings') renderStandings();
+
+    const gen = data.generated_at ? new Date(data.generated_at) : null;
+    document.getElementById('last-updated').textContent = gen
+      ? 'Last synced ' + gen.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'America/New_York'}) + ' ' + gen.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'America/New_York'}) + ' EST'
+      : 'Schedule loaded';
+
+    // Auto-refresh live ticker every 60s if there are live matches
+    if (allMatches.some(m => m.status === 'live')) {
+      if (tickerInterval) clearInterval(tickerInterval);
+      tickerInterval = setInterval(() => loadData(), 60000);
+    }
+
+  } catch(e) {
+    document.getElementById('alerts-content').innerHTML = `<div class="error-box"><i class="ti ti-alert-circle"></i><p>${e.message}<br><br>Go to your repo → <strong>Actions</strong> tab → <strong>Update FIFA Schedule</strong> → <strong>Run workflow</strong> to generate schedule.json.</p><button onclick="loadData()">Try again</button></div>`;
+    document.getElementById('s-total').textContent = '—';
+    document.getElementById('s-week').textContent = '—';
+    document.getElementById('s-next').textContent = '—';
+  } finally {
+    icon.classList.remove('spinning');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
