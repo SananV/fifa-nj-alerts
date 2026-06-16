@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T21:33:08.096962-04:00",
+  "generated_at": "2026-06-16T11:11:05.146283-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -407,10 +407,10 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "live",
+      "status": "closed",
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "win_probability": {
         "home_win": 50,
@@ -2905,16 +2905,28 @@
           "position": 1,
           "team": "New Zealand",
           "played": 1,
-          "won": 1,
-          "drawn": 0,
+          "won": 0,
+          "drawn": 1,
           "lost": 0,
-          "gf": 1,
-          "ga": 0,
-          "gd": 1,
-          "points": 3
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
         },
         {
           "position": 2,
+          "team": "Iran",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 3,
           "team": "Belgium",
           "played": 1,
           "won": 0,
@@ -2926,7 +2938,7 @@
           "points": 1
         },
         {
-          "position": 3,
+          "position": 4,
           "team": "Egypt",
           "played": 1,
           "won": 0,
@@ -2936,18 +2948,6 @@
           "ga": 1,
           "gd": 0,
           "points": 1
-        },
-        {
-          "position": 4,
-          "team": "Iran",
-          "played": 1,
-          "won": 0,
-          "drawn": 0,
-          "lost": 1,
-          "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "points": 0
         }
       ]
     },
@@ -2956,7 +2956,7 @@
       "table": [
         {
           "position": 1,
-          "team": "Saudi Arabia",
+          "team": "Uruguay",
           "played": 1,
           "won": 0,
           "drawn": 1,
@@ -2967,8 +2967,8 @@
           "points": 1
         },
         {
-          "position": 1,
-          "team": "Uruguay",
+          "position": 2,
+          "team": "Saudi Arabia",
           "played": 1,
           "won": 0,
           "drawn": 1,
