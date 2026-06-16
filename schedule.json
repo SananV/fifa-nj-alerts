@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T21:28:09.449931-04:00",
+  "generated_at": "2026-06-15T21:33:08.096962-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -407,7 +407,7 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "live",
       "score": {
         "home": 0,
         "away": 1
@@ -2903,30 +2903,18 @@
       "table": [
         {
           "position": 1,
-          "team": "Iran",
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 1
-        },
-        {
-          "position": 1,
           "team": "New Zealand",
           "played": 1,
-          "won": 0,
-          "drawn": 1,
+          "won": 1,
+          "drawn": 0,
           "lost": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "points": 1
+          "gd": 1,
+          "points": 3
         },
         {
-          "position": 3,
+          "position": 2,
           "team": "Belgium",
           "played": 1,
           "won": 0,
@@ -2938,7 +2926,7 @@
           "points": 1
         },
         {
-          "position": 4,
+          "position": 3,
           "team": "Egypt",
           "played": 1,
           "won": 0,
@@ -2948,6 +2936,18 @@
           "ga": 1,
           "gd": 0,
           "points": 1
+        },
+        {
+          "position": 4,
+          "team": "Iran",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
         }
       ]
     },
