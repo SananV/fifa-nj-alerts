@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T12:34:11.058764-04:00",
+  "generated_at": "2026-06-17T09:42:25.189046-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -433,10 +433,10 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "win_probability": {
         "home_win": 58,
@@ -459,10 +459,10 @@
         "name": "Group Stage - GROUP_I"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 4
       },
       "win_probability": {
         "home_win": 28,
@@ -485,10 +485,10 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 0
       },
       "win_probability": {
         "home_win": 65,
@@ -511,10 +511,10 @@
         "name": "Group Stage - GROUP_J"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "win_probability": {
         "home_win": 33,
@@ -3009,50 +3009,50 @@
       "table": [
         {
           "position": 1,
-          "team": "France",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
-          "team": "Iraq",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
           "team": "Norway",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "gf": 4,
+          "ga": 1,
+          "gd": 3,
+          "points": 3
+        },
+        {
+          "position": 2,
+          "team": "France",
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "gf": 3,
+          "ga": 1,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team": "Senegal",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 3,
+          "gd": -2,
           "points": 0
         },
         {
-          "position": 1,
-          "team": "Senegal",
-          "played": 0,
+          "position": 4,
+          "team": "Iraq",
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 4,
+          "gd": -3,
           "points": 0
         }
       ]
@@ -3062,50 +3062,50 @@
       "table": [
         {
           "position": 1,
-          "team": "Algeria",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
           "team": "Argentina",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
+          "gf": 3,
           "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gd": 3,
+          "points": 3
         },
         {
-          "position": 1,
-          "team": "Jordan",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
+          "position": 2,
           "team": "Austria",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
+          "gf": 3,
+          "ga": 1,
+          "gd": 2,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team": "Jordan",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 3,
+          "gd": -2,
+          "points": 0
+        },
+        {
+          "position": 4,
+          "team": "Algeria",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 3,
+          "gd": -3,
           "points": 0
         }
       ]
