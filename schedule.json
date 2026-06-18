@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:42:25.189046-04:00",
+  "generated_at": "2026-06-18T08:54:37.354207-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -537,10 +537,10 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "win_probability": {
         "home_win": 64,
@@ -563,10 +563,10 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 2
       },
       "win_probability": {
         "home_win": 50,
@@ -589,10 +589,10 @@
         "name": "Group Stage - GROUP_L"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "win_probability": {
         "home_win": 43,
@@ -615,10 +615,10 @@
         "name": "Group Stage - GROUP_K"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 3
       },
       "win_probability": {
         "home_win": 21,
@@ -3115,50 +3115,50 @@
       "table": [
         {
           "position": 1,
-          "team": "Congo DR",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
           "team": "Colombia",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gf": 3,
+          "ga": 1,
+          "gd": 2,
+          "points": 3
         },
         {
-          "position": 1,
+          "position": 2,
+          "team": "Congo DR",
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "gf": 1,
+          "ga": 1,
+          "gd": 0,
+          "points": 1
+        },
+        {
+          "position": 2,
           "team": "Portugal",
-          "played": 0,
+          "played": 1,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 1,
+          "ga": 1,
           "gd": 0,
-          "points": 0
+          "points": 1
         },
         {
-          "position": 1,
+          "position": 4,
           "team": "Uzbekistan",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 3,
+          "gd": -2,
           "points": 0
         }
       ]
@@ -3169,49 +3169,49 @@
         {
           "position": 1,
           "team": "England",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gf": 4,
+          "ga": 2,
+          "gd": 2,
+          "points": 3
         },
         {
-          "position": 1,
+          "position": 2,
           "team": "Ghana",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "drawn": 0,
           "lost": 0,
-          "gf": 0,
+          "gf": 1,
           "ga": 0,
-          "gd": 0,
-          "points": 0
+          "gd": 1,
+          "points": 3
         },
         {
-          "position": 1,
-          "team": "Croatia",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
-          "points": 0
-        },
-        {
-          "position": 1,
+          "position": 3,
           "team": "Panama",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "ga": 1,
+          "gd": -1,
+          "points": 0
+        },
+        {
+          "position": 4,
+          "team": "Croatia",
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "gf": 2,
+          "ga": 4,
+          "gd": -2,
           "points": 0
         }
       ]
