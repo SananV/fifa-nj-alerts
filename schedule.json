@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T08:54:37.354207-04:00",
+  "generated_at": "2026-06-19T09:35:51.756162-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -641,10 +641,10 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "win_probability": {
         "home_win": 33,
@@ -667,10 +667,10 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 1
       },
       "win_probability": {
         "home_win": 62,
@@ -693,10 +693,10 @@
         "name": "Group Stage - GROUP_B"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 6,
+        "away": 0
       },
       "win_probability": {
         "home_win": 44,
@@ -719,10 +719,10 @@
         "name": "Group Stage - GROUP_A"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "win_probability": {
         "home_win": 44,
@@ -2586,50 +2586,50 @@
         {
           "position": 1,
           "team": "Mexico",
-          "played": 1,
-          "won": 1,
+          "played": 2,
+          "won": 2,
           "drawn": 0,
           "lost": 0,
-          "gf": 2,
+          "gf": 3,
           "ga": 0,
-          "gd": 2,
-          "points": 3
+          "gd": 3,
+          "points": 6
         },
         {
           "position": 2,
           "team": "South Korea",
-          "played": 1,
+          "played": 2,
           "won": 1,
           "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "gf": 2,
-          "ga": 1,
-          "gd": 1,
+          "ga": 2,
+          "gd": 0,
           "points": 3
         },
         {
           "position": 3,
           "team": "Czechia",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "gf": 1,
-          "ga": 2,
+          "gf": 2,
+          "ga": 3,
           "gd": -1,
-          "points": 0
+          "points": 1
         },
         {
           "position": 4,
           "team": "South Africa",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "gf": 0,
-          "ga": 2,
+          "gf": 1,
+          "ga": 3,
           "gd": -2,
-          "points": 0
+          "points": 1
         }
       ]
     },
@@ -2638,50 +2638,50 @@
       "table": [
         {
           "position": 1,
-          "team": "Switzerland",
-          "played": 1,
-          "won": 0,
+          "team": "Canada",
+          "played": 2,
+          "won": 1,
           "drawn": 1,
           "lost": 0,
-          "gf": 1,
+          "gf": 7,
           "ga": 1,
-          "gd": 0,
-          "points": 1
+          "gd": 6,
+          "points": 4
         },
         {
           "position": 2,
-          "team": "Canada",
-          "played": 1,
-          "won": 0,
+          "team": "Switzerland",
+          "played": 2,
+          "won": 1,
           "drawn": 1,
           "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
+          "gf": 5,
+          "ga": 2,
+          "gd": 3,
+          "points": 4
         },
         {
           "position": 3,
-          "team": "Qatar",
-          "played": 1,
+          "team": "Bosnia-Herzegovina",
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
+          "lost": 1,
+          "gf": 2,
+          "ga": 5,
+          "gd": -3,
           "points": 1
         },
         {
           "position": 4,
-          "team": "Bosnia-Herzegovina",
-          "played": 1,
+          "team": "Qatar",
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
+          "lost": 1,
           "gf": 1,
-          "ga": 1,
-          "gd": 0,
+          "ga": 7,
+          "gd": -6,
           "points": 1
         }
       ]
