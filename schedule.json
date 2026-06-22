@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T08:11:19.928534-04:00",
+  "generated_at": "2026-06-22T11:24:51.897097-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -953,10 +953,10 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 0
       },
       "win_probability": {
         "home_win": 63,
@@ -979,10 +979,10 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "win_probability": {
         "home_win": 58,
@@ -1005,10 +1005,10 @@
         "name": "Group Stage - GROUP_H"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 2
       },
       "win_probability": {
         "home_win": 59,
@@ -1031,10 +1031,10 @@
         "name": "Group Stage - GROUP_G"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 3
       },
       "win_probability": {
         "home_win": 29,
@@ -2903,50 +2903,50 @@
       "table": [
         {
           "position": 1,
-          "team": "New Zealand",
-          "played": 1,
-          "won": 0,
+          "team": "Egypt",
+          "played": 2,
+          "won": 1,
           "drawn": 1,
           "lost": 0,
-          "gf": 2,
+          "gf": 4,
           "ga": 2,
-          "gd": 0,
-          "points": 1
+          "gd": 2,
+          "points": 4
         },
         {
           "position": 2,
           "team": "Iran",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 1
+          "points": 2
         },
         {
           "position": 3,
           "team": "Belgium",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "gf": 1,
           "ga": 1,
           "gd": 0,
-          "points": 1
+          "points": 2
         },
         {
           "position": 4,
-          "team": "Egypt",
-          "played": 1,
+          "team": "New Zealand",
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
+          "lost": 1,
+          "gf": 3,
+          "ga": 5,
+          "gd": -2,
           "points": 1
         }
       ]
@@ -2956,50 +2956,50 @@
       "table": [
         {
           "position": 1,
-          "team": "Uruguay",
-          "played": 1,
-          "won": 0,
+          "team": "Spain",
+          "played": 2,
+          "won": 1,
           "drawn": 1,
           "lost": 0,
-          "gf": 1,
-          "ga": 1,
-          "gd": 0,
-          "points": 1
+          "gf": 4,
+          "ga": 0,
+          "gd": 4,
+          "points": 4
         },
         {
           "position": 2,
-          "team": "Saudi Arabia",
-          "played": 1,
+          "team": "Uruguay",
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
-          "gf": 1,
-          "ga": 1,
+          "gf": 3,
+          "ga": 3,
           "gd": 0,
-          "points": 1
+          "points": 2
         },
         {
           "position": 3,
-          "team": "Spain",
-          "played": 1,
+          "team": "Cape Verde Islands",
+          "played": 2,
           "won": 0,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
-          "gf": 0,
-          "ga": 0,
+          "gf": 2,
+          "ga": 2,
           "gd": 0,
-          "points": 1
+          "points": 2
         },
         {
           "position": 4,
-          "team": "Cape Verde Islands",
-          "played": 1,
+          "team": "Saudi Arabia",
+          "played": 2,
           "won": 0,
           "drawn": 1,
-          "lost": 0,
-          "gf": 0,
-          "ga": 0,
-          "gd": 0,
+          "lost": 1,
+          "gf": 1,
+          "ga": 5,
+          "gd": -4,
           "points": 1
         }
       ]
