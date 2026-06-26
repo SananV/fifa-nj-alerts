@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T08:23:04.029089-04:00",
+  "generated_at": "2026-06-26T08:12:10.751214-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -1421,10 +1421,10 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "win_probability": {
         "home_win": 26,
@@ -1447,10 +1447,10 @@
         "name": "Group Stage - GROUP_E"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "win_probability": {
         "home_win": 35,
@@ -1473,10 +1473,10 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 3
       },
       "win_probability": {
         "home_win": 17,
@@ -1499,10 +1499,10 @@
         "name": "Group Stage - GROUP_F"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "win_probability": {
         "home_win": 43,
@@ -1525,10 +1525,10 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 2
       },
       "win_probability": {
         "home_win": 47,
@@ -1551,10 +1551,10 @@
         "name": "Group Stage - GROUP_D"
       },
       "phase": "group",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "win_probability": {
         "home_win": 26,
@@ -1877,10 +1877,10 @@
     {
       "scheduled": "2026-06-28T15:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "South Africa"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Canada"
       },
       "venue": {
         "name": "MetLife Stadium, East Rutherford, NJ"
@@ -1894,15 +1894,19 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 29,
+        "draw": 23,
+        "away_win": 48
+      }
     },
     {
       "scheduled": "2026-06-29T13:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Brazil"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Japan"
       },
       "venue": {
         "name": "ATT Stadium, Arlington, TX"
@@ -1916,12 +1920,16 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 55,
+        "draw": 21,
+        "away_win": 24
+      }
     },
     {
       "scheduled": "2026-06-29T16:30:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Germany"
       },
       "away_team": {
         "name": "TBD"
@@ -1943,10 +1951,10 @@
     {
       "scheduled": "2026-06-29T21:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Netherlands"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Morocco"
       },
       "venue": {
         "name": "Hard Rock Stadium, Miami Gardens, FL"
@@ -1960,7 +1968,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 49,
+        "draw": 23,
+        "away_win": 29
+      }
     },
     {
       "scheduled": "2026-06-30T13:00:00-04:00",
@@ -2009,7 +2021,7 @@
     {
       "scheduled": "2026-06-30T21:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Mexico"
       },
       "away_team": {
         "name": "TBD"
@@ -2075,10 +2087,10 @@
     {
       "scheduled": "2026-07-01T20:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "United States"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Bosnia-Herzegovina"
       },
       "venue": {
         "name": "NRG Stadium, Houston, TX"
@@ -2092,7 +2104,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 46,
+        "draw": 23,
+        "away_win": 31
+      }
     },
     {
       "scheduled": "2026-07-02T15:00:00-04:00",
@@ -2141,7 +2157,7 @@
     {
       "scheduled": "2026-07-02T23:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Switzerland"
       },
       "away_team": {
         "name": "TBD"
@@ -2163,7 +2179,7 @@
     {
       "scheduled": "2026-07-03T14:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Australia"
       },
       "away_team": {
         "name": "TBD"
@@ -2185,7 +2201,7 @@
     {
       "scheduled": "2026-07-03T18:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Argentina"
       },
       "away_team": {
         "name": "TBD"
@@ -2745,50 +2761,50 @@
         {
           "position": 1,
           "team": "United States",
-          "played": 2,
+          "played": 3,
           "won": 2,
           "drawn": 0,
-          "lost": 0,
-          "gf": 6,
-          "ga": 1,
-          "gd": 5,
+          "lost": 1,
+          "gf": 8,
+          "ga": 4,
+          "gd": 4,
           "points": 6
         },
         {
           "position": 2,
           "team": "Australia",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 3
+          "points": 4
         },
         {
           "position": 3,
           "team": "Paraguay",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
           "gf": 2,
           "ga": 4,
           "gd": -2,
-          "points": 3
+          "points": 4
         },
         {
           "position": 4,
           "team": "Turkey",
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "drawn": 0,
           "lost": 2,
-          "gf": 0,
-          "ga": 3,
-          "gd": -3,
-          "points": 0
+          "gf": 3,
+          "ga": 5,
+          "gd": -2,
+          "points": 3
         }
       ]
     },
@@ -2798,49 +2814,49 @@
         {
           "position": 1,
           "team": "Germany",
-          "played": 2,
+          "played": 3,
           "won": 2,
           "drawn": 0,
-          "lost": 0,
-          "gf": 9,
-          "ga": 2,
-          "gd": 7,
+          "lost": 1,
+          "gf": 10,
+          "ga": 4,
+          "gd": 6,
           "points": 6
         },
         {
           "position": 2,
           "team": "Ivory Coast",
-          "played": 2,
-          "won": 1,
+          "played": 3,
+          "won": 2,
           "drawn": 0,
           "lost": 1,
-          "gf": 2,
+          "gf": 4,
           "ga": 2,
-          "gd": 0,
-          "points": 3
+          "gd": 2,
+          "points": 6
         },
         {
           "position": 3,
           "team": "Ecuador",
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "drawn": 1,
           "lost": 1,
-          "gf": 0,
-          "ga": 1,
-          "gd": -1,
-          "points": 1
+          "gf": 2,
+          "ga": 2,
+          "gd": 0,
+          "points": 4
         },
         {
           "position": 4,
           "team": "Cura\u00e7ao",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 1,
-          "lost": 1,
+          "lost": 2,
           "gf": 1,
-          "ga": 7,
-          "gd": -6,
+          "ga": 9,
+          "gd": -8,
           "points": 1
         }
       ]
@@ -2851,49 +2867,49 @@
         {
           "position": 1,
           "team": "Netherlands",
-          "played": 2,
-          "won": 1,
+          "played": 3,
+          "won": 2,
           "drawn": 1,
           "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
-          "points": 4
+          "gf": 10,
+          "ga": 4,
+          "gd": 6,
+          "points": 7
         },
         {
           "position": 2,
           "team": "Japan",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
-          "gf": 6,
-          "ga": 2,
+          "gf": 7,
+          "ga": 3,
           "gd": 4,
-          "points": 4
+          "points": 5
         },
         {
           "position": 3,
           "team": "Sweden",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "gf": 6,
-          "ga": 6,
+          "gf": 7,
+          "ga": 7,
           "gd": 0,
-          "points": 3
+          "points": 4
         },
         {
           "position": 4,
           "team": "Tunisia",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
-          "gf": 1,
-          "ga": 9,
-          "gd": -8,
+          "lost": 3,
+          "gf": 2,
+          "ga": 12,
+          "gd": -10,
           "points": 0
         }
       ]
