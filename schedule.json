@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T07:47:41.925597-04:00",
+  "generated_at": "2026-06-29T10:05:45.445040-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -1889,10 +1889,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "win_probability": {
         "home_win": 29,
@@ -2293,7 +2293,7 @@
     {
       "scheduled": "2026-07-04T13:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Canada"
       },
       "away_team": {
         "name": "TBD"
