@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T10:05:45.445040-04:00",
+  "generated_at": "2026-06-30T08:10:12.883920-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -1915,10 +1915,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "win_probability": {
         "home_win": 55,
@@ -1941,10 +1941,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 5
       },
       "win_probability": {
         "home_win": 63,
@@ -1967,10 +1967,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 4
       },
       "win_probability": {
         "home_win": 49,
@@ -2296,7 +2296,7 @@
         "name": "Canada"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Morocco"
       },
       "venue": {
         "name": "MetLife Stadium, East Rutherford, NJ"
@@ -2310,12 +2310,16 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 32,
+        "draw": 23,
+        "away_win": 45
+      }
     },
     {
       "scheduled": "2026-07-04T17:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Paraguay"
       },
       "away_team": {
         "name": "TBD"
@@ -2337,7 +2341,7 @@
     {
       "scheduled": "2026-07-05T16:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Brazil"
       },
       "away_team": {
         "name": "TBD"
