@@ -130,6 +130,58 @@ KNOCKOUT_VENUE_MAP = {
     "FINAL-1":        "MetLife Stadium, East Rutherford, NJ",
 }
 
+
+# ---------------------------------------------------------------------------
+# OFFICIAL FIFA MATCH-BASED VENUE OVERRIDE (Round of 32 onward)
+# Source: FIFA official schedule, confirmed matchups as of Round of 32 draw.
+# Keyed by sorted tuple of (home_team, away_team) lowercase, OR by stage+matchday
+# fallback when teams are still TBD/Winner placeholders.
+# ---------------------------------------------------------------------------
+KNOCKOUT_MATCH_VENUES = {
+    # Round of 32 (Match 73-88) - confirmed teams once group stage completed
+    frozenset(["south africa", "canada"]): "SoFi Stadium, Inglewood, CA",
+    frozenset(["germany", "paraguay"]): "Gillette Stadium, Foxborough, MA",
+    frozenset(["netherlands", "morocco"]): "Estadio BBVA, Monterrey, Mexico",
+    frozenset(["brazil", "japan"]): "NRG Stadium, Houston, TX",
+    frozenset(["france", "sweden"]): "MetLife Stadium, East Rutherford, NJ",
+    frozenset(["ivory coast", "norway"]): "ATT Stadium, Arlington, TX",
+    frozenset(["côte d'ivoire", "norway"]): "ATT Stadium, Arlington, TX",
+    frozenset(["mexico", "ecuador"]): "Estadio Azteca, Mexico City, Mexico",
+    frozenset(["england", "congo dr"]): "Mercedes-Benz Stadium, Atlanta, GA",
+    frozenset(["england", "dr congo"]): "Mercedes-Benz Stadium, Atlanta, GA",
+    frozenset(["usa", "bosnia and herzegovina"]): "Levis Stadium, Santa Clara, CA",
+    frozenset(["usa", "bosnia-herzegovina"]): "Levis Stadium, Santa Clara, CA",
+    frozenset(["belgium", "senegal"]): "Lumen Field, Seattle, WA",
+    frozenset(["portugal", "croatia"]): "BMO Field, Toronto, Canada",
+    frozenset(["spain", "austria"]): "SoFi Stadium, Inglewood, CA",
+    frozenset(["switzerland", "algeria"]): "BC Place, Vancouver, Canada",
+    frozenset(["argentina", "cabo verde"]): "Hard Rock Stadium, Miami Gardens, FL",
+    frozenset(["argentina", "cape verde"]): "Hard Rock Stadium, Miami Gardens, FL",
+    frozenset(["colombia", "ghana"]): "Arrowhead Stadium, Kansas City, MO",
+    frozenset(["australia", "egypt"]): "ATT Stadium, Arlington, TX",
+}
+
+# Round of 16 onward: keyed by match number since teams are still "Winner X"
+# placeholders until Round of 32 completes. Match number = order in tournament.
+MATCH_NUMBER_VENUES = {
+    89: "Lincoln Financial Field, Philadelphia, PA",
+    90: "NRG Stadium, Houston, TX",
+    91: "MetLife Stadium, East Rutherford, NJ",
+    92: "Estadio Azteca, Mexico City, Mexico",
+    93: "ATT Stadium, Arlington, TX",
+    94: "Lumen Field, Seattle, WA",
+    95: "Mercedes-Benz Stadium, Atlanta, GA",
+    96: "BC Place, Vancouver, Canada",
+    97: "Gillette Stadium, Foxborough, MA",
+    98: "SoFi Stadium, Inglewood, CA",
+    99: "Hard Rock Stadium, Miami Gardens, FL",
+    100: "Arrowhead Stadium, Kansas City, MO",
+    101: "ATT Stadium, Arlington, TX",
+    102: "Mercedes-Benz Stadium, Atlanta, GA",
+    103: "Hard Rock Stadium, Miami Gardens, FL",
+    104: "MetLife Stadium, East Rutherford, NJ",
+}
+
 MATCH_VENUE_OVERRIDE = {
     "france":   "MetLife Stadium, East Rutherford, NJ",
     "iraq":     "Gillette Stadium, Foxborough, MA",
@@ -163,11 +215,93 @@ ELO = {
     "Curacao": 1580, "Thailand": 1560,
 }
 
-def elo_probs(home, away):
-    h = ELO.get(home, 1700)
-    a = ELO.get(away, 1700)
+def expected_score(rating_a, rating_b):
+    """Standard Elo expected-score formula for team A vs team B."""
+    return 1 / (1 + 10 ** ((rating_b - rating_a) / 400))
+
+def update_elo(live_ratings, home, away, home_goals, away_goals, stage):
+    """
+    Apply one completed match result to the live ratings table in place.
+    Uses the classic Elo update with a goal-difference multiplier (common
+    in football Elo systems, e.g. the World Football Elo Ratings model)
+    and a higher K-factor for knockout matches since they carry more
+    tournament significance than group games.
+    """
+    r_h = live_ratings.get(home, 1700)
+    r_a = live_ratings.get(away, 1700)
+
+    if home_goals > away_goals:
+        actual_h, actual_a = 1.0, 0.0
+    elif home_goals < away_goals:
+        actual_h, actual_a = 0.0, 1.0
+    else:
+        actual_h, actual_a = 0.5, 0.5
+
+    exp_h = expected_score(r_h, r_a)
+    exp_a = 1 - exp_h
+
+    # Base K-factor: higher stakes = bigger rating swings
+    K = 20 if stage == 'GROUP_STAGE' else 35
+
+    # Goal-difference multiplier (soft cap so blowouts don't dominate)
+    gd = abs(home_goals - away_goals)
+    gd_multiplier = 1 + min(gd, 4) * 0.18
+
+    delta_h = K * gd_multiplier * (actual_h - exp_h)
+    delta_a = K * gd_multiplier * (actual_a - exp_a)
+
+    live_ratings[home] = r_h + delta_h
+    live_ratings[away] = r_a + delta_a
+
+def build_live_ratings(all_raw_matches):
+    """
+    Walk every COMPLETED match in chronological order, starting from the
+    static pre-tournament Elo table, applying Elo updates as we go.
+    Returns a fresh ratings dict reflecting current tournament form —
+    this is what powers win probabilities for all upcoming matches.
+
+    Knockout matches decided on penalties show as a 90-minute draw in the
+    fullTime score, but football-data.org's score.winner field correctly
+    identifies who actually advanced. We use winner when present so a
+    penalty-shootout win still counts as a win for Elo purposes, not a draw.
+    """
+    live = dict(ELO)  # start from pre-tournament baseline
+    completed = [m for m in all_raw_matches if (m.get('status', '').upper() in ('FINISHED', 'AWARDED'))]
+    completed.sort(key=lambda m: m.get('utcDate', ''))
+
+    updates_applied = 0
+    for m in completed:
+        home = m.get('homeTeam', {}).get('name')
+        away = m.get('awayTeam', {}).get('name')
+        if not home or not away:
+            continue
+        score = m.get('score', {})
+        full = score.get('fullTime', {})
+        hg, ag = full.get('home'), full.get('away')
+        if hg is None or ag is None:
+            continue
+
+        winner = score.get('winner')  # 'HOME_TEAM' / 'AWAY_TEAM' / 'DRAW' / None
+        if winner == 'HOME_TEAM' and hg == ag:
+            # Penalty-shootout win for home side — nudge goal differential
+            # to 1 for Elo purposes so it registers as a win, not a draw.
+            hg_for_elo, ag_for_elo = hg + 1, ag
+        elif winner == 'AWAY_TEAM' and hg == ag:
+            hg_for_elo, ag_for_elo = hg, ag + 1
+        else:
+            hg_for_elo, ag_for_elo = hg, ag
+
+        update_elo(live, home, away, hg_for_elo, ag_for_elo, m.get('stage', ''))
+        updates_applied += 1
+
+    print(f"Live Elo: applied {updates_applied} completed-match updates on top of baseline ratings.")
+    return live
+
+def elo_probs(home, away, ratings_table):
+    h = ratings_table.get(home, 1700)
+    a = ratings_table.get(away, 1700)
     # Standard Elo win probability formula
-    exp_h = 1 / (1 + 10 ** ((a - h) / 400))
+    exp_h = expected_score(h, a)
     exp_a = 1 - exp_h
     # Allocate draw probability from middle ground
     draw = 0.28 - abs(exp_h - 0.5) * 0.20
@@ -184,20 +318,34 @@ def elo_probs(home, away):
 # ---------------------------------------------------------------------------
 # HELPERS
 # ---------------------------------------------------------------------------
-def resolve_venue(match, stage_counter):
+def resolve_venue(match, stage_counter, match_number=None):
     stage = match.get('stage', '')
     group = match.get('group', '') or ''
     matchday = match.get('matchday') or 1
     home_name = (match.get('homeTeam', {}).get('name') or '').lower().strip()
+    away_name = (match.get('awayTeam', {}).get('name') or '').lower().strip()
 
-    if home_name in MATCH_VENUE_OVERRIDE and stage == 'GROUP_STAGE':
-        return MATCH_VENUE_OVERRIDE[home_name]
+    # GROUP STAGE: team-name override first, then group/matchday map
+    if stage == 'GROUP_STAGE':
+        if home_name in MATCH_VENUE_OVERRIDE:
+            return MATCH_VENUE_OVERRIDE[home_name]
+        if group:
+            key = f"{group}-{matchday}"
+            if key in GROUP_VENUE_MAP:
+                return GROUP_VENUE_MAP[key]
+        return "Venue TBD"
 
-    if stage == 'GROUP_STAGE' and group:
-        key = f"{group}-{matchday}"
-        if key in GROUP_VENUE_MAP:
-            return GROUP_VENUE_MAP[key]
+    # KNOCKOUT: try exact confirmed matchup first (most reliable)
+    if home_name and away_name and home_name != 'tbd' and away_name != 'tbd':
+        matchup = frozenset([home_name, away_name])
+        if matchup in KNOCKOUT_MATCH_VENUES:
+            return KNOCKOUT_MATCH_VENUES[matchup]
 
+    # KNOCKOUT: fall back to official match number (for "Winner X" placeholder games)
+    if match_number and match_number in MATCH_NUMBER_VENUES:
+        return MATCH_NUMBER_VENUES[match_number]
+
+    # Last resort: old slot-counter system (least reliable, used only if above fail)
     count = stage_counter.get(stage, 1)
     key = f"{stage}-{count}"
     if key in KNOCKOUT_VENUE_MAP:
@@ -255,25 +403,34 @@ except urllib.error.HTTPError as e:
 raw_matches = sorted(data.get('matches', []), key=lambda m: m.get('utcDate', ''))
 print(f"Fetched {len(raw_matches)} matches")
 
+# Build dynamic Elo ratings from completed results before computing any
+# win probabilities, so future-match predictions reflect actual tournament
+# form rather than frozen pre-tournament reputation.
+live_ratings = build_live_ratings(raw_matches)
+
 stage_counter = {}
 matches = []
+knockout_match_num = 72  # Match 73 is the first knockout game
 for m in raw_matches:
     stage = m.get('stage', '')
     if stage != 'GROUP_STAGE':
         stage_counter[stage] = stage_counter.get(stage, 0) + 1
+        knockout_match_num += 1
 
     home = m.get('homeTeam', {}).get('name') or 'TBD'
     away = m.get('awayTeam', {}).get('name') or 'TBD'
-    probs = elo_probs(home, away) if home != 'TBD' and away != 'TBD' else None
+    probs = elo_probs(home, away, live_ratings) if home != 'TBD' and away != 'TBD' else None
 
     score = m.get('score', {})
     full = score.get('fullTime', {})
+
+    venue_name = resolve_venue(m, stage_counter, knockout_match_num if stage != 'GROUP_STAGE' else None)
 
     matches.append({
         "scheduled": to_est(m.get('utcDate', '')),
         "home_team": {"name": home},
         "away_team": {"name": away},
-        "venue": {"name": resolve_venue(m, stage_counter)},
+        "venue": {"name": venue_name},
         "tournament_round": {"name": map_round(m)},
         "phase": map_phase(m),
         "status": map_status(m),
@@ -323,6 +480,7 @@ output = {
     "match_count": len(matches),
     "matches": matches,
     "standings": standings_data,
+    "live_elo_ratings": {k: round(v) for k, v in sorted(live_ratings.items(), key=lambda x: -x[1])},
 }
 
 with open("schedule.json", "w") as f:
