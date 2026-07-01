@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T08:10:12.883920-04:00",
+  "generated_at": "2026-07-01T08:34:23.150534-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -1993,10 +1993,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 2
       },
       "win_probability": {
         "home_win": 31,
@@ -2019,10 +2019,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 0
       },
       "win_probability": {
         "home_win": 61,
@@ -2045,10 +2045,10 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "win_probability": {
         "home_win": 45,
@@ -2322,7 +2322,7 @@
         "name": "Paraguay"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "France"
       },
       "venue": {
         "name": "SoFi Stadium, Inglewood, CA"
@@ -2336,7 +2336,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 12,
+        "draw": 19,
+        "away_win": 70
+      }
     },
     {
       "scheduled": "2026-07-05T16:00:00-04:00",
@@ -2344,7 +2348,7 @@
         "name": "Brazil"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Norway"
       },
       "venue": {
         "name": "ATT Stadium, Arlington, TX"
@@ -2358,7 +2362,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 59,
+        "draw": 21,
+        "away_win": 20
+      }
     },
     {
       "scheduled": "2026-07-05T20:00:00-04:00",
