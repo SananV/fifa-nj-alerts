@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T08:34:23.150534-04:00",
+  "generated_at": "2026-07-02T08:09:33.718126-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -23,9 +23,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 58,
-        "draw": 21,
-        "away_win": 21
+        "home_win": 62,
+        "draw": 20,
+        "away_win": 17
       }
     },
     {
@@ -49,9 +49,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 58,
+        "home_win": 57,
         "draw": 21,
-        "away_win": 21
+        "away_win": 22
       }
     },
     {
@@ -75,9 +75,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 56,
+        "home_win": 58,
         "draw": 21,
-        "away_win": 23
+        "away_win": 21
       }
     },
     {
@@ -103,7 +103,7 @@
       "win_probability": {
         "home_win": 39,
         "draw": 24,
-        "away_win": 37
+        "away_win": 36
       }
     },
     {
@@ -127,9 +127,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 27,
-        "draw": 22,
-        "away_win": 51
+        "home_win": 23,
+        "draw": 21,
+        "away_win": 56
       }
     },
     {
@@ -153,9 +153,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 54,
+        "home_win": 51,
         "draw": 22,
-        "away_win": 24
+        "away_win": 27
       }
     },
     {
@@ -179,9 +179,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 37,
+        "home_win": 35,
         "draw": 24,
-        "away_win": 39
+        "away_win": 41
       }
     },
     {
@@ -207,7 +207,7 @@
       "win_probability": {
         "home_win": 43,
         "draw": 24,
-        "away_win": 34
+        "away_win": 33
       }
     },
     {
@@ -231,9 +231,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 63,
+        "home_win": 61,
         "draw": 20,
-        "away_win": 17
+        "away_win": 19
       }
     },
     {
@@ -257,9 +257,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 50,
-        "draw": 22,
-        "away_win": 28
+        "home_win": 48,
+        "draw": 23,
+        "away_win": 29
       }
     },
     {
@@ -283,9 +283,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 30,
+        "home_win": 32,
         "draw": 23,
-        "away_win": 47
+        "away_win": 45
       }
     },
     {
@@ -309,9 +309,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 49,
-        "draw": 23,
-        "away_win": 29
+        "home_win": 51,
+        "draw": 22,
+        "away_win": 27
       }
     },
     {
@@ -387,9 +387,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 23,
-        "draw": 21,
-        "away_win": 56
+        "home_win": 24,
+        "draw": 22,
+        "away_win": 54
       }
     },
     {
@@ -413,9 +413,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 50,
+        "home_win": 51,
         "draw": 22,
-        "away_win": 28
+        "away_win": 27
       }
     },
     {
@@ -439,9 +439,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 58,
-        "draw": 21,
-        "away_win": 21
+        "home_win": 63,
+        "draw": 20,
+        "away_win": 17
       }
     },
     {
@@ -465,9 +465,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 28,
-        "draw": 22,
-        "away_win": 49
+        "home_win": 23,
+        "draw": 21,
+        "away_win": 56
       }
     },
     {
@@ -491,7 +491,7 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 65,
+        "home_win": 66,
         "draw": 20,
         "away_win": 15
       }
@@ -517,9 +517,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 33,
-        "draw": 24,
-        "away_win": 43
+        "home_win": 38,
+        "draw": 25,
+        "away_win": 38
       }
     },
     {
@@ -569,9 +569,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 50,
+        "home_win": 51,
         "draw": 22,
-        "away_win": 28
+        "away_win": 27
       }
     },
     {
@@ -595,9 +595,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 43,
-        "draw": 24,
-        "away_win": 34
+        "home_win": 46,
+        "draw": 23,
+        "away_win": 31
       }
     },
     {
@@ -621,9 +621,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 21,
-        "draw": 21,
-        "away_win": 58
+        "home_win": 18,
+        "draw": 20,
+        "away_win": 62
       }
     },
     {
@@ -647,7 +647,7 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 33,
+        "home_win": 32,
         "draw": 23,
         "away_win": 44
       }
@@ -673,9 +673,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 62,
+        "home_win": 64,
         "draw": 20,
-        "away_win": 18
+        "away_win": 17
       }
     },
     {
@@ -699,9 +699,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 44,
-        "draw": 23,
-        "away_win": 33
+        "home_win": 49,
+        "draw": 22,
+        "away_win": 28
       }
     },
     {
@@ -725,9 +725,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 44,
-        "draw": 23,
-        "away_win": 33
+        "home_win": 51,
+        "draw": 22,
+        "away_win": 27
       }
     },
     {
@@ -751,9 +751,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 27,
-        "draw": 22,
-        "away_win": 51
+        "home_win": 31,
+        "draw": 23,
+        "away_win": 46
       }
     },
     {
@@ -777,9 +777,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 19,
-        "draw": 21,
-        "away_win": 60
+        "home_win": 16,
+        "draw": 20,
+        "away_win": 64
       }
     },
     {
@@ -803,9 +803,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 71,
-        "draw": 19,
-        "away_win": 10
+        "home_win": 74,
+        "draw": 18,
+        "away_win": 8
       }
     },
     {
@@ -829,9 +829,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 48,
-        "draw": 23,
-        "away_win": 30
+        "home_win": 42,
+        "draw": 24,
+        "away_win": 35
       }
     },
     {
@@ -857,7 +857,7 @@
       "win_probability": {
         "home_win": 54,
         "draw": 22,
-        "away_win": 24
+        "away_win": 25
       }
     },
     {
@@ -881,9 +881,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 60,
+        "home_win": 56,
         "draw": 21,
-        "away_win": 19
+        "away_win": 23
       }
     },
     {
@@ -907,7 +907,7 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 51,
+        "home_win": 50,
         "draw": 22,
         "away_win": 27
       }
@@ -933,9 +933,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 25,
-        "draw": 22,
-        "away_win": 53
+        "home_win": 22,
+        "draw": 21,
+        "away_win": 56
       }
     },
     {
@@ -959,9 +959,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 63,
+        "home_win": 64,
         "draw": 20,
-        "away_win": 17
+        "away_win": 16
       }
     },
     {
@@ -985,9 +985,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 58,
+        "home_win": 59,
         "draw": 21,
-        "away_win": 21
+        "away_win": 20
       }
     },
     {
@@ -1011,9 +1011,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 59,
+        "home_win": 56,
         "draw": 21,
-        "away_win": 20
+        "away_win": 22
       }
     },
     {
@@ -1037,9 +1037,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 29,
-        "draw": 23,
-        "away_win": 48
+        "home_win": 26,
+        "draw": 22,
+        "away_win": 51
       }
     },
     {
@@ -1089,9 +1089,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 69,
-        "draw": 19,
-        "away_win": 12
+        "home_win": 73,
+        "draw": 18,
+        "away_win": 9
       }
     },
     {
@@ -1115,9 +1115,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 34,
+        "home_win": 40,
         "draw": 24,
-        "away_win": 42
+        "away_win": 36
       }
     },
     {
@@ -1141,9 +1141,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 37,
+        "home_win": 33,
         "draw": 24,
-        "away_win": 39
+        "away_win": 43
       }
     },
     {
@@ -1167,9 +1167,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 64,
-        "draw": 20,
-        "away_win": 16
+        "home_win": 67,
+        "draw": 19,
+        "away_win": 14
       }
     },
     {
@@ -1195,7 +1195,7 @@
       "win_probability": {
         "home_win": 65,
         "draw": 20,
-        "away_win": 16
+        "away_win": 15
       }
     },
     {
@@ -1219,9 +1219,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 20,
-        "draw": 21,
-        "away_win": 59
+        "home_win": 18,
+        "draw": 20,
+        "away_win": 61
       }
     },
     {
@@ -1245,9 +1245,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 58,
+        "home_win": 59,
         "draw": 21,
-        "away_win": 21
+        "away_win": 20
       }
     },
     {
@@ -1297,9 +1297,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 27,
-        "draw": 22,
-        "away_win": 50
+        "home_win": 30,
+        "draw": 23,
+        "away_win": 47
       }
     },
     {
@@ -1323,9 +1323,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 61,
-        "draw": 20,
-        "away_win": 19
+        "home_win": 66,
+        "draw": 19,
+        "away_win": 14
       }
     },
     {
@@ -1350,8 +1350,8 @@
       },
       "win_probability": {
         "home_win": 10,
-        "draw": 19,
-        "away_win": 71
+        "draw": 18,
+        "away_win": 72
       }
     },
     {
@@ -1375,9 +1375,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 17,
-        "draw": 20,
-        "away_win": 63
+        "home_win": 14,
+        "draw": 19,
+        "away_win": 67
       }
     },
     {
@@ -1401,9 +1401,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 26,
+        "home_win": 27,
         "draw": 22,
-        "away_win": 52
+        "away_win": 51
       }
     },
     {
@@ -1427,9 +1427,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 26,
+        "home_win": 28,
         "draw": 22,
-        "away_win": 52
+        "away_win": 50
       }
     },
     {
@@ -1453,9 +1453,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 35,
-        "draw": 24,
-        "away_win": 41
+        "home_win": 33,
+        "draw": 23,
+        "away_win": 43
       }
     },
     {
@@ -1479,9 +1479,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 17,
+        "home_win": 16,
         "draw": 20,
-        "away_win": 63
+        "away_win": 65
       }
     },
     {
@@ -1507,7 +1507,7 @@
       "win_probability": {
         "home_win": 43,
         "draw": 24,
-        "away_win": 34
+        "away_win": 33
       }
     },
     {
@@ -1531,9 +1531,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 47,
-        "draw": 23,
-        "away_win": 30
+        "home_win": 40,
+        "draw": 24,
+        "away_win": 36
       }
     },
     {
@@ -1557,9 +1557,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 26,
-        "draw": 22,
-        "away_win": 52
+        "home_win": 30,
+        "draw": 23,
+        "away_win": 47
       }
     },
     {
@@ -1611,7 +1611,7 @@
       "win_probability": {
         "home_win": 54,
         "draw": 22,
-        "away_win": 25
+        "away_win": 24
       }
     },
     {
@@ -1635,9 +1635,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 30,
-        "draw": 23,
-        "away_win": 47
+        "home_win": 28,
+        "draw": 22,
+        "away_win": 50
       }
     },
     {
@@ -1661,9 +1661,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 34,
+        "home_win": 36,
         "draw": 24,
-        "away_win": 42
+        "away_win": 40
       }
     },
     {
@@ -1687,9 +1687,9 @@
         "away": 5
       },
       "win_probability": {
-        "home_win": 14,
+        "home_win": 12,
         "draw": 19,
-        "away_win": 67
+        "away_win": 69
       }
     },
     {
@@ -1713,9 +1713,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 36,
-        "draw": 24,
-        "away_win": 39
+        "home_win": 38,
+        "draw": 25,
+        "away_win": 38
       }
     },
     {
@@ -1739,9 +1739,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 13,
+        "home_win": 11,
         "draw": 19,
-        "away_win": 68
+        "away_win": 70
       }
     },
     {
@@ -1765,8 +1765,8 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 55,
-        "draw": 21,
+        "home_win": 54,
+        "draw": 22,
         "away_win": 24
       }
     },
@@ -1791,9 +1791,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 31,
+        "home_win": 33,
         "draw": 23,
-        "away_win": 46
+        "away_win": 44
       }
     },
     {
@@ -1817,9 +1817,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 38,
-        "draw": 25,
-        "away_win": 38
+        "home_win": 42,
+        "draw": 24,
+        "away_win": 35
       }
     },
     {
@@ -1843,9 +1843,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 15,
-        "draw": 20,
-        "away_win": 66
+        "home_win": 12,
+        "draw": 19,
+        "away_win": 69
       }
     },
     {
@@ -1869,9 +1869,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 44,
-        "draw": 23,
-        "away_win": 32
+        "home_win": 43,
+        "draw": 24,
+        "away_win": 33
       }
     },
     {
@@ -1883,7 +1883,7 @@
         "name": "Canada"
       },
       "venue": {
-        "name": "MetLife Stadium, East Rutherford, NJ"
+        "name": "SoFi Stadium, Inglewood, CA"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -1895,9 +1895,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 29,
-        "draw": 23,
-        "away_win": 48
+        "home_win": 27,
+        "draw": 22,
+        "away_win": 51
       }
     },
     {
@@ -1909,7 +1909,7 @@
         "name": "Japan"
       },
       "venue": {
-        "name": "ATT Stadium, Arlington, TX"
+        "name": "NRG Stadium, Houston, TX"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -1921,9 +1921,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 55,
+        "home_win": 57,
         "draw": 21,
-        "away_win": 24
+        "away_win": 22
       }
     },
     {
@@ -1935,7 +1935,7 @@
         "name": "Paraguay"
       },
       "venue": {
-        "name": "SoFi Stadium, Inglewood, CA"
+        "name": "Gillette Stadium, Foxborough, MA"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -1947,9 +1947,9 @@
         "away": 5
       },
       "win_probability": {
-        "home_win": 63,
-        "draw": 20,
-        "away_win": 17
+        "home_win": 57,
+        "draw": 21,
+        "away_win": 22
       }
     },
     {
@@ -1961,7 +1961,7 @@
         "name": "Morocco"
       },
       "venue": {
-        "name": "Hard Rock Stadium, Miami Gardens, FL"
+        "name": "Estadio BBVA, Monterrey, Mexico"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -1973,9 +1973,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 49,
-        "draw": 23,
-        "away_win": 29
+        "home_win": 42,
+        "draw": 24,
+        "away_win": 34
       }
     },
     {
@@ -1987,7 +1987,7 @@
         "name": "Norway"
       },
       "venue": {
-        "name": "Levis Stadium, Santa Clara, CA"
+        "name": "ATT Stadium, Arlington, TX"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -1999,9 +1999,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 31,
+        "home_win": 29,
         "draw": 23,
-        "away_win": 45
+        "away_win": 49
       }
     },
     {
@@ -2013,7 +2013,7 @@
         "name": "Sweden"
       },
       "venue": {
-        "name": "Arrowhead Stadium, Kansas City, MO"
+        "name": "MetLife Stadium, East Rutherford, NJ"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2025,13 +2025,13 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 61,
+        "home_win": 64,
         "draw": 20,
-        "away_win": 19
+        "away_win": 16
       }
     },
     {
-      "scheduled": "2026-06-30T21:00:00-04:00",
+      "scheduled": "2026-06-30T22:00:00-04:00",
       "home_team": {
         "name": "Mexico"
       },
@@ -2039,7 +2039,7 @@
         "name": "Ecuador"
       },
       "venue": {
-        "name": "Lincoln Financial Field, Philadelphia, PA"
+        "name": "Estadio Azteca, Mexico City, Mexico"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2051,9 +2051,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 45,
-        "draw": 23,
-        "away_win": 31
+        "home_win": 52,
+        "draw": 22,
+        "away_win": 26
       }
     },
     {
@@ -2071,13 +2071,13 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "win_probability": {
-        "home_win": 66,
+        "home_win": 67,
         "draw": 19,
         "away_win": 14
       }
@@ -2091,21 +2091,21 @@
         "name": "Senegal"
       },
       "venue": {
-        "name": "Rose Bowl, Pasadena, CA"
+        "name": "Lumen Field, Seattle, WA"
       },
       "tournament_round": {
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 2
       },
       "win_probability": {
-        "home_win": 48,
-        "draw": 23,
-        "away_win": 30
+        "home_win": 52,
+        "draw": 22,
+        "away_win": 26
       }
     },
     {
@@ -2123,15 +2123,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "win_probability": {
-        "home_win": 46,
-        "draw": 23,
-        "away_win": 31
+        "home_win": 51,
+        "draw": 22,
+        "away_win": 27
       }
     },
     {
@@ -2143,7 +2143,7 @@
         "name": "Austria"
       },
       "venue": {
-        "name": "Gillette Stadium, Foxborough, MA"
+        "name": "SoFi Stadium, Inglewood, CA"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2155,7 +2155,7 @@
         "away": null
       },
       "win_probability": {
-        "home_win": 70,
+        "home_win": 69,
         "draw": 19,
         "away_win": 12
       }
@@ -2169,7 +2169,7 @@
         "name": "Croatia"
       },
       "venue": {
-        "name": "BC Place, Vancouver, Canada"
+        "name": "BMO Field, Toronto, Canada"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2195,7 +2195,7 @@
         "name": "Algeria"
       },
       "venue": {
-        "name": "BMO Field, Toronto, Canada"
+        "name": "BC Place, Vancouver, Canada"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2207,9 +2207,9 @@
         "away": null
       },
       "win_probability": {
-        "home_win": 54,
-        "draw": 22,
-        "away_win": 24
+        "home_win": 55,
+        "draw": 21,
+        "away_win": 23
       }
     },
     {
@@ -2221,7 +2221,7 @@
         "name": "Egypt"
       },
       "venue": {
-        "name": "Estadio Azteca, Mexico City, Mexico"
+        "name": "ATT Stadium, Arlington, TX"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2233,9 +2233,9 @@
         "away": null
       },
       "win_probability": {
-        "home_win": 49,
+        "home_win": 46,
         "draw": 23,
-        "away_win": 29
+        "away_win": 31
       }
     },
     {
@@ -2273,7 +2273,7 @@
         "name": "Ghana"
       },
       "venue": {
-        "name": "Estadio Akron, Guadalajara, Mexico"
+        "name": "Arrowhead Stadium, Kansas City, MO"
       },
       "tournament_round": {
         "name": "Round of 32"
@@ -2285,9 +2285,9 @@
         "away": null
       },
       "win_probability": {
-        "home_win": 56,
+        "home_win": 57,
         "draw": 21,
-        "away_win": 23
+        "away_win": 22
       }
     },
     {
@@ -2297,6 +2297,58 @@
       },
       "away_team": {
         "name": "Morocco"
+      },
+      "venue": {
+        "name": "Lincoln Financial Field, Philadelphia, PA"
+      },
+      "tournament_round": {
+        "name": "Round of 16"
+      },
+      "phase": "knockout",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 30,
+        "draw": 23,
+        "away_win": 47
+      }
+    },
+    {
+      "scheduled": "2026-07-04T17:00:00-04:00",
+      "home_team": {
+        "name": "Paraguay"
+      },
+      "away_team": {
+        "name": "France"
+      },
+      "venue": {
+        "name": "NRG Stadium, Houston, TX"
+      },
+      "tournament_round": {
+        "name": "Round of 16"
+      },
+      "phase": "knockout",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 12,
+        "draw": 19,
+        "away_win": 69
+      }
+    },
+    {
+      "scheduled": "2026-07-05T16:00:00-04:00",
+      "home_team": {
+        "name": "Brazil"
+      },
+      "away_team": {
+        "name": "Norway"
       },
       "venue": {
         "name": "MetLife Stadium, East Rutherford, NJ"
@@ -2311,73 +2363,21 @@
         "away": null
       },
       "win_probability": {
-        "home_win": 32,
-        "draw": 23,
-        "away_win": 45
-      }
-    },
-    {
-      "scheduled": "2026-07-04T17:00:00-04:00",
-      "home_team": {
-        "name": "Paraguay"
-      },
-      "away_team": {
-        "name": "France"
-      },
-      "venue": {
-        "name": "SoFi Stadium, Inglewood, CA"
-      },
-      "tournament_round": {
-        "name": "Round of 16"
-      },
-      "phase": "knockout",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "win_probability": {
-        "home_win": 12,
-        "draw": 19,
-        "away_win": 70
-      }
-    },
-    {
-      "scheduled": "2026-07-05T16:00:00-04:00",
-      "home_team": {
-        "name": "Brazil"
-      },
-      "away_team": {
-        "name": "Norway"
-      },
-      "venue": {
-        "name": "ATT Stadium, Arlington, TX"
-      },
-      "tournament_round": {
-        "name": "Round of 16"
-      },
-      "phase": "knockout",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "win_probability": {
-        "home_win": 59,
+        "home_win": 58,
         "draw": 21,
-        "away_win": 20
+        "away_win": 21
       }
     },
     {
       "scheduled": "2026-07-05T20:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Mexico"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "England"
       },
       "venue": {
-        "name": "Hard Rock Stadium, Miami Gardens, FL"
+        "name": "Estadio Azteca, Mexico City, Mexico"
       },
       "tournament_round": {
         "name": "Round of 16"
@@ -2388,7 +2388,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 31,
+        "draw": 23,
+        "away_win": 46
+      }
     },
     {
       "scheduled": "2026-07-06T15:00:00-04:00",
@@ -2399,7 +2403,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Levis Stadium, Santa Clara, CA"
+        "name": "ATT Stadium, Arlington, TX"
       },
       "tournament_round": {
         "name": "Round of 16"
@@ -2414,6 +2418,32 @@
     },
     {
       "scheduled": "2026-07-06T20:00:00-04:00",
+      "home_team": {
+        "name": "United States"
+      },
+      "away_team": {
+        "name": "Belgium"
+      },
+      "venue": {
+        "name": "Lumen Field, Seattle, WA"
+      },
+      "tournament_round": {
+        "name": "Round of 16"
+      },
+      "phase": "knockout",
+      "status": "scheduled",
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "win_probability": {
+        "home_win": 20,
+        "draw": 21,
+        "away_win": 59
+      }
+    },
+    {
+      "scheduled": "2026-07-07T12:00:00-04:00",
       "home_team": {
         "name": "TBD"
       },
@@ -2435,28 +2465,6 @@
       "win_probability": null
     },
     {
-      "scheduled": "2026-07-07T12:00:00-04:00",
-      "home_team": {
-        "name": "TBD"
-      },
-      "away_team": {
-        "name": "TBD"
-      },
-      "venue": {
-        "name": "Rose Bowl, Pasadena, CA"
-      },
-      "tournament_round": {
-        "name": "Round of 16"
-      },
-      "phase": "knockout",
-      "status": "scheduled",
-      "score": {
-        "home": null,
-        "away": null
-      },
-      "win_probability": null
-    },
-    {
       "scheduled": "2026-07-07T16:00:00-04:00",
       "home_team": {
         "name": "TBD"
@@ -2465,7 +2473,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Arrowhead Stadium, Kansas City, MO"
+        "name": "BC Place, Vancouver, Canada"
       },
       "tournament_round": {
         "name": "Round of 16"
@@ -2487,7 +2495,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "MetLife Stadium, East Rutherford, NJ"
+        "name": "Gillette Stadium, Foxborough, MA"
       },
       "tournament_round": {
         "name": "Quarter-final"
@@ -2531,7 +2539,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "ATT Stadium, Arlington, TX"
+        "name": "Hard Rock Stadium, Miami Gardens, FL"
       },
       "tournament_round": {
         "name": "Quarter-final"
@@ -2553,7 +2561,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "Hard Rock Stadium, Miami Gardens, FL"
+        "name": "Arrowhead Stadium, Kansas City, MO"
       },
       "tournament_round": {
         "name": "Quarter-final"
@@ -2597,7 +2605,7 @@
         "name": "TBD"
       },
       "venue": {
-        "name": "MetLife Stadium, East Rutherford, NJ"
+        "name": "Mercedes-Benz Stadium, Atlanta, GA"
       },
       "tournament_round": {
         "name": "Semi-final"
@@ -3292,5 +3300,74 @@
         }
       ]
     }
-  ]
+  ],
+  "live_elo_ratings": {
+    "France": 2034,
+    "Brazil": 1999,
+    "England": 1983,
+    "Spain": 1976,
+    "Argentina": 1974,
+    "Portugal": 1943,
+    "Netherlands": 1925,
+    "Belgium": 1924,
+    "Mexico": 1913,
+    "Italy": 1905,
+    "Colombia": 1893,
+    "Germany": 1889,
+    "Morocco": 1886,
+    "Uruguay": 1872,
+    "Croatia": 1869,
+    "Switzerland": 1864,
+    "Denmark": 1858,
+    "USA": 1848,
+    "Japan": 1837,
+    "Norway": 1825,
+    "Australia": 1806,
+    "Senegal": 1806,
+    "Canada": 1805,
+    "South Korea": 1802,
+    "Poland": 1800,
+    "Ecuador": 1789,
+    "Sweden": 1789,
+    "Peru": 1782,
+    "Chile": 1778,
+    "Turkey": 1760,
+    "United States": 1741,
+    "Egypt": 1740,
+    "Iran": 1740,
+    "Nigeria": 1732,
+    "Ivory Coast": 1731,
+    "Saudi Arabia": 1731,
+    "Ghana": 1729,
+    "Paraguay": 1727,
+    "Cameroon": 1715,
+    "Algeria": 1714,
+    "Cape Verde Islands": 1712,
+    "Qatar": 1711,
+    "Congo DR": 1705,
+    "South Africa": 1691,
+    "Bolivia": 1688,
+    "Venezuela": 1685,
+    "Cura\u00e7ao": 1683,
+    "Costa Rica": 1678,
+    "Tunisia": 1677,
+    "Uzbekistan": 1673,
+    "Honduras": 1670,
+    "Jordan": 1669,
+    "Iraq": 1669,
+    "Austria": 1668,
+    "El Salvador": 1660,
+    "Panama": 1660,
+    "Jamaica": 1655,
+    "Slovenia": 1650,
+    "Scotland": 1650,
+    "Czech Republic": 1648,
+    "Slovakia": 1645,
+    "Czechia": 1637,
+    "Bosnia-Herzegovina": 1630,
+    "New Zealand": 1625,
+    "Haiti": 1619,
+    "Curacao": 1580,
+    "Thailand": 1560
+  }
 }
