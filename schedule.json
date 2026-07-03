@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T08:09:33.718126-04:00",
+  "generated_at": "2026-07-03T08:09:56.796411-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -127,9 +127,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 23,
+        "home_win": 22,
         "draw": 21,
-        "away_win": 56
+        "away_win": 57
       }
     },
     {
@@ -335,7 +335,7 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 66,
+        "home_win": 67,
         "draw": 19,
         "away_win": 14
       }
@@ -491,9 +491,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 66,
-        "draw": 20,
-        "away_win": 15
+        "home_win": 67,
+        "draw": 19,
+        "away_win": 14
       }
     },
     {
@@ -517,9 +517,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 38,
-        "draw": 25,
-        "away_win": 38
+        "home_win": 37,
+        "draw": 24,
+        "away_win": 39
       }
     },
     {
@@ -543,9 +543,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 64,
+        "home_win": 65,
         "draw": 20,
-        "away_win": 16
+        "away_win": 15
       }
     },
     {
@@ -569,9 +569,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 51,
+        "home_win": 53,
         "draw": 22,
-        "away_win": 27
+        "away_win": 25
       }
     },
     {
@@ -673,9 +673,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 64,
+        "home_win": 65,
         "draw": 20,
-        "away_win": 17
+        "away_win": 16
       }
     },
     {
@@ -959,9 +959,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 64,
+        "home_win": 65,
         "draw": 20,
-        "away_win": 16
+        "away_win": 15
       }
     },
     {
@@ -1063,9 +1063,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 69,
+        "home_win": 70,
         "draw": 19,
-        "away_win": 12
+        "away_win": 11
       }
     },
     {
@@ -1141,9 +1141,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 33,
+        "home_win": 35,
         "draw": 24,
-        "away_win": 43
+        "away_win": 41
       }
     },
     {
@@ -1167,9 +1167,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 67,
+        "home_win": 68,
         "draw": 19,
-        "away_win": 14
+        "away_win": 13
       }
     },
     {
@@ -1219,9 +1219,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 18,
-        "draw": 20,
-        "away_win": 61
+        "home_win": 20,
+        "draw": 21,
+        "away_win": 60
       }
     },
     {
@@ -1271,9 +1271,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 45,
+        "home_win": 47,
         "draw": 23,
-        "away_win": 32
+        "away_win": 31
       }
     },
     {
@@ -1635,9 +1635,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 28,
+        "home_win": 27,
         "draw": 22,
-        "away_win": 50
+        "away_win": 51
       }
     },
     {
@@ -1765,9 +1765,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 54,
+        "home_win": 52,
         "draw": 22,
-        "away_win": 24
+        "away_win": 26
       }
     },
     {
@@ -1791,9 +1791,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 33,
+        "home_win": 31,
         "draw": 23,
-        "away_win": 44
+        "away_win": 46
       }
     },
     {
@@ -1871,7 +1871,7 @@
       "win_probability": {
         "home_win": 43,
         "draw": 24,
-        "away_win": 33
+        "away_win": 34
       }
     },
     {
@@ -2149,15 +2149,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 0
       },
       "win_probability": {
-        "home_win": 69,
+        "home_win": 70,
         "draw": 19,
-        "away_win": 12
+        "away_win": 11
       }
     },
     {
@@ -2175,15 +2175,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "win_probability": {
-        "home_win": 47,
-        "draw": 23,
-        "away_win": 30
+        "home_win": 50,
+        "draw": 22,
+        "away_win": 27
       }
     },
     {
@@ -2201,15 +2201,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "win_probability": {
-        "home_win": 55,
+        "home_win": 58,
         "draw": 21,
-        "away_win": 23
+        "away_win": 21
       }
     },
     {
@@ -3304,10 +3304,10 @@
   "live_elo_ratings": {
     "France": 2034,
     "Brazil": 1999,
+    "Spain": 1984,
     "England": 1983,
-    "Spain": 1976,
     "Argentina": 1974,
-    "Portugal": 1943,
+    "Portugal": 1959,
     "Netherlands": 1925,
     "Belgium": 1924,
     "Mexico": 1913,
@@ -3315,10 +3315,10 @@
     "Colombia": 1893,
     "Germany": 1889,
     "Morocco": 1886,
+    "Switzerland": 1878,
     "Uruguay": 1872,
-    "Croatia": 1869,
-    "Switzerland": 1864,
     "Denmark": 1858,
+    "Croatia": 1853,
     "USA": 1848,
     "Japan": 1837,
     "Norway": 1825,
@@ -3341,10 +3341,10 @@
     "Ghana": 1729,
     "Paraguay": 1727,
     "Cameroon": 1715,
-    "Algeria": 1714,
     "Cape Verde Islands": 1712,
     "Qatar": 1711,
     "Congo DR": 1705,
+    "Algeria": 1700,
     "South Africa": 1691,
     "Bolivia": 1688,
     "Venezuela": 1685,
@@ -3355,8 +3355,8 @@
     "Honduras": 1670,
     "Jordan": 1669,
     "Iraq": 1669,
-    "Austria": 1668,
     "El Salvador": 1660,
+    "Austria": 1660,
     "Panama": 1660,
     "Jamaica": 1655,
     "Slovenia": 1650,
