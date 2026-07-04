@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T08:09:56.796411-04:00",
+  "generated_at": "2026-07-04T07:28:25.260192-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -205,9 +205,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 43,
+        "home_win": 40,
         "draw": 24,
-        "away_win": 33
+        "away_win": 36
       }
     },
     {
@@ -337,7 +337,7 @@
       "win_probability": {
         "home_win": 67,
         "draw": 19,
-        "away_win": 14
+        "away_win": 13
       }
     },
     {
@@ -361,9 +361,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 59,
+        "home_win": 56,
         "draw": 21,
-        "away_win": 20
+        "away_win": 23
       }
     },
     {
@@ -493,7 +493,7 @@
       "win_probability": {
         "home_win": 67,
         "draw": 19,
-        "away_win": 14
+        "away_win": 13
       }
     },
     {
@@ -595,9 +595,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 46,
+        "home_win": 45,
         "draw": 23,
-        "away_win": 31
+        "away_win": 32
       }
     },
     {
@@ -621,9 +621,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 18,
+        "home_win": 17,
         "draw": 20,
-        "away_win": 62
+        "away_win": 63
       }
     },
     {
@@ -751,9 +751,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 31,
-        "draw": 23,
-        "away_win": 46
+        "home_win": 34,
+        "draw": 24,
+        "away_win": 42
       }
     },
     {
@@ -1011,7 +1011,7 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 56,
+        "home_win": 57,
         "draw": 21,
         "away_win": 22
       }
@@ -1037,9 +1037,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 26,
-        "draw": 22,
-        "away_win": 51
+        "home_win": 24,
+        "draw": 21,
+        "away_win": 55
       }
     },
     {
@@ -1193,9 +1193,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 65,
-        "draw": 20,
-        "away_win": 15
+        "home_win": 66,
+        "draw": 19,
+        "away_win": 14
       }
     },
     {
@@ -1245,9 +1245,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 59,
-        "draw": 21,
-        "away_win": 20
+        "home_win": 60,
+        "draw": 20,
+        "away_win": 19
       }
     },
     {
@@ -1557,9 +1557,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 30,
+        "home_win": 33,
         "draw": 23,
-        "away_win": 47
+        "away_win": 44
       }
     },
     {
@@ -1661,9 +1661,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 36,
+        "home_win": 35,
         "draw": 24,
-        "away_win": 40
+        "away_win": 41
       }
     },
     {
@@ -1713,9 +1713,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 38,
-        "draw": 25,
-        "away_win": 38
+        "home_win": 41,
+        "draw": 24,
+        "away_win": 35
       }
     },
     {
@@ -1765,9 +1765,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 52,
+        "home_win": 54,
         "draw": 22,
-        "away_win": 26
+        "away_win": 25
       }
     },
     {
@@ -1791,9 +1791,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 31,
+        "home_win": 32,
         "draw": 23,
-        "away_win": 46
+        "away_win": 44
       }
     },
     {
@@ -1845,7 +1845,7 @@
       "win_probability": {
         "home_win": 12,
         "draw": 19,
-        "away_win": 69
+        "away_win": 70
       }
     },
     {
@@ -2227,15 +2227,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 5
       },
       "win_probability": {
-        "home_win": 46,
-        "draw": 23,
-        "away_win": 31
+        "home_win": 39,
+        "draw": 24,
+        "away_win": 37
       }
     },
     {
@@ -2253,15 +2253,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 2
       },
       "win_probability": {
-        "home_win": 66,
-        "draw": 20,
-        "away_win": 15
+        "home_win": 67,
+        "draw": 19,
+        "away_win": 14
       }
     },
     {
@@ -2279,15 +2279,15 @@
         "name": "Round of 32"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "win_probability": {
-        "home_win": 57,
+        "home_win": 59,
         "draw": 21,
-        "away_win": 22
+        "away_win": 20
       }
     },
     {
@@ -2397,10 +2397,10 @@
     {
       "scheduled": "2026-07-06T15:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Portugal"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Spain"
       },
       "venue": {
         "name": "ATT Stadium, Arlington, TX"
@@ -2414,7 +2414,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 35,
+        "draw": 24,
+        "away_win": 41
+      }
     },
     {
       "scheduled": "2026-07-06T20:00:00-04:00",
@@ -2445,10 +2449,10 @@
     {
       "scheduled": "2026-07-07T12:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Argentina"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Egypt"
       },
       "venue": {
         "name": "Mercedes-Benz Stadium, Atlanta, GA"
@@ -2462,15 +2466,19 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 62,
+        "draw": 20,
+        "away_win": 18
+      }
     },
     {
       "scheduled": "2026-07-07T16:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Switzerland"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "Colombia"
       },
       "venue": {
         "name": "BC Place, Vancouver, Canada"
@@ -2484,7 +2492,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 35,
+        "draw": 24,
+        "away_win": 41
+      }
     },
     {
       "scheduled": "2026-07-09T16:00:00-04:00",
@@ -3306,13 +3318,13 @@
     "Brazil": 1999,
     "Spain": 1984,
     "England": 1983,
-    "Argentina": 1974,
+    "Argentina": 1982,
     "Portugal": 1959,
     "Netherlands": 1925,
     "Belgium": 1924,
     "Mexico": 1913,
     "Italy": 1905,
-    "Colombia": 1893,
+    "Colombia": 1904,
     "Germany": 1889,
     "Morocco": 1886,
     "Switzerland": 1878,
@@ -3322,7 +3334,6 @@
     "USA": 1848,
     "Japan": 1837,
     "Norway": 1825,
-    "Australia": 1806,
     "Senegal": 1806,
     "Canada": 1805,
     "South Korea": 1802,
@@ -3331,19 +3342,20 @@
     "Sweden": 1789,
     "Peru": 1782,
     "Chile": 1778,
+    "Australia": 1778,
+    "Egypt": 1768,
     "Turkey": 1760,
     "United States": 1741,
-    "Egypt": 1740,
     "Iran": 1740,
     "Nigeria": 1732,
     "Ivory Coast": 1731,
     "Saudi Arabia": 1731,
-    "Ghana": 1729,
     "Paraguay": 1727,
+    "Ghana": 1717,
     "Cameroon": 1715,
-    "Cape Verde Islands": 1712,
     "Qatar": 1711,
     "Congo DR": 1705,
+    "Cape Verde Islands": 1704,
     "Algeria": 1700,
     "South Africa": 1691,
     "Bolivia": 1688,
