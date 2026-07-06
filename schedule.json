@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T07:36:15.015168-04:00",
+  "generated_at": "2026-07-06T09:46:38.558494-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -23,9 +23,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 62,
+        "home_win": 61,
         "draw": 20,
-        "away_win": 17
+        "away_win": 19
       }
     },
     {
@@ -153,9 +153,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 49,
+        "home_win": 45,
         "draw": 23,
-        "away_win": 29
+        "away_win": 32
       }
     },
     {
@@ -465,9 +465,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 23,
+        "home_win": 20,
         "draw": 21,
-        "away_win": 56
+        "away_win": 59
       }
     },
     {
@@ -569,9 +569,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 53,
-        "draw": 22,
-        "away_win": 25
+        "home_win": 55,
+        "draw": 21,
+        "away_win": 24
       }
     },
     {
@@ -725,9 +725,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 51,
+        "home_win": 49,
         "draw": 22,
-        "away_win": 27
+        "away_win": 28
       }
     },
     {
@@ -803,9 +803,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 74,
+        "home_win": 72,
         "draw": 18,
-        "away_win": 8
+        "away_win": 10
       }
     },
     {
@@ -1115,9 +1115,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 40,
-        "draw": 24,
-        "away_win": 36
+        "home_win": 44,
+        "draw": 23,
+        "away_win": 33
       }
     },
     {
@@ -1193,9 +1193,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 66,
+        "home_win": 67,
         "draw": 19,
-        "away_win": 14
+        "away_win": 13
       }
     },
     {
@@ -1349,9 +1349,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 10,
-        "draw": 18,
-        "away_win": 72
+        "home_win": 11,
+        "draw": 19,
+        "away_win": 70
       }
     },
     {
@@ -1375,9 +1375,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 14,
-        "draw": 19,
-        "away_win": 67
+        "home_win": 15,
+        "draw": 20,
+        "away_win": 66
       }
     },
     {
@@ -1583,9 +1583,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 18,
-        "draw": 20,
-        "away_win": 62
+        "home_win": 20,
+        "draw": 21,
+        "away_win": 59
       }
     },
     {
@@ -1739,9 +1739,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 11,
+        "home_win": 10,
         "draw": 19,
-        "away_win": 70
+        "away_win": 71
       }
     },
     {
@@ -1921,9 +1921,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 57,
-        "draw": 21,
-        "away_win": 22
+        "home_win": 53,
+        "draw": 22,
+        "away_win": 25
       }
     },
     {
@@ -1999,9 +1999,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 29,
-        "draw": 23,
-        "away_win": 49
+        "home_win": 26,
+        "draw": 22,
+        "away_win": 52
       }
     },
     {
@@ -2051,9 +2051,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 52,
+        "home_win": 51,
         "draw": 22,
-        "away_win": 26
+        "away_win": 27
       }
     },
     {
@@ -2077,9 +2077,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 67,
+        "home_win": 68,
         "draw": 19,
-        "away_win": 14
+        "away_win": 13
       }
     },
     {
@@ -2357,19 +2357,19 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 2
       },
       "win_probability": {
-        "home_win": 58,
-        "draw": 21,
-        "away_win": 21
+        "home_win": 51,
+        "draw": 22,
+        "away_win": 27
       }
     },
     {
-      "scheduled": "2026-07-05T20:00:00-04:00",
+      "scheduled": "2026-07-05T21:00:00-04:00",
       "home_team": {
         "name": "Mexico"
       },
@@ -2383,15 +2383,15 @@
         "name": "Round of 16"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 3
       },
       "win_probability": {
-        "home_win": 31,
-        "draw": 23,
-        "away_win": 46
+        "home_win": 28,
+        "draw": 22,
+        "away_win": 50
       }
     },
     {
@@ -2549,10 +2549,10 @@
     {
       "scheduled": "2026-07-11T17:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Norway"
       },
       "away_team": {
-        "name": "TBD"
+        "name": "England"
       },
       "venue": {
         "name": "Hard Rock Stadium, Miami Gardens, FL"
@@ -2566,7 +2566,11 @@
         "home": null,
         "away": null
       },
-      "win_probability": null
+      "win_probability": {
+        "home_win": 24,
+        "draw": 21,
+        "away_win": 55
+      }
     },
     {
       "scheduled": "2026-07-11T21:00:00-04:00",
@@ -3319,25 +3323,25 @@
   ],
   "live_elo_ratings": {
     "France": 2040,
-    "Brazil": 1999,
+    "England": 2000,
     "Spain": 1984,
-    "England": 1983,
     "Argentina": 1982,
+    "Brazil": 1969,
     "Portugal": 1959,
     "Netherlands": 1925,
     "Belgium": 1924,
-    "Mexico": 1913,
     "Morocco": 1907,
     "Italy": 1905,
     "Colombia": 1904,
+    "Mexico": 1897,
     "Germany": 1889,
     "Switzerland": 1878,
     "Uruguay": 1872,
     "Denmark": 1858,
+    "Norway": 1856,
     "Croatia": 1853,
     "USA": 1848,
     "Japan": 1837,
-    "Norway": 1825,
     "Senegal": 1806,
     "South Korea": 1802,
     "Poland": 1800,
