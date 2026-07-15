@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T07:25:55.761119-04:00",
+  "generated_at": "2026-07-15T07:36:22.324996-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -335,9 +335,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 70,
+        "home_win": 71,
         "draw": 19,
-        "away_win": 11
+        "away_win": 10
       }
     },
     {
@@ -439,9 +439,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 65,
+        "home_win": 63,
         "draw": 20,
-        "away_win": 15
+        "away_win": 17
       }
     },
     {
@@ -959,9 +959,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 68,
+        "home_win": 70,
         "draw": 19,
-        "away_win": 13
+        "away_win": 11
       }
     },
     {
@@ -1089,9 +1089,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 74,
+        "home_win": 72,
         "draw": 18,
-        "away_win": 8
+        "away_win": 9
       }
     },
     {
@@ -1583,9 +1583,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 18,
-        "draw": 20,
-        "away_win": 62
+        "home_win": 20,
+        "draw": 21,
+        "away_win": 59
       }
     },
     {
@@ -1635,9 +1635,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 24,
+        "home_win": 21,
         "draw": 21,
-        "away_win": 55
+        "away_win": 58
       }
     },
     {
@@ -2025,9 +2025,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 66,
-        "draw": 19,
-        "away_win": 14
+        "home_win": 64,
+        "draw": 20,
+        "away_win": 16
       }
     },
     {
@@ -2155,9 +2155,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 73,
+        "home_win": 74,
         "draw": 18,
-        "away_win": 9
+        "away_win": 8
       }
     },
     {
@@ -2337,9 +2337,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 10,
+        "home_win": 12,
         "draw": 19,
-        "away_win": 71
+        "away_win": 69
       }
     },
     {
@@ -2415,9 +2415,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 30,
-        "draw": 23,
-        "away_win": 47
+        "home_win": 27,
+        "draw": 22,
+        "away_win": 50
       }
     },
     {
@@ -2519,9 +2519,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 57,
-        "draw": 21,
-        "away_win": 22
+        "home_win": 54,
+        "draw": 22,
+        "away_win": 25
       }
     },
     {
@@ -2545,9 +2545,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 50,
+        "home_win": 53,
         "draw": 22,
-        "away_win": 28
+        "away_win": 26
       }
     },
     {
@@ -2617,15 +2617,15 @@
         "name": "Semi-final"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "win_probability": {
-        "home_win": 42,
+        "home_win": 36,
         "draw": 24,
-        "away_win": 34
+        "away_win": 40
       }
     },
     {
@@ -2657,7 +2657,7 @@
     {
       "scheduled": "2026-07-18T17:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "France"
       },
       "away_team": {
         "name": "TBD"
@@ -2679,7 +2679,7 @@
     {
       "scheduled": "2026-07-19T15:00:00-04:00",
       "home_team": {
-        "name": "TBD"
+        "name": "Spain"
       },
       "away_team": {
         "name": "TBD"
@@ -3338,8 +3338,8 @@
     }
   ],
   "live_elo_ratings": {
-    "France": 2055,
-    "Spain": 2020,
+    "Spain": 2046,
+    "France": 2029,
     "England": 2012,
     "Argentina": 2009,
     "Brazil": 1969,
