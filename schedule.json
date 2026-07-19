@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T07:05:02.702282-04:00",
+  "generated_at": "2026-07-19T07:08:54.165110-04:00",
   "match_count": 104,
   "matches": [
     {
@@ -439,9 +439,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 63,
-        "draw": 20,
-        "away_win": 17
+        "home_win": 60,
+        "draw": 21,
+        "away_win": 19
       }
     },
     {
@@ -569,9 +569,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 54,
-        "draw": 22,
-        "away_win": 24
+        "home_win": 57,
+        "draw": 21,
+        "away_win": 22
       }
     },
     {
@@ -1089,9 +1089,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 72,
-        "draw": 18,
-        "away_win": 9
+        "home_win": 71,
+        "draw": 19,
+        "away_win": 10
       }
     },
     {
@@ -1193,9 +1193,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 67,
+        "home_win": 69,
         "draw": 19,
-        "away_win": 14
+        "away_win": 12
       }
     },
     {
@@ -1583,9 +1583,9 @@
         "away": 4
       },
       "win_probability": {
-        "home_win": 20,
+        "home_win": 23,
         "draw": 21,
-        "away_win": 59
+        "away_win": 56
       }
     },
     {
@@ -1739,9 +1739,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 10,
-        "draw": 19,
-        "away_win": 71
+        "home_win": 9,
+        "draw": 18,
+        "away_win": 72
       }
     },
     {
@@ -2025,9 +2025,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 64,
+        "home_win": 62,
         "draw": 20,
-        "away_win": 16
+        "away_win": 18
       }
     },
     {
@@ -2077,9 +2077,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 68,
+        "home_win": 70,
         "draw": 19,
-        "away_win": 13
+        "away_win": 12
       }
     },
     {
@@ -2337,9 +2337,9 @@
         "away": 1
       },
       "win_probability": {
-        "home_win": 12,
+        "home_win": 13,
         "draw": 19,
-        "away_win": 69
+        "away_win": 67
       }
     },
     {
@@ -2389,9 +2389,9 @@
         "away": 3
       },
       "win_probability": {
-        "home_win": 28,
+        "home_win": 26,
         "draw": 22,
-        "away_win": 49
+        "away_win": 52
       }
     },
     {
@@ -2519,9 +2519,9 @@
         "away": 0
       },
       "win_probability": {
-        "home_win": 54,
+        "home_win": 51,
         "draw": 22,
-        "away_win": 25
+        "away_win": 27
       }
     },
     {
@@ -2571,9 +2571,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 23,
+        "home_win": 21,
         "draw": 21,
-        "away_win": 55
+        "away_win": 58
       }
     },
     {
@@ -2623,9 +2623,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 36,
+        "home_win": 33,
         "draw": 24,
-        "away_win": 40
+        "away_win": 43
       }
     },
     {
@@ -2649,9 +2649,9 @@
         "away": 2
       },
       "win_probability": {
-        "home_win": 34,
+        "home_win": 37,
         "draw": 24,
-        "away_win": 42
+        "away_win": 39
       }
     },
     {
@@ -2669,15 +2669,15 @@
         "name": "Third place"
       },
       "phase": "knockout",
-      "status": "scheduled",
+      "status": "closed",
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 6
       },
       "win_probability": {
-        "home_win": 42,
+        "home_win": 36,
         "draw": 24,
-        "away_win": 34
+        "away_win": 40
       }
     },
     {
@@ -3348,8 +3348,8 @@
   "live_elo_ratings": {
     "Spain": 2046,
     "Argentina": 2030,
-    "France": 2029,
-    "England": 1991,
+    "England": 2018,
+    "France": 2002,
     "Brazil": 1969,
     "Portugal": 1940,
     "Netherlands": 1925,
